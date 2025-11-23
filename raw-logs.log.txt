@@ -1,0 +1,191 @@
+--      ▄     ▄███▄      ▄   ▄█▄  
+-- ▀▄   █    █▀   ▀      █  █▀ ▀▄  
+--   █ ▀  -  ██▄▄    ██   █ █   ▀
+--  ▄ █      █▄   ▄▀ █ █  █ █▄  ▄▀
+-- █   ▀▄    ▀███▀   █  █ █ ▀███▀ 
+--  ▀                █   ██ dsc.gg/obfuscation  
+-- Generated: 2025-11-23T15:39:09.109803599+00:00
+-- Total operations: 168
+
+-- STATISTICS --
+-- Total logs: 168
+-- Network requests: 0
+-- Security operations: 2
+-- Obfuscation operations: 0
+-- Remote calls: 0
+-- Loadstring calls: 0
+-- Unique URLs: 0
+-- Errors: 1
+
+-- FULL LOG --
+
+[1] [OTHER] global_write | key="_IJpC_jpRXXKZ", value="This file was protected with MoonSec V3"
+[2] [SECURITY] getfenv | level=1
+[3] [CONTROL_FLOW] pcall_start | id=1, fn_type="function"
+[4] [CONTROL_FLOW] wait | seconds=0
+[5] [CONTROL_FLOW] pcall_end | id=1, returns={}, success=true
+[6] [CONTROL_FLOW] pcall_start | id=2, fn_type="function"
+[7] [CONTROL_FLOW] pcall_end | id=2, success=false, error="/app/temp/scripts/script_1763912347687.lua:1: attempt to call a table value"
+[8] [CONTROL_FLOW] pcall_start | id=3, fn_type="function"
+[9] [CONTROL_FLOW] pcall_end | id=3, success=false, error="/app/temp/scripts/script_1763912347687.lua:1: attempt to call a table value"
+[10] [SECURITY] getfenv | level=1
+[11] [OTHER] setmetatable | hasMetatable=true
+[12] [GAME_API] game_access | key="GetService", clean_key="GetService"
+[13] [GAME_API] service_access | service="Players"
+[14] [GAME_API] game_access | key="GetService", clean_key="GetService"
+[15] [GAME_API] service_access | service="RunService"
+[16] [INSTANCE] instance_waitforchild | parent="LocalPlayer", child="PlayerGui"
+[17] [INSTANCE] instance_new | uniqueName="ScreenGui1", hasParent=true, className="ScreenGui"
+[18] [INSTANCE] instance_property_set | instance_name="ScreenGui1", property="Parent", instance_class="ScreenGui", value={}
+[19] [OTHER] playergui_access | key="_name"
+[20] [INSTANCE] instance_property_set | instance_name="ScreenGui1", property="Name", instance_class="ScreenGui", value="BAR1S & DEFFENDERS"
+[21] [INSTANCE] instance_property_set | instance_name="ScreenGui1", property="ResetOnSpawn", instance_class="ScreenGui", value=false
+[22] [INSTANCE] instance_new | uniqueName="Frame2", hasParent=true, className="Frame"
+[23] [INSTANCE] instance_property_set | instance_name="Frame2", property="Parent", instance_class="Frame", value={_properties={}, _name="ScreenGui1", _children={}, Parent={}, _className="ScreenGui", Name="BAR1S & DEFFENDERS", ResetOnSpawn=false}
+[24] [DATATYPE] udim2_new | xOffset=400, xScale=0, yScale=0, yOffset=150
+[25] [INSTANCE] instance_property_set | instance_name="Frame2", property="Size", instance_class="Frame", value={Y={Scale=0, Offset=150}, X={Scale=0, Offset=400}, ClassName="UDim2"}
+[26] [DATATYPE] udim2_new | xOffset=-200, xScale=0.5, yScale=0.5, yOffset=-75
+[27] [INSTANCE] instance_property_set | instance_name="Frame2", property="Position", instance_class="Frame", value={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}
+[28] [DATATYPE] color3_fromrgb | b=20, g=20, r=20
+[29] [INSTANCE] instance_property_set | instance_name="Frame2", property="BackgroundColor3", instance_class="Frame", value={R=0.0784313725490196, G=0.0784313725490196, B=0.0784313725490196}
+[30] [INSTANCE] instance_property_set | instance_name="Frame2", property="BorderSizePixel", instance_class="Frame", value=0
+[31] [INSTANCE] instance_property_set | instance_name="Frame2", property="Active", instance_class="Frame", value=true
+[32] [INSTANCE] instance_property_set | instance_name="Frame2", property="Draggable", instance_class="Frame", value=true
+[33] [INSTANCE] instance_new | uniqueName="UICorner3", hasParent=true, className="UICorner"
+[34] [INSTANCE] instance_property_set | instance_name="UICorner3", property="Parent", instance_class="UICorner", value={Draggable=true, _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Size={Y={Scale=0, Offset=150}, X={Scale=0, Offset=400}, ClassName="UDim2"}, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, _className="Frame", _properties={}, BorderSizePixel=0, ...}
+[35] [DATATYPE] udim_new | scale=0, offset=10
+[36] [INSTANCE] instance_property_set | instance_name="UICorner3", property="CornerRadius", instance_class="UICorner", value={Offset=10, Scale=0, ClassName="UDim"}
+[37] [INSTANCE] instance_new | uniqueName="UIStroke4", hasParent=true, className="UIStroke"
+[38] [INSTANCE] instance_property_set | instance_name="UIStroke4", property="Parent", instance_class="UIStroke", value={Draggable=true, _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Size={Y={Scale=0, Offset=150}, X={Scale=0, Offset=400}, ClassName="UDim2"}, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, _className="Frame", _properties={}, BorderSizePixel=0, ...}
+[39] [INSTANCE] instance_property_set | instance_name="UIStroke4", property="Thickness", instance_class="UIStroke", value=3
+[40] [OTHER] enum_access | enum="ApplyStrokeMode"
+[41] [OTHER] enum_value_access | value="Border", enum="ApplyStrokeMode"
+[42] [INSTANCE] instance_property_set | instance_name="UIStroke4", property="ApplyStrokeMode", instance_class="UIStroke", value={Value=0, Name="Border", EnumType="ApplyStrokeMode"}
+[43] [OTHER] enum_access | enum="LineJoinMode"
+[44] [OTHER] enum_value_access | value="Round", enum="LineJoinMode"
+[45] [INSTANCE] instance_property_set | instance_name="UIStroke4", property="LineJoinMode", instance_class="UIStroke", value={Value=0, Name="Round", EnumType="LineJoinMode"}
+[46] [OTHER] setmetatable | hasMetatable=true
+[47] [OTHER] signal_connect | signal="RenderStepped", service="RunService"
+[48] [INSTANCE] instance_new | uniqueName="TextLabel5", hasParent=true, className="TextLabel"
+[49] [INSTANCE] instance_property_set | instance_name="TextLabel5", property="Parent", instance_class="TextLabel", value={Draggable=true, _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Size={Y={Scale=0, Offset=150}, X={Scale=0, Offset=400}, ClassName="UDim2"}, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, _className="Frame", _properties={}, BorderSizePixel=0, ...}
+[50] [DATATYPE] udim2_new | xOffset=0, xScale=1, yScale=0, yOffset=25
+[51] [INSTANCE] instance_property_set | instance_name="TextLabel5", property="Size", instance_class="TextLabel", value={Y={Scale=0, Offset=25}, X={Scale=1, Offset=0}, ClassName="UDim2"}
+[52] [DATATYPE] udim2_new | xOffset=10, xScale=0, yScale=0, yOffset=5
+[53] [INSTANCE] instance_property_set | instance_name="TextLabel5", property="Position", instance_class="TextLabel", value={Y={Scale=0, Offset=5}, X={Scale=0, Offset=10}, ClassName="UDim2"}
+[54] [INSTANCE] instance_property_set | instance_name="TextLabel5", property="BackgroundTransparency", instance_class="TextLabel", value=1
+[55] [OTHER] enum_access | enum="Font"
+[56] [OTHER] enum_value_access | value="GothamBold", enum="Font"
+[57] [INSTANCE] instance_property_set | instance_name="TextLabel5", property="Font", instance_class="TextLabel", value={Value=0, Name="GothamBold", EnumType="Font"}
+[58] [INSTANCE] instance_property_set | instance_name="TextLabel5", property="TextSize", instance_class="TextLabel", value=16
+[59] [OTHER] enum_access | enum="TextXAlignment"
+[60] [OTHER] enum_value_access | value="Center", enum="TextXAlignment"
+[61] [INSTANCE] instance_property_set | instance_name="TextLabel5", property="TextXAlignment", instance_class="TextLabel", value={Value=0, Name="Center", EnumType="TextXAlignment"}
+[62] [INSTANCE] instance_property_set | instance_name="TextLabel5", property="Text", instance_class="TextLabel", value="BAR1S - DEFFENDERS"
+[63] [OTHER] setmetatable | hasMetatable=true
+[64] [OTHER] signal_connect | signal="RenderStepped", service="RunService"
+[65] [INSTANCE] instance_new | uniqueName="TextBox6", hasParent=true, className="TextBox"
+[66] [INSTANCE] instance_property_set | instance_name="TextBox6", property="Parent", instance_class="TextBox", value={Draggable=true, _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Size={Y={Scale=0, Offset=150}, X={Scale=0, Offset=400}, ClassName="UDim2"}, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, _className="Frame", _properties={}, BorderSizePixel=0, ...}
+[67] [INSTANCE] instance_property_set | instance_name="TextBox6", property="PlaceholderText", instance_class="TextBox", value="Enter your key..."
+[68] [DATATYPE] udim2_new | xOffset=-20, xScale=1, yScale=0, yOffset=35
+[69] [INSTANCE] instance_property_set | instance_name="TextBox6", property="Size", instance_class="TextBox", value={Y={Scale=0, Offset=35}, X={Scale=1, Offset=-20}, ClassName="UDim2"}
+[70] [DATATYPE] udim2_new | xOffset=10, xScale=0, yScale=0, yOffset=35
+[71] [INSTANCE] instance_property_set | instance_name="TextBox6", property="Position", instance_class="TextBox", value={Y={Scale=0, Offset=35}, X={Scale=0, Offset=10}, ClassName="UDim2"}
+[72] [DATATYPE] color3_fromrgb | b=240, g=240, r=240
+[73] [INSTANCE] instance_property_set | instance_name="TextBox6", property="BackgroundColor3", instance_class="TextBox", value={R=0.9411764705882353, G=0.9411764705882353, B=0.9411764705882353}
+[74] [DATATYPE] color3_fromrgb | b=20, g=20, r=20
+[75] [INSTANCE] instance_property_set | instance_name="TextBox6", property="TextColor3", instance_class="TextBox", value={R=0.0784313725490196, G=0.0784313725490196, B=0.0784313725490196}
+[76] [INSTANCE] instance_property_set | instance_name="TextBox6", property="Text", instance_class="TextBox", value=""
+[77] [OTHER] enum_access | enum="Font"
+[78] [OTHER] enum_value_access | value="Gotham", enum="Font"
+[79] [INSTANCE] instance_property_set | instance_name="TextBox6", property="Font", instance_class="TextBox", value={Value=0, Name="Gotham", EnumType="Font"}
+[80] [INSTANCE] instance_property_set | instance_name="TextBox6", property="TextSize", instance_class="TextBox", value=16
+[81] [INSTANCE] instance_property_set | instance_name="TextBox6", property="BorderSizePixel", instance_class="TextBox", value=0
+[82] [INSTANCE] instance_new | uniqueName="UICorner7", hasParent=true, className="UICorner"
+[83] [INSTANCE] instance_property_set | instance_name="UICorner7", property="Parent", instance_class="UICorner", value={_properties={}, _name="TextBox6", TextColor3={B=0.0784313725490196, G=0.0784313725490196, R=0.0784313725490196}, Parent={_className="Frame", _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Draggable=true, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, BackgroundColor3={B=0.0784313725490196, G=0.0784313725490196, R=0.0784313725490196}, _properties={}, BorderSizePixel=0, ...}, Text="", Size={Y={Scale=0, Offset=35}, X={Scale=1, Offset=-20}, ClassName="UDim2"}, TextSize=16, Font={Value=0, Name="Gotham", EnumType="Font"}, _children={_className="Frame", _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Draggable=true, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, BackgroundColor3={B=0.0784313725490196, G=0.0784313725490196, R=0.0784313725490196}, _properties={}, BorderSizePixel=0, ...}, Position={Y={Scale=0, Offset=35}, X={Scale=0, Offset=10}, ClassName="UDim2"}, ...}
+[84] [DATATYPE] udim_new | scale=0, offset=6
+[85] [INSTANCE] instance_property_set | instance_name="UICorner7", property="CornerRadius", instance_class="UICorner", value={Offset=6, Scale=0, ClassName="UDim"}
+[86] [INSTANCE] instance_new | uniqueName="TextButton8", hasParent=true, className="TextButton"
+[87] [INSTANCE] instance_property_set | instance_name="TextButton8", property="Parent", instance_class="TextButton", value={Draggable=true, _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Size={Y={Scale=0, Offset=150}, X={Scale=0, Offset=400}, ClassName="UDim2"}, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, _className="Frame", _properties={}, BorderSizePixel=0, ...}
+[88] [DATATYPE] udim2_new | xOffset=180, xScale=0, yScale=0, yOffset=35
+[89] [INSTANCE] instance_property_set | instance_name="TextButton8", property="Size", instance_class="TextButton", value={Y={Scale=0, Offset=35}, X={Scale=0, Offset=180}, ClassName="UDim2"}
+[90] [DATATYPE] udim2_new | xOffset=10, xScale=0, yScale=0, yOffset=80
+[91] [INSTANCE] instance_property_set | instance_name="TextButton8", property="Position", instance_class="TextButton", value={Y={Scale=0, Offset=80}, X={Scale=0, Offset=10}, ClassName="UDim2"}
+[92] [INSTANCE] instance_property_set | instance_name="TextButton8", property="Text", instance_class="TextButton", value="Verify Key"
+[93] [OTHER] enum_access | enum="Font"
+[94] [OTHER] enum_value_access | value="GothamBold", enum="Font"
+[95] [INSTANCE] instance_property_set | instance_name="TextButton8", property="Font", instance_class="TextButton", value={Value=0, Name="GothamBold", EnumType="Font"}
+[96] [INSTANCE] instance_property_set | instance_name="TextButton8", property="TextSize", instance_class="TextButton", value=15
+[97] [DATATYPE] color3_fromrgb | b=255, g=255, r=255
+[98] [INSTANCE] instance_property_set | instance_name="TextButton8", property="TextColor3", instance_class="TextButton", value={R=1, G=1, B=1}
+[99] [DATATYPE] color3_fromrgb | b=120, g=120, r=120
+[100] [INSTANCE] instance_property_set | instance_name="TextButton8", property="BackgroundColor3", instance_class="TextButton", value={R=0.47058823529411764, G=0.47058823529411764, B=0.47058823529411764}
+[101] [INSTANCE] instance_property_set | instance_name="TextButton8", property="BorderSizePixel", instance_class="TextButton", value=0
+[102] [INSTANCE] instance_new | uniqueName="UICorner9", hasParent=true, className="UICorner"
+[103] [INSTANCE] instance_property_set | instance_name="UICorner9", property="Parent", instance_class="UICorner", value={_className="TextButton", _name="TextButton8", TextColor3={B=1, G=1, R=1}, Parent={_className="Frame", _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Draggable=true, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, BackgroundColor3={B=0.0784313725490196, G=0.0784313725490196, R=0.0784313725490196}, _properties={}, BorderSizePixel=0, ...}, Text="Verify Key", Size={Y={Scale=0, Offset=35}, X={Scale=0, Offset=180}, ClassName="UDim2"}, Font={Value=0, Name="GothamBold", EnumType="Font"}, _children={_className="Frame", _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Draggable=true, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, BackgroundColor3={B=0.0784313725490196, G=0.0784313725490196, R=0.0784313725490196}, _properties={}, BorderSizePixel=0, ...}, Position={Y={Scale=0, Offset=80}, X={Scale=0, Offset=10}, ClassName="UDim2"}, TextSize=15, ...}
+[104] [DATATYPE] udim_new | scale=0, offset=6
+[105] [INSTANCE] instance_property_set | instance_name="UICorner9", property="CornerRadius", instance_class="UICorner", value={Offset=6, Scale=0, ClassName="UDim"}
+[106] [INSTANCE] instance_property_set | instance_name="TextButton8", property="Active", instance_class="TextButton", value=false
+[107] [INSTANCE] instance_new | uniqueName="TextButton10", hasParent=true, className="TextButton"
+[108] [INSTANCE] instance_property_set | instance_name="TextButton10", property="Parent", instance_class="TextButton", value={Draggable=true, _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Size={Y={Scale=0, Offset=150}, X={Scale=0, Offset=400}, ClassName="UDim2"}, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, _className="Frame", _properties={}, BorderSizePixel=0, ...}
+[109] [DATATYPE] udim2_new | xOffset=180, xScale=0, yScale=0, yOffset=35
+[110] [INSTANCE] instance_property_set | instance_name="TextButton10", property="Size", instance_class="TextButton", value={Y={Scale=0, Offset=35}, X={Scale=0, Offset=180}, ClassName="UDim2"}
+[111] [DATATYPE] udim2_new | xOffset=-190, xScale=1, yScale=0, yOffset=80
+[112] [INSTANCE] instance_property_set | instance_name="TextButton10", property="Position", instance_class="TextButton", value={Y={Scale=0, Offset=80}, X={Scale=1, Offset=-190}, ClassName="UDim2"}
+[113] [INSTANCE] instance_property_set | instance_name="TextButton10", property="Text", instance_class="TextButton", value="Discord (Copy Invite)"
+[114] [OTHER] enum_access | enum="Font"
+[115] [OTHER] enum_value_access | value="GothamBold", enum="Font"
+[116] [INSTANCE] instance_property_set | instance_name="TextButton10", property="Font", instance_class="TextButton", value={Value=0, Name="GothamBold", EnumType="Font"}
+[117] [INSTANCE] instance_property_set | instance_name="TextButton10", property="TextSize", instance_class="TextButton", value=15
+[118] [DATATYPE] color3_fromrgb | b=255, g=255, r=255
+[119] [INSTANCE] instance_property_set | instance_name="TextButton10", property="TextColor3", instance_class="TextButton", value={R=1, G=1, B=1}
+[120] [DATATYPE] color3_fromrgb | b=242, g=101, r=88
+[121] [INSTANCE] instance_property_set | instance_name="TextButton10", property="BackgroundColor3", instance_class="TextButton", value={R=0.34509803921568627, G=0.396078431372549, B=0.9490196078431372}
+[122] [INSTANCE] instance_property_set | instance_name="TextButton10", property="BorderSizePixel", instance_class="TextButton", value=0
+[123] [INSTANCE] instance_new | uniqueName="UICorner11", hasParent=true, className="UICorner"
+[124] [INSTANCE] instance_property_set | instance_name="UICorner11", property="Parent", instance_class="UICorner", value={_className="TextButton", _name="TextButton10", TextColor3={B=1, G=1, R=1}, Parent={_className="Frame", _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Draggable=true, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, BackgroundColor3={B=0.0784313725490196, G=0.0784313725490196, R=0.0784313725490196}, _properties={}, BorderSizePixel=0, ...}, Text="Discord (Copy Invite)", Size={Y={Scale=0, Offset=35}, X={Scale=0, Offset=180}, ClassName="UDim2"}, Font={Value=0, Name="GothamBold", EnumType="Font"}, _children={_className="Frame", _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Draggable=true, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, BackgroundColor3={B=0.0784313725490196, G=0.0784313725490196, R=0.0784313725490196}, _properties={}, BorderSizePixel=0, ...}, Position={Y={Scale=0, Offset=80}, X={Scale=1, Offset=-190}, ClassName="UDim2"}, TextSize=15, ...}
+[125] [DATATYPE] udim_new | scale=0, offset=6
+[126] [INSTANCE] instance_property_set | instance_name="UICorner11", property="CornerRadius", instance_class="UICorner", value={Offset=6, Scale=0, ClassName="UDim"}
+[127] [INSTANCE] instance_new | uniqueName="TextLabel12", hasParent=true, className="TextLabel"
+[128] [INSTANCE] instance_property_set | instance_name="TextLabel12", property="Parent", instance_class="TextLabel", value={Draggable=true, _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Size={Y={Scale=0, Offset=150}, X={Scale=0, Offset=400}, ClassName="UDim2"}, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, _className="Frame", _properties={}, BorderSizePixel=0, ...}
+[129] [INSTANCE] instance_property_set | instance_name="TextLabel12", property="Text", instance_class="TextLabel", value="Join our Discord to get the key."
+[130] [DATATYPE] udim2_new | xOffset=-20, xScale=1, yScale=0, yOffset=20
+[131] [INSTANCE] instance_property_set | instance_name="TextLabel12", property="Size", instance_class="TextLabel", value={Y={Scale=0, Offset=20}, X={Scale=1, Offset=-20}, ClassName="UDim2"}
+[132] [DATATYPE] udim2_new | xOffset=10, xScale=0, yScale=0, yOffset=120
+[133] [INSTANCE] instance_property_set | instance_name="TextLabel12", property="Position", instance_class="TextLabel", value={Y={Scale=0, Offset=120}, X={Scale=0, Offset=10}, ClassName="UDim2"}
+[134] [INSTANCE] instance_property_set | instance_name="TextLabel12", property="BackgroundTransparency", instance_class="TextLabel", value=1
+[135] [OTHER] enum_access | enum="Font"
+[136] [OTHER] enum_value_access | value="Gotham", enum="Font"
+[137] [INSTANCE] instance_property_set | instance_name="TextLabel12", property="Font", instance_class="TextLabel", value={Value=0, Name="Gotham", EnumType="Font"}
+[138] [INSTANCE] instance_property_set | instance_name="TextLabel12", property="TextSize", instance_class="TextLabel", value=13
+[139] [DATATYPE] color3_fromrgb | b=220, g=220, r=220
+[140] [INSTANCE] instance_property_set | instance_name="TextLabel12", property="TextColor3", instance_class="TextLabel", value={R=0.8627450980392157, G=0.8627450980392157, B=0.8627450980392157}
+[141] [OTHER] enum_access | enum="TextXAlignment"
+[142] [OTHER] enum_value_access | value="Left", enum="TextXAlignment"
+[143] [INSTANCE] instance_property_set | instance_name="TextLabel12", property="TextXAlignment", instance_class="TextLabel", value={Value=0, Name="Left", EnumType="TextXAlignment"}
+[144] [INSTANCE] instance_new | uniqueName="TextLabel13", hasParent=true, className="TextLabel"
+[145] [INSTANCE] instance_property_set | instance_name="TextLabel13", property="Parent", instance_class="TextLabel", value={Draggable=true, _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Size={Y={Scale=0, Offset=150}, X={Scale=0, Offset=400}, ClassName="UDim2"}, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, _className="Frame", _properties={}, BorderSizePixel=0, ...}
+[146] [INSTANCE] instance_property_set | instance_name="TextLabel13", property="Text", instance_class="TextLabel", value="Status: waiting..."
+[147] [DATATYPE] udim2_new | xOffset=-20, xScale=1, yScale=0, yOffset=20
+[148] [INSTANCE] instance_property_set | instance_name="TextLabel13", property="Size", instance_class="TextLabel", value={Y={Scale=0, Offset=20}, X={Scale=1, Offset=-20}, ClassName="UDim2"}
+[149] [DATATYPE] udim2_new | xOffset=10, xScale=0, yScale=1, yOffset=-20
+[150] [INSTANCE] instance_property_set | instance_name="TextLabel13", property="Position", instance_class="TextLabel", value={Y={Scale=1, Offset=-20}, X={Scale=0, Offset=10}, ClassName="UDim2"}
+[151] [INSTANCE] instance_property_set | instance_name="TextLabel13", property="BackgroundTransparency", instance_class="TextLabel", value=1
+[152] [OTHER] enum_access | enum="Font"
+[153] [OTHER] enum_value_access | value="Gotham", enum="Font"
+[154] [INSTANCE] instance_property_set | instance_name="TextLabel13", property="Font", instance_class="TextLabel", value={Value=0, Name="Gotham", EnumType="Font"}
+[155] [INSTANCE] instance_property_set | instance_name="TextLabel13", property="TextSize", instance_class="TextLabel", value=13
+[156] [DATATYPE] color3_fromrgb | b=190, g=190, r=190
+[157] [INSTANCE] instance_property_set | instance_name="TextLabel13", property="TextColor3", instance_class="TextLabel", value={R=0.7450980392156863, G=0.7450980392156863, B=0.7450980392156863}
+[158] [OTHER] enum_access | enum="TextXAlignment"
+[159] [OTHER] enum_value_access | value="Left", enum="TextXAlignment"
+[160] [INSTANCE] instance_property_set | instance_name="TextLabel13", property="TextXAlignment", instance_class="TextLabel", value={Value=0, Name="Left", EnumType="TextXAlignment"}
+[161] [OTHER] setmetatable | hasMetatable=true
+[162] [OTHER] setmetatable | hasMetatable=true
+[163] [INSTANCE] instance_access | instance="TextButton10", property="MouseButton1Click", className="TextButton"
+[164] [OTHER] setmetatable | hasMetatable=true
+[165] [OTHER] signal_connect | instance="TextButton10", signal="MouseButton1Click"
+[166] [INSTANCE] instance_access | instance="TextBox6", property="GetPropertyChangedSignal", className="TextBox"
+[167] [INSTANCE] instance_call | instance="TextBox6.GetPropertyChangedSignal", args={1={_className="TextBox", _name="TextBox6", TextColor3={B=0.0784313725490196, G=0.0784313725490196, R=0.0784313725490196}, Parent={_className="Frame", _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Draggable=true, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, BackgroundColor3={B=0.0784313725490196, G=0.0784313725490196, R=0.0784313725490196}, _properties={}, BorderSizePixel=0, ...}, Text="", BorderSizePixel=0, _properties={}, Font={Value=0, Name="Gotham", EnumType="Font"}, _children={_className="Frame", _name="Frame2", Active=true, Parent={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Draggable=true, _children={_properties={}, _name="ScreenGui1", _children={}, Parent={}, ResetOnSpawn=false, Name="BAR1S & DEFFENDERS", _className="ScreenGui"}, Position={Y={Scale=0.5, Offset=-75}, X={Scale=0.5, Offset=-200}, ClassName="UDim2"}, BackgroundColor3={B=0.0784313725490196, G=0.0784313725490196, R=0.0784313725490196}, _properties={}, BorderSizePixel=0, ...}, Position={Y={Scale=0, Offset=35}, X={Scale=0, Offset=10}, ClassName="UDim2"}, ...}, 2="Text"}
+[168] [OUTPUT] execution_error | error="/app/temp/scripts/script_1763912347687.lua:1: attempt to index nil with 'Connect'", traceback="/app/temp/scripts/script_1763912347687.lua:1: attempt to index nil with 'Connect'\n/app/temp/scripts/script_1763912347687.lua:1 function ae\n/app/temp/scripts/script_1763912347687.lua:1 function ee\n/app/temp/scripts/script_1763912347687.lua:1\n/app/temp/scripts/script_1763912347687.lua:1\n/app/main:97\n/app/main:95\n"
+
+-- End of raw log
