@@ -671,7 +671,7 @@ screenGui.Parent = game.CoreGui
 local toggleButton = Instance.new("ImageButton")
 toggleButton.Size = UDim2.new(0, 50, 0, 50)
 toggleButton.Position = UDim2.new(0.15, 0, 0.15, 0)
-toggleButton.Image = "rbxassetid://115806510176270"
+toggleButton.Image = "rbxassetid://108466988778020"
 toggleButton.BackgroundTransparency = 1
 toggleButton.Parent = screenGui
 
@@ -751,7 +751,84 @@ toggleButton.MouseButton1Click:Connect(function()
     end
 end)
 
+--// Notification System
+
+local StarterGui = game:GetService("StarterGui")
+
+-- Hàm tạo thông báo
+local function CreateNotification(title, message, imageId, duration)
+    duration = duration or 4
+
+    -- Frame chính
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    local notify = Instance.new("Frame")
+    notify.Size = UDim2.new(0, 280, 0, 90)
+    notify.Position = UDim2.new(1, -300, 1, 120) -- ngoài màn hình (chuẩn bị trượt vào)
+    notify.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    notify.BackgroundTransparency = 0.15
+    notify.BorderSizePixel = 0
+    notify.Parent = screenGui
+    notify.ClipsDescendants = true
+
+    -- Bo góc
+    Instance.new("UICorner", notify).CornerRadius = UDim.new(0, 10)
+
+    -- Icon avatar
+    local icon = Instance.new("ImageLabel")
+    icon.Size = UDim2.new(0, 70, 0, 70)
+    icon.Position = UDim2.new(0, 10, 0, 10)
+    icon.Image = imageId
+    icon.BackgroundTransparency = 1
+    icon.Parent = notify
+    Instance.new("UICorner", icon).CornerRadius = UDim.new(1, 0)
+
+    -- Tiêu đề
+    local titleLabel = Instance.new("TextLabel")
+    titleLabel.Position = UDim2.new(0, 90, 0, 10)
+    titleLabel.Size = UDim2.new(1, -100, 0, 25)
+    titleLabel.Text = title
+    titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    titleLabel.TextSize = 18
+    titleLabel.Font = Enum.Font.GothamBold
+    titleLabel.BackgroundTransparency = 1
+    titleLabel.Parent = notify
+
+    -- Nội dung
+    local messageLabel = Instance.new("TextLabel")
+    messageLabel.Position = UDim2.new(0, 90, 0, 40)
+    messageLabel.Size = UDim2.new(1, -100, 0, 45)
+    messageLabel.Text = message
+    messageLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+    messageLabel.TextSize = 15
+    messageLabel.Font = Enum.Font.Gotham
+    messageLabel.TextWrapped = true
+    messageLabel.BackgroundTransparency = 1
+    messageLabel.Parent = notify
+
+    -- Hiệu ứng trượt vào
+    notify:TweenPosition(UDim2.new(1, -300, 1,-120), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.4, true)
+
+    task.wait(duration)
+
+    -- Hiệu ứng biến mất
+    notify:TweenPosition(UDim2.new(0, -50, 0, 50), Enum.EasingDirection.In, Enum.EasingStyle.Quint, 0.4, true)
+
+    task.wait(0.4)
+    screenGui:Destroy()
+end
+
+-- Ví dụ sử dụng
+CreateNotification(
+    "Night Slayer Hub",
+    "Script Night Slayer Hub Successfully remade ",
+    "rbxassetid://108466988778020",
+    5
+)
+
 local Tabs = {
+  Info = Window:AddTab({Title = "Tab Info", Icon = "info"}),
   Main = Window:AddTab({Title = "Tab Farming", Icon = "home"}),
   Settings = Window:AddTab({Title = "Tab Setting Farm", Icon = "hammer"}),
   Melee = Window:AddTab({Title = "Tab Auto Get Melee V2", Icon = "flame"}),
@@ -768,7 +845,7 @@ local Tabs = {
   Misc = Window:AddTab({Title = "Tab Misc", Icon = "settings"}),
 }
 
-Tabs.Main:AddButton({
+Tabs.Info:AddButton({
         Title="Link Join Sever Discord",
         Description="https://discord.gg/TnEvytWux",
         Callback=function()
