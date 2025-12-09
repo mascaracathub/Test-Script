@@ -1,0 +1,104 @@
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+local VirtualInputManager = game:GetService('VirtualInputManager')
+
+local StartQuestionEvent = ReplicatedStorage.Events:WaitForChild('StartQuestion')
+local QuestionDataEvent = ReplicatedStorage.Events:WaitForChild('QuestionData')
+
+local allRounds = {}
+local currentRound = nil
+
+---->>> CONFIG <<<----
+
+--[[
+    Speed Translations: 
+
+    ["SUPER FAST ANSWER!"] = < 1.5,
+    ["SPEEDY ANSWER!"] = < 3
+
+--]]
+
+local waitTime = 0.1
+
+---->>>>>><<<<<<----
+
+
+local function PressKey(keyNumber)
+    local keyMap = {
+        [1] = Enum.KeyCode.One,
+        [2] = Enum.KeyCode.Two,
+        [3] = Enum.KeyCode.Three,
+        [4] = Enum.KeyCode.Four,
+    }
+
+    local keyCode = keyMap[keyNumber]
+    VirtualInputManager:SendKeyEvent(true, keyCode, false, game)
+    task.wait(0.05)
+    VirtualInputManager:SendKeyEvent(false, keyCode, false, game)
+end
+
+-->> Capture QuestionData info for all rounds
+
+--[[
+    For some reason when a round starts, they send you:
+
+    - Current Round #
+    - Round Type (Vote, Song)
+    - Options in the form of IDs (37, 48, 63, 92)
+    - SongNum in the form of an ID. [Ex. 48]
+
+    + Data for future rounds (upwards of 20 rounds)
+    + SongNum is always the correct song choice
+--]]
+
+QuestionDataEvent.OnClientEvent:Connect(function(roundsTable)
+    for _, roundData in ipairs(roundsTable) do
+        allRounds[roundData.Round] = roundData
+    end
+end)
+
+-->> Listen for when a new round starts
+StartQuestionEvent.OnClientEvent:Connect(function(data)
+    if not data or not data.RoundNumber then
+        return
+    end
+
+    local roundNumber = data.RoundNumber
+    local roundInfo = allRounds[roundNumber]
+    if not roundInfo then
+        warn('⚠️ No data found for round', roundNumber)
+        return
+    end
+
+    -->> Determine the correct option and button index
+    if roundInfo.RoundType == 'Song' then
+        local correctSongNum = roundInfo.SongNum
+
+        -->> They put this in the UI's localscript for some reason
+        local correctIndex = table.find(roundInfo.Options, correctSongNum)
+
+        if correctIndex then
+            --[[
+                The correctIndex is a number (1-4) which represents your four buttons.
+                I just get that number by using table.find with the same args they used in
+                the localscript. "LocalPlayer.PlayerGui.QuestionGUI.GameClient"
+
+                "if table.find(v154.Options, v154.ArtistNum or v154.SongNum) == u47 then"
+            --]]
+
+            -->> Since there's no event or anything to submit your selection I just fake a key press.
+            task.wait(waitTime)
+            PressKey(correctIndex)
+        else
+            warn('⚠️ Could not find SongNum in options for this round.')
+        end
+    elseif roundInfo.RoundType == 'Vote' then
+        -->> Voting rounds don't have a correct answer but voting 
+        -->> will always give you some extra height for some reason
+        task.wait(6)
+        PressKey(1)
+    else
+        warn('⚠️ Unknown round type:', roundInfo.RoundType)
+    end
+end)
+
+print("✅ [Auto Guesser] Initialized")
