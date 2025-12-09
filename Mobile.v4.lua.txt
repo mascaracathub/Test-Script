@@ -1951,7 +1951,7 @@ end
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Night Slayer Hub",
+    Title = "Night Slayer Hub : FREEMUIM",
     SubTitle = "Blox Fruits",
     TabWidth = 185,
     Size = UDim2.fromOffset(555, 414),
@@ -1961,7 +1961,7 @@ local Window = Fluent:CreateWindow({
 })
 local Tabs = {
     Main = Window:AddTab({ Title = "Tab Farming", Icon = "home" }),
-    Settings = Window:AddTab({ Title = "Tab Config", Icon = "settings" }),
+    Settings = Window:AddTab({ Title = "Tab Settings", Icon = "settings" }),
     Melee = Window:AddTab({ Title = "Tab Fighting Style", Icon = "sword" }),
     Quests = Window:AddTab({ Title = "Tab Items Farm", Icon = "target" }),
     New = Window:AddTab({ Title = "Tab Events", Icon = "star" }),
@@ -1976,20 +1976,6 @@ local Tabs = {
     Shop = Window:AddTab({ Title = "Tab Shop", Icon = "shopping-bag" }),
     Misc = Window:AddTab({ Title = "Tab Misc", Icon = "grid" })
 }
-local function FlyAround(duration)
-    duration = duration or 3
-    local t = tick()
-    while tick() - t < duration and _G.Level do
-        local angle = (tick() * 2) % (2 * math.pi)
-        local radius = 15
-        local x = math.cos(angle) * radius
-        local z = math.sin(angle) * radius
-        local newPos = Root.CFrame * CFrame.new(x, 10, z)
-        _tp(newPos)
-        task.wait(0.03)
-    end
-end
-
 local FarmLevel = Tabs.Main:AddToggle("FarmLevel", {
     Title = "Auto Farm Level",
     Description = "Auto Farm Level, Stable",
@@ -2038,9 +2024,6 @@ spawn(function()
                         Attack.Kill(Target, _G.Level)
                         task.wait()
                     until not _G.Level or Target.Humanoid.Health <= 0 or not Target.Parent or not Quest.Visible
-
-                    FlyAround(3)
-
                 else
                     _tp(MobPos)
                 end
@@ -10925,30 +10908,63 @@ task.spawn(function()
     end)
 end)
 Window:SelectTab(1)
-local ScreenGui = Instance.new("ScreenGui");
-local ImageButton = Instance.new("ImageButton");
-local UICorner = Instance.new("UICorner");
-local ParticleEmitter = Instance.new("ParticleEmitter");
-local TweenService = game:GetService("TweenService");
-ScreenGui.Parent = game.CoreGui;
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
-ImageButton.Parent = ScreenGui;
-ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0);
-ImageButton.BorderSizePixel = 0;
-ImageButton.Position = UDim2.new(0.120833337 - 0.1, 0, 0.0952890813 + 0.01, 0);
-ImageButton.Size = UDim2.new(0, 50, 0, 50);
-ImageButton.Draggable = true;
-ImageButton.Image = "http://www.roblox.com/asset/?id=91521936822360";
-UICorner.Parent = ImageButton;
-UICorner.CornerRadius = UDim.new(0, 12);
-ParticleEmitter.Parent = ImageButton;
-ParticleEmitter.LightEmission = 1;
-ParticleEmitter.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.1),NumberSequenceKeypoint.new(1, 0)});
-ParticleEmitter.Lifetime = NumberRange.new(0.5, 1);
-ParticleEmitter.Rate = 0;
-ParticleEmitter.Speed = NumberRange.new(5, 10);
-ParticleEmitter.Color = ColorSequence.new(Color3.fromRGB(255, 85, 255), Color3.fromRGB(85, 255, 255));
-local rotateTween = TweenService:Create(ImageButton, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Rotation=360});
+local player = game:GetService("Players").LocalPlayer
+local PlayerGui = player:WaitForChild("PlayerGui")
+
+if PlayerGui:FindFirstChild("NightSlayerHub_Logo") then
+	PlayerGui:FindFirstChild("NightSlayerHub_Logo"):Destroy()
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "NightSlayerHub_Logo"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Parent = PlayerGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local ImageButton = Instance.new("ImageButton")
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.020, 0, 0.12, 0)
+ImageButton.Size = UDim2.new(0, 50, 0, 50)
+ImageButton.Draggable = true
+ImageButton.Image = "rbxassetid://91521936822360"
+
+local UICorner = Instance.new("UICorner", ImageButton)
+UICorner.CornerRadius = UDim.new(0, 12)
+
+local Label = Instance.new("TextLabel")
+Label.Parent = ScreenGui
+Label.Text = "Night Slayer Hub"
+Label.Font = Enum.Font.GothamBold
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextSize = 14
+Label.BackgroundTransparency = 1
+Label.AnchorPoint = Vector2.new(0.5, 0)
+Label.Position = UDim2.new(0.020 + 0.03, 0, 0.12 + 0.065, 0)
+
+local ParticleEmitter = Instance.new("ParticleEmitter")
+ParticleEmitter.Parent = ImageButton
+ParticleEmitter.LightEmission = 1
+ParticleEmitter.Size = NumberSequence.new({
+	NumberSequenceKeypoint.new(0, 0.1),
+	NumberSequenceKeypoint.new(1, 0)
+})
+ParticleEmitter.Lifetime = NumberRange.new(0.5, 1)
+ParticleEmitter.Rate = 0
+ParticleEmitter.Speed = NumberRange.new(5, 10)
+ParticleEmitter.Color = ColorSequence.new(
+	Color3.fromRGB(255, 85, 255),
+	Color3.fromRGB(85, 255, 255)
+)
+
+local TweenService = game:GetService("TweenService")
+local rotateTween = TweenService:Create(ImageButton,
+	TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+	{Rotation = 360}
+)
+
 ImageButton.MouseButton1Down:Connect(function()
-	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game);
-end);
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+	rotateTween:Play()
+end)
