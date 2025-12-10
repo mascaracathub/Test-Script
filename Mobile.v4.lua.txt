@@ -1948,17 +1948,102 @@ QuestNeta = function()
         [6] = PosQ
     }
 end
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/AnhTuanDzai-Hub/UIMenu/refs/heads/main/TuanAnhIOS/Uifluent.lua"))()
 local Window = Fluent:CreateWindow({
-    Title = "Night Slayer Hub : FREEMUIM",
-    SubTitle = "Blox Fruits",
-    TabWidth = 185,
-    Size = UDim2.fromOffset(555, 414),
-    Acrylic = false,
-    Theme = "Darker",
-    MinimizeKey = Enum.KeyCode.End
+    Title="Night Slayer Hub",
+    SubTitle="  by nguyentuananh", 
+    TabWidth=170, 
+    Theme="Dark",
+    Acrylic=false,
+    Size=UDim2.fromOffset(530, 350), 
+    MinimizeKey=Enum.KeyCode.End
 })
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "ControlGUI"
+screenGui.Parent = game.CoreGui
+
+local toggleButton = Instance.new("ImageButton")
+toggleButton.Size = UDim2.new(0, 50, 0, 50)
+toggleButton.Position = UDim2.new(0.10, 0, 0.10, 0)
+toggleButton.Image = "rbxassetid://114207146879405"
+toggleButton.BackgroundTransparency = 1
+toggleButton.Parent = screenGui
+
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0.25, 0)
+corner.Parent = toggleButton
+
+local stroke = Instance.new("UIStroke")
+stroke.Thickness = 2
+stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+stroke.Parent = toggleButton
+
+local rainbowColors = {
+    Color3.fromRGB(255, 0, 0),    -- đỏ
+    Color3.fromRGB(255, 127, 0),  -- cam
+    Color3.fromRGB(255, 255, 0),  -- vàng
+    Color3.fromRGB(0, 255, 0),    -- lục
+    Color3.fromRGB(0, 255, 255),  -- lam
+    Color3.fromRGB(0, 0, 255),    -- chàm
+    Color3.fromRGB(139, 0, 255),  -- tím
+}
+
+task.spawn(function()
+    local i = 1
+    while true do
+        stroke.Color = rainbowColors[i]
+        i = (i % #rainbowColors) + 1
+        task.wait(0.5) -- thời gian đổi màu
+    end
+end)
+local isFluentVisible = true
+
+local dragging, dragInput, dragStart, startPos
+
+local function update(input)
+    local delta = input.Position - dragStart
+    toggleButton.Position = UDim2.new(
+        startPos.X.Scale,
+        startPos.X.Offset + delta.X,
+        startPos.Y.Scale,
+        startPos.Y.Offset + delta.Y
+    )
+end
+
+toggleButton.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = toggleButton.Position
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+toggleButton.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.Touch or input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
+    end
+end)
+
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+    if dragging and input == dragInput then
+        update(input)
+    end
+end)
+
+toggleButton.MouseButton1Click:Connect(function()
+    isFluentVisible = not isFluentVisible
+
+    if isFluentVisible then
+        Window:Minimize(false) -- Mở lại cửa sổ
+    else
+        Window:Minimize(true) -- Thu nhỏ cửa sổ
+    end
+end)
 local Tabs = {
     Main = Window:AddTab({ Title = "Tab Farming", Icon = "home" }),
     Settings = Window:AddTab({ Title = "Tab Settings", Icon = "settings" }),
@@ -10908,63 +10993,3 @@ task.spawn(function()
     end)
 end)
 Window:SelectTab(1)
-local player = game:GetService("Players").LocalPlayer
-local PlayerGui = player:WaitForChild("PlayerGui")
-
-if PlayerGui:FindFirstChild("NightSlayerHub_Logo") then
-	PlayerGui:FindFirstChild("NightSlayerHub_Logo"):Destroy()
-end
-
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "NightSlayerHub_Logo"
-ScreenGui.ResetOnSpawn = false
-ScreenGui.Parent = PlayerGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-local ImageButton = Instance.new("ImageButton")
-ImageButton.Parent = ScreenGui
-ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(0.020, 0, 0.12, 0)
-ImageButton.Size = UDim2.new(0, 50, 0, 50)
-ImageButton.Draggable = true
-ImageButton.Image = "rbxassetid://91521936822360"
-
-local UICorner = Instance.new("UICorner", ImageButton)
-UICorner.CornerRadius = UDim.new(0, 12)
-
-local Label = Instance.new("TextLabel")
-Label.Parent = ScreenGui
-Label.Text = "Night Slayer Hub"
-Label.Font = Enum.Font.GothamBold
-Label.TextColor3 = Color3.fromRGB(255, 255, 255)
-Label.TextSize = 14
-Label.BackgroundTransparency = 1
-Label.AnchorPoint = Vector2.new(0.5, 0)
-Label.Position = UDim2.new(0.020 + 0.03, 0, 0.12 + 0.065, 0)
-
-local ParticleEmitter = Instance.new("ParticleEmitter")
-ParticleEmitter.Parent = ImageButton
-ParticleEmitter.LightEmission = 1
-ParticleEmitter.Size = NumberSequence.new({
-	NumberSequenceKeypoint.new(0, 0.1),
-	NumberSequenceKeypoint.new(1, 0)
-})
-ParticleEmitter.Lifetime = NumberRange.new(0.5, 1)
-ParticleEmitter.Rate = 0
-ParticleEmitter.Speed = NumberRange.new(5, 10)
-ParticleEmitter.Color = ColorSequence.new(
-	Color3.fromRGB(255, 85, 255),
-	Color3.fromRGB(85, 255, 255)
-)
-
-local TweenService = game:GetService("TweenService")
-local rotateTween = TweenService:Create(ImageButton,
-	TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-	{Rotation = 360}
-)
-
-ImageButton.MouseButton1Down:Connect(function()
-	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
-	rotateTween:Play()
-end)
