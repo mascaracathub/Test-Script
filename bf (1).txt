@@ -3743,7 +3743,6 @@ l_ImageButton_0.MouseButton1Click:Connect(function()
 end)
 local v484 = v466:MakeTab({"Tab Info", "info"})
 local v485 = v466:MakeTab({"Tab Farming", "home"})
-local v496 = v466:MakeTab({"Tab Settings", "settings"})
 local v486 = v466:MakeTab({"Tab Auto Fishing", "rbxassetid://127664059821666"})
 local v487 = v466:MakeTab({"Tab Quest | Items", "swords"})
 local v488 = v466:MakeTab({"Tab Volcano Dojo", "cake"})
@@ -3754,6 +3753,7 @@ local v492 = v466:MakeTab({"Tab Fruits | Check Stock", "apple"})
 local v493 = v466:MakeTab({"Tab Teleport", "locate"})
 local v494 = v466:MakeTab({"Tab PvP - Player", "user"})
 local v495 = v466:MakeTab({"Tab Shop", "shoppingCart"})
+local v496 = v466:MakeTab({"Tab Settings", "settings"})
 v484:AddDiscordInvite({
     Name = "Tham Gia Discord",
     Description = "Link Sever Discord",
