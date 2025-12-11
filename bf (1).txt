@@ -8872,7 +8872,7 @@ v494:AddSlider({
     end
 })
 v494:AddSlider({
-    Title = "Nh\225\186\163y Cao by tuananhiosdz",
+    Title = "Nh\225\186\163y Cao by danno",
     Min = 50,
     Max = 500,
     Default = getgenv().JumpValue,
@@ -8908,176 +8908,22 @@ spawn(function()
         end
     end
 end)
---========================================================
--- ESP CONFIG
---========================================================
-local ESP_COLOR = Color3.fromRGB(0,255,0)
-local ESP_ENABLED = false
-local Drawings = {}
-
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local Camera = workspace.CurrentCamera
-local LocalPlayer = Players.LocalPlayer
-
---========================================================
--- ESP CREATE
---========================================================
-local function CreateESP(plr)
-    if plr == LocalPlayer then return end
-    if Drawings[plr] then return end
-
-    Drawings[plr] = {
-        Box = Drawing.new("Square"),
-        Name = Drawing.new("Text"),
-        Dist = Drawing.new("Text"),
-        Head = Drawing.new("Circle"),
-        Health = Drawing.new("Line"),
-        Tracer = Drawing.new("Line"),
-    }
-
-    local d = Drawings[plr]
-
-    d.Box.Color = ESP_COLOR
-    d.Box.Thickness = 1.5
-    d.Box.Filled = false
-    d.Box.Visible = false
-
-    d.Name.Color = ESP_COLOR
-    d.Name.Size = 16
-    d.Name.Center = true
-    d.Name.Outline = true
-    d.Name.Visible = false
-
-    d.Dist.Color = ESP_COLOR
-    d.Dist.Size = 14
-    d.Dist.Center = true
-    d.Dist.Outline = true
-    d.Dist.Visible = false
-
-    d.Head.Color = ESP_COLOR
-    d.Head.Radius = 6
-    d.Head.Thickness = 1
-    d.Head.Filled = false
-    d.Head.Visible = false
-
-    d.Health.Color = Color3.new(0,1,0)
-    d.Health.Thickness = 3
-    d.Health.Visible = false
-
-    d.Tracer.Color = ESP_COLOR
-    d.Tracer.Thickness = 1
-    d.Tracer.Visible = false
-end
-
-local function RemoveESP(plr)
-    if Drawings[plr] then
-        for _,obj in pairs(Drawings[plr]) do
-            obj:Remove()
-        end
-        Drawings[plr] = nil
-    end
-end
-
-Players.PlayerAdded:Connect(CreateESP)
-Players.PlayerRemoving:Connect(RemoveESP)
-
-for _,p in ipairs(Players:GetPlayers()) do
-    CreateESP(p)
-end
-
---========================================================
--- ESP UPDATE LOOP
---========================================================
-RunService.RenderStepped:Connect(function()
-    if not ESP_ENABLED then
-        for _,d in pairs(Drawings) do
-            d.Box.Visible = false
-            d.Name.Visible = false
-            d.Dist.Visible = false
-            d.Head.Visible = false
-            d.Health.Visible = false
-            d.Tracer.Visible = false
-        end
-        return
-    end
-
-    local lpChar = LocalPlayer.Character
-    local lpHRP = lpChar and lpChar:FindFirstChild("HumanoidRootPart")
-    if not lpHRP then return end
-
-    for plr,d in pairs(Drawings) do
-        local char = plr.Character
-        local hrp = char and char:FindFirstChild("HumanoidRootPart")
-        local head = char and char:FindFirstChild("Head")
-        local hum = char and char:FindFirstChild("Humanoid")
-
-        if hrp and head and hum then
-            local pos, visible = Camera:WorldToViewportPoint(hrp.Position)
-            if not visible then
-                d.Box.Visible = false
-                d.Name.Visible = false
-                d.Dist.Visible = false
-                d.Head.Visible = false
-                d.Health.Visible = false
-                d.Tracer.Visible = false
-                continue
-            end
-
-            local dist = (lpHRP.Position - hrp.Position).Magnitude
-            local scale = 200 / dist
-            local bw, bh = 50 * scale, 60 * scale
-
-            d.Box.Size = Vector2.new(bw, bh)
-            d.Box.Position = Vector2.new(pos.X - bw/2, pos.Y - bh/2)
-            d.Box.Visible = true
-
-            d.Name.Text = plr.Name
-            d.Name.Position = Vector2.new(pos.X, pos.Y - bh/2 - 15)
-            d.Name.Visible = true
-
-            d.Dist.Text = string.format("%dm", math.floor(dist))
-            d.Dist.Position = Vector2.new(pos.X, pos.Y + bh/2 + 3)
-            d.Dist.Visible = true
-
-            local headPos, vis2 = Camera:WorldToViewportPoint(head.Position)
-            if vis2 then
-                d.Head.Position = Vector2.new(headPos.X, headPos.Y)
-                d.Head.Visible = true
-            else
-                d.Head.Visible = false
-            end
-
-            local hp = hum.Health / hum.MaxHealth
-            local hpH = bh * hp
-
-            d.Health.From = Vector2.new(pos.X - bw/2 - 6, pos.Y + bh/2)
-            d.Health.To = Vector2.new(pos.X - bw/2 - 6, pos.Y + bh/2 - hpH)
-            d.Health.Visible = true
-
-            d.Tracer.From = Vector2.new(Camera.ViewportSize.X/2, Camera.ViewportSize.Y)
-            d.Tracer.To = Vector2.new(pos.X, pos.Y + bh/2)
-            d.Tracer.Visible = true
-
-        else
-            d.Box.Visible = false
-            d.Name.Visible = false
-            d.Dist.Visible = false
-            d.Head.Visible = false
-            d.Health.Visible = false
-            d.Tracer.Visible = false
-        end
-    end
-end)
-
---========================================================
--- UI TOGGLE
---========================================================
+local _ = v494:AddSection({"Esp | \196\144\225\187\139nh V\225\187\139..."})
 v494:AddToggle({
     Title = "Esp Players",
     Value = false,
-    Callback = function(v)
-        ESP_ENABLED = v
+    Callback = function(v1146)
+        ESPPlayer = v1146
+        if ESPPlayer then
+            task.spawn(function()
+                while ESPPlayer do
+                    UpdatePlayerChams()
+                    task.wait(1)
+                end
+            end)
+        else
+            UpdatePlayerChams()
+        end
     end
 })
 v494:AddToggle({
