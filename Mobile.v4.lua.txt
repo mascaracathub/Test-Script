@@ -1951,7 +1951,7 @@ end
 local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/AnhTuanDzai-Hub/UIMenu/refs/heads/main/TuanAnhIOS/Uifluent.lua"))()
 local Window = Fluent:CreateWindow({
     Title="Night Slayer Hub",
-    SubTitle="  by nguyentuananh", 
+    SubTitle="  by danno", 
     TabWidth=170, 
     Theme="Dark",
     Acrylic=false,
@@ -1965,7 +1965,7 @@ screenGui.Parent = game.CoreGui
 local toggleButton = Instance.new("ImageButton")
 toggleButton.Size = UDim2.new(0, 50, 0, 50)
 toggleButton.Position = UDim2.new(0.10, 0, 0.10, 0)
-toggleButton.Image = "rbxassetid://114207146879405"
+toggleButton.Image = "rbxassetid://125003246208510"
 toggleButton.BackgroundTransparency = 1
 toggleButton.Parent = screenGui
 
