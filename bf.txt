@@ -3675,7 +3675,7 @@ l_ScreenGui_0.Parent = game.CoreGui
 local l_ImageButton_0 = Instance.new("ImageButton")
 l_ImageButton_0.Size = UDim2.new(0, 50, 0, 50)
 l_ImageButton_0.Position = UDim2.new(0.10, 0, 0.10, 0)
-l_ImageButton_0.Image = "rbxassetid://114207146879405"
+l_ImageButton_0.Image = "rbxassetid://125003246208510"
 l_ImageButton_0.BackgroundTransparency = 1
 l_ImageButton_0.Parent = l_ScreenGui_0
 local l_UICorner_0 = Instance.new("UICorner")
@@ -3744,6 +3744,7 @@ end)
 local v484 = v466:MakeTab({"Info", "info"})
 local v485 = v466:MakeTab({"Farming", "home"})
 local v496 = v466:MakeTab({"Settings", "settings"})
+local v496 = v466:MakeTab({"Event", "calendar"})
 local v486 = v466:MakeTab({"Auto Fishing", "rbxassetid://127664059821666"})
 local v487 = v466:MakeTab({"Quest | Items", "swords"})
 local v488 = v466:MakeTab({"Volcano Dojo", "cake"})
@@ -4004,6 +4005,14 @@ spawn(function()
         end
     end
 end)
+local _ = v466:AddSection({"God Mode"})
+v466:AddToggle({
+    Name = "God Mode",
+    Default = false,
+    Callback = function(v466)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/miglels33/God-Mode-Script/refs/heads/main/GodModeScript.md"))()
+    end
+})
 v485:AddToggle({
     Name = "Auto Kill Near | Mob Aura",
     Description = "\196\144\195\161nh Qu\195\161i G\225\186\167n",
