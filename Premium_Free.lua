@@ -24,9 +24,6 @@ local DiscordTab = Window:MakeTab({"Discord", "mail"})
 local MainTab = Window:MakeTab({"Main", "home"})
 local PlayerTab = Window:MakeTab({"Player", "user"})
 local CombatTab = Window:MakeTab({"Combat", "swords"})
-local TeleportTab = Window:MakeTab({"Teleport", "map-pin"})
-local VisualTab = Window:MakeTab({"Visual", "eye"})
-local SettingsTab = Window:MakeTab({"Settings", "settings"})
 
 -- ========== DISCORD TAB ==========
 DiscordTab:AddDiscordInvite({
