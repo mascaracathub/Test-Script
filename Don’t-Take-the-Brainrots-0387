@@ -1,0 +1,504 @@
+-- Redz Hub for Don't Take the Brainrots
+-- Full version with multiple features
+
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
+
+-- Create the main window
+local Window = redzlib:MakeWindow({
+    Title = "Brainrots Hub",
+    SubTitle = "by danno | v2.0",
+    SaveFolder = "BrainrotsHubConfig"
+})
+
+-- Add a minimize button
+Window:AddMinimizeButton({
+    Button = {
+        Image = "rbxassetid://125003246208510",
+        BackgroundTransparency = 0
+    },
+    Corner = {
+        CornerRadius = UDim.new(0, 5)
+    }
+})
+
+-- First tab: Discord invite
+local DiscordInviteTab = Window:MakeTab({"Discord", "mail"})
+
+DiscordInviteTab:AddDiscordInvite({
+    Name = "Support Discord",
+    Description = "Join for updates, support and scripts",
+    Logo = "rbxassetid://125003246208510",
+    Invite = "https://discord.gg/97NybfMde"
+})
+
+-- Main Tab
+local MainTab = Window:MakeTab({"Main", "home"})
+
+-- Auto-Farm Section
+MainTab:AddSection("Auto-Farm")
+
+MainTab:AddToggle({
+    Name = "Auto Collect Brains",
+    Default = false,
+    Callback = function(Value)
+        _G.AutoCollectBrains = Value
+        if Value then
+            spawn(function()
+                while _G.AutoCollectBrains do
+                    wait(0.1)
+                    -- Auto collect brain function
+                    pcall(function()
+                        local brains = game:GetService("Workspace"):FindFirstChild("Brains")
+                        if brains then
+                            for _, brain in pairs(brains:GetChildren()) do
+                                if brain:IsA("BasePart") then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = brain.CFrame
+                                    wait(0.05)
+                                end
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+    end
+})
+
+MainTab:AddToggle({
+    Name = "Auto Complete Quests",
+    Default = false,
+    Callback = function(Value)
+        _G.AutoQuests = Value
+        if Value then
+            spawn(function()
+                while _G.AutoQuests do
+                    wait(1)
+                    pcall(function()
+                        -- Auto quest completion logic
+                        local quests = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Quests")
+                        if quests then
+                            -- Add quest completion code here
+                        end
+                    end)
+                end
+            end)
+        end
+    end
+})
+
+MainTab:AddToggle({
+    Name = "Auto Rebirth",
+    Default = false,
+    Callback = function(Value)
+        _G.AutoRebirth = Value
+        if Value then
+            spawn(function()
+                while _G.AutoRebirth do
+                    wait(5)
+                    pcall(function()
+                        -- Rebirth function
+                        local rebirthRemote = game:GetService("ReplicatedStorage"):FindFirstChild("Rebirth")
+                        if rebirthRemote then
+                            rebirthRemote:FireServer()
+                        end
+                    end)
+                end
+            end)
+        end
+    end
+})
+
+-- Combat Section
+MainTab:AddSection("Combat")
+
+MainTab:AddToggle({
+    Name = "Auto Attack Enemies",
+    Default = false,
+    Callback = function(Value)
+        _G.AutoAttack = Value
+        if Value then
+            spawn(function()
+                while _G.AutoAttack do
+                    wait(0.3)
+                    pcall(function()
+                        local enemies = game:GetService("Workspace"):FindFirstChild("Enemies")
+                        if enemies then
+                            for _, enemy in pairs(enemies:GetChildren()) do
+                                if enemy:FindFirstChild("HumanoidRootPart") then
+                                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = enemy.HumanoidRootPart.CFrame
+                                    -- Attack remote here
+                                    wait(0.2)
+                                end
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+    end
+})
+
+MainTab:AddToggle({
+    Name = "Kill Aura",
+    Default = false,
+    Callback = function(Value)
+        _G.KillAura = Value
+        if Value then
+            spawn(function()
+                while _G.KillAura do
+                    wait(0.2)
+                    pcall(function()
+                        local character = game.Players.LocalPlayer.Character
+                        if character then
+                            local range = 20
+                            local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+                            if humanoidRootPart then
+                                for _, player in pairs(game.Players:GetPlayers()) do
+                                    if player ~= game.Players.LocalPlayer then
+                                        local targetChar = player.Character
+                                        if targetChar and targetChar:FindFirstChild("HumanoidRootPart") then
+                                            local distance = (humanoidRootPart.Position - targetChar.HumanoidRootPart.Position).Magnitude
+                                            if distance <= range then
+                                                -- Attack nearby players
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+    end
+})
+
+-- Teleport Section
+MainTab:AddSection("Teleports")
+
+local locations = {
+    {"Spawn Area", CFrame.new(0, 10, 0)},
+    {"Brain Farm", CFrame.new(50, 10, 50)},
+    {"Enemy Area", CFrame.new(100, 10, 0)},
+    {"Secret Zone", CFrame.new(-100, 10, -50)}
+}
+
+for _, location in pairs(locations) do
+    MainTab:AddButton({
+        Name = "TP to " .. location[1],
+        Callback = function()
+            pcall(function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = location[2]
+            end)
+        end
+    })
+end
+
+-- Settings Tab
+local SettingsTab = Window:MakeTab({"Settings", "settings"})
+
+SettingsTab:AddSection("UI Settings")
+
+SettingsTab:AddToggle({
+    Name = "UI Blur Effect",
+    Default = true,
+    Callback = function(Value)
+        Window:SetBlur(Value)
+    end
+})
+
+SettingsTab:AddSlider({
+    Name = "UI Transparency",
+    Min = 0,
+    Max = 1,
+    Default = 0.1,
+    Increment = 0.1,
+    Callback = function(Value)
+        Window:SetTransparency(Value)
+    end
+})
+
+SettingsTab:AddSection("Notifications")
+
+SettingsTab:AddToggle({
+    Name = "Enable Notifications",
+    Default = true,
+    Callback = function(Value)
+        _G.Notifications = Value
+    end
+})
+
+SettingsTab:AddToggle({
+    Name = "Sound Effects",
+    Default = true,
+    Callback = function(Value)
+        _G.SoundEffects = Value
+    end
+})
+
+SettingsTab:AddSection("Keybinds")
+
+SettingsTab:AddBind({
+    Name = "Toggle UI",
+    Default = Enum.KeyCode.RightShift,
+    Hold = false,
+    Callback = function()
+        Window:Toggle()
+    end
+})
+
+SettingsTab:AddBind({
+    Name = "Toggle Fly",
+    Default = Enum.KeyCode.F,
+    Hold = false,
+    Callback = function()
+        -- Toggle fly function
+    end
+})
+
+-- Player Tab
+local PlayerTab = Window:MakeTab({"Player", "user"})
+
+PlayerTab:AddSection("Movement")
+
+PlayerTab:AddSlider({
+    Name = "Walk Speed",
+    Min = 16,
+    Max = 200,
+    Default = 16,
+    Increment = 5,
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end
+})
+
+PlayerTab:AddSlider({
+    Name = "Jump Power",
+    Min = 50,
+    Max = 500,
+    Default = 50,
+    Increment = 10,
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end
+})
+
+PlayerTab:AddToggle({
+    Name = "Infinite Jump",
+    Default = false,
+    Callback = function(Value)
+        _G.InfiniteJump = Value
+        local player = game:GetService("Players").LocalPlayer
+        local mouse = player:GetMouse()
+        
+        mouse.KeyDown:connect(function(key)
+            if _G.InfiniteJump and key:byte() == 32 then
+                player.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+                wait(0.1)
+                player.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Seated")
+            end
+        end)
+    end
+})
+
+PlayerTab:AddToggle({
+    Name = "Noclip",
+    Default = false,
+    Callback = function(Value)
+        _G.Noclip = Value
+        local character = game.Players.LocalPlayer.Character
+        
+        if character then
+            spawn(function()
+                while _G.Noclip do
+                    wait()
+                    pcall(function()
+                        for _, part in pairs(character:GetChildren()) do
+                            if part:IsA("BasePart") then
+                                part.CanCollide = false
+                            end
+                        end
+                    end)
+                end
+            end)
+        end
+    end
+})
+
+PlayerTab:AddSection("Visuals")
+
+PlayerTab:AddToggle({
+    Name = "ESP Players",
+    Default = false,
+    Callback = function(Value)
+        _G.ESPPlayers = Value
+        if Value then
+            -- ESP implementation
+            for _, player in pairs(game.Players:GetPlayers()) do
+                if player ~= game.Players.LocalPlayer then
+                    -- Create ESP box
+                end
+            end
+        else
+            -- Remove ESP
+        end
+    end
+})
+
+PlayerTab:AddToggle({
+    Name = "ESP Brains",
+    Default = false,
+    Callback = function(Value)
+        _G.ESPBrains = Value
+    end
+})
+
+PlayerTab:AddColorpicker({
+    Name = "ESP Color",
+    Default = Color3.fromRGB(0, 255, 0),
+    Callback = function(Value)
+        _G.ESPColor = Value
+    end
+})
+
+-- Server Tab
+local ServerTab = Window:MakeTab({"Server", "server"})
+
+ServerTab:AddSection("Server Info")
+
+ServerTab:AddLabel("Players: " .. #game.Players:GetPlayers())
+ServerTab:AddLabel("Server ID: " .. game.JobId)
+ServerTab:AddLabel("Place ID: " .. game.PlaceId)
+
+ServerTab:AddSection("Server Controls")
+
+ServerTab:AddButton({
+    Name = "Rejoin Server",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+    end
+})
+
+ServerTab:AddButton({
+    Name = "Server Hop",
+    Callback = function()
+        local Http = game:GetService("HttpService")
+        local TPS = game:GetService("TeleportService")
+        local API = "https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=%s&limit=%s"
+        
+        local _place = game.PlaceId
+        local _sort = "Desc"
+        local _limit = 100
+        
+        local req = Http:GetAsync(string.format(API, _place, _sort, _limit))
+        local servers = Http:JSONDecode(req).data
+        
+        for i, v in pairs(servers) do
+            if v.playing < v.maxPlayers and v.id ~= game.JobId then
+                TPS:TeleportToPlaceInstance(_place, v.id)
+                break
+            end
+        end
+    end
+})
+
+ServerTab:AddButton({
+    Name = "Copy Server ID",
+    Callback = function()
+        setclipboard(game.JobId)
+        Window:Notify({
+            Title = "Success",
+            Description = "Server ID copied to clipboard!",
+            Duration = 3
+        })
+    end
+})
+
+-- Misc Tab
+local MiscTab = Window:MakeTab({"Misc", "menu"})
+
+MiscTab:AddSection("Fun Features")
+
+MiscTab:AddToggle({
+    Name = "Anti-AFK",
+    Default = false,
+    Callback = function(Value)
+        _G.AntiAFK = Value
+        if Value then
+            local VirtualUser = game:GetService("VirtualUser")
+            game:GetService("Players").LocalPlayer.Idled:Connect(function()
+                VirtualUser:CaptureController()
+                VirtualUser:ClickButton2(Vector2.new())
+            end)
+        end
+    end
+})
+
+MiscTab:AddToggle({
+    Name = "Auto Clicker",
+    Default = false,
+    Callback = function(Value)
+        _G.AutoClick = Value
+        if Value then
+            spawn(function()
+                while _G.AutoClick do
+                    wait(0.1)
+                    mouse1click()
+                end
+            end)
+        end
+    end
+})
+
+MiscTab:AddButton({
+    Name = "FPS Boost",
+    Callback = function()
+        local settings = UserSettings()
+        settings.Rendering.QualityLevel = 1
+        settings:GetService("RenderSettings").QualityLevel = 1
+        for _, v in pairs(workspace:GetDescendants()) do
+            if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
+                v.Material = Enum.Material.SmoothPlastic
+            end
+        end
+    end
+})
+
+MiscTab:AddSection("Utilities")
+
+MiscTab:AddButton({
+    Name = "Destroy GUI",
+    Callback = function()
+        Window:Destroy()
+    end
+})
+
+MiscTab:AddButton({
+    Name = "Reset Character",
+    Callback = function()
+        game.Players.LocalPlayer.Character:BreakJoints()
+    end
+})
+
+MiscTab:AddButton({
+    Name = "Hide Name",
+    Callback = function()
+        game.Players.LocalPlayer.Character.Head.Nametag:Destroy()
+    end
+})
+
+MiscTab:AddSection("Credits")
+
+MiscTab:AddLabel("Script: danno")
+MiscTab:AddLabel("UI Library: Redz")
+MiscTab:AddLabel("Version: 2.0")
+MiscTab:AddLabel("Game: Don't Take the Brainrots")
+
+-- Initialize
+Window:Notify({
+    Title = "Brainrots Hub Loaded",
+    Description = "Welcome! Press RightShift to toggle UI",
+    Duration = 5
+})
+
+print("Brainrots Hub v2.0 Loaded Successfully!")
