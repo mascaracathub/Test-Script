@@ -1,4 +1,4 @@
-print("✅ Security verification passed. Loading Night Slayer HubDev...")
+print("✅ Security verification passed. Loading Night HubDev...")
 if game.PlaceId == 2753915549 then
 	World1 = true;
 elseif game.PlaceId == 4442272183 then
@@ -7,7 +7,7 @@ elseif game.PlaceId == 7449423635 then
 	World3 = true;
 end;
 
-local Update = (loadstring(Game:HttpGet("https://raw.githubusercontent.com/RTaOexe1/rtao_dev/refs/heads/main/RTaO_UI_1.lua")))();
+local Update = (loadstring(Game:HttpGet("https://raw.githubusercontent.com/mascaracathub/Library/refs/heads/main/Library.1.lua")))();
 if Update:LoadAnimation() then
 	Update:StartLoad();
 end;
@@ -16,8 +16,8 @@ if Update:LoadAnimation() then
 end;
 local Library = Update:Window({
 	SubTitle = "Blox Fruits",
-	Size = UDim2.new(0, 450, 0, 300),
-	TabWidth = 140
+	Size = UDim2.new(0, 555, 0, 400),
+	TabWidth = 150
 });
 local MainTab = Library:Tab("Main", "rbxassetid://10723407389");
 local FarmTab = Library:Tab("Farming", "rbxassetid://10723415335");
@@ -319,16 +319,16 @@ _G.Settings = {
 };
 (getgenv()).Load = function()
 	if readfile and writefile and isfile and isfolder then
-		if not isfolder("Night Slayer") then
-			makefolder("Night Slayer");
+		if not isfolder("Night") then
+			makefolder("Night");
 		end;
-		if not isfolder("Night Slayer/Blox Fruits/") then
-			makefolder("Night Slayer/Blox Fruits/");
+		if not isfolder("Night/Blox Fruits/") then
+			makefolder("Night/Blox Fruits/");
 		end;
-		if not isfile(("Night Slayer/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json")) then
-			writefile("Night Slayer/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(_G.Settings));
+		if not isfile(("Night/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json")) then
+			writefile("Night/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(_G.Settings));
 		else
-			local Decode = (game:GetService("HttpService")):JSONDecode(readfile("Night Slayer/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"));
+			local Decode = (game:GetService("HttpService")):JSONDecode(readfile("Night/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"));
 			for i, v in pairs(Decode) do
 				_G.Settings[i] = v;
 			end;
@@ -341,15 +341,15 @@ end;
 (getgenv()).SaveSetting = function()
 	if Update:SaveSettings() then
 		if readfile and writefile and isfile and isfolder then
-			if not isfile(("Night Slayer/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json")) then
+			if not isfile(("Night/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json")) then
 				(getgenv()).Load();
 			else
-				local Decode = (game:GetService("HttpService")):JSONDecode(readfile("Night Slayer/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"));
+				local Decode = (game:GetService("HttpService")):JSONDecode(readfile("Night/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"));
 				local Array = {};
 				for i, v in pairs(_G.Settings) do
 					Array[i] = v;
 				end;
-				writefile("Night Slayer/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(Array));
+				writefile("Night/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(Array));
 			end;
 		else
 			return warn("Status : Undetected Executor");
