@@ -1,0 +1,1 @@
+game:GetService("Players").LocalPlayer:Kick("Bạn đã bị kick vui lòng thử lại sau 3 ngày sẽ cháy liền")
