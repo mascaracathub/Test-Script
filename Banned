@@ -1,0 +1,78 @@
+-- FAKE BAN HUB | UI SIMULATION ONLY
+-- Không ban thật, không server-side
+
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local player = Players.LocalPlayer
+
+-- random số ngày ban (1–3)
+local banDays = math.random(1,3)
+
+-- ScreenGui
+local gui = Instance.new("ScreenGui")
+gui.Name = "Night Slayer Hub"
+gui.ResetOnSpawn = false
+gui.Parent = player:WaitForChild("PlayerGui")
+
+-- nền mờ
+local bg = Instance.new("Frame", gui)
+bg.Size = UDim2.fromScale(1,1)
+bg.BackgroundColor3 = Color3.fromRGB(10,10,10)
+bg.BackgroundTransparency = 1
+
+TweenService:Create(bg, TweenInfo.new(0.5), {
+	BackgroundTransparency = 0.15
+}):Play()
+
+-- box trung tâm
+local box = Instance.new("Frame", bg)
+box.Size = UDim2.fromScale(0.45,0.3)
+box.Position = UDim2.fromScale(0.275,0.35)
+box.BackgroundColor3 = Color3.fromRGB(20,20,20)
+box.BorderSizePixel = 0
+box.BackgroundTransparency = 1
+
+TweenService:Create(box, TweenInfo.new(0.6), {
+	BackgroundTransparency = 0
+}):Play()
+
+-- bo góc
+Instance.new("UICorner", box).CornerRadius = UDim.new(0,16)
+
+-- tiêu đề
+local title = Instance.new("TextLabel", box)
+title.Size = UDim2.fromScale(1,0.25)
+title.BackgroundTransparency = 1
+title.Text = "ACCOUNT SUSPENDED"
+title.TextColor3 = Color3.fromRGB(255,80,80)
+title.Font = Enum.Font.GothamBold
+title.TextScaled = true
+
+-- nội dung
+local desc = Instance.new("TextLabel", box)
+desc.Position = UDim2.fromScale(0,0.3)
+desc.Size = UDim2.fromScale(1,0.5)
+desc.BackgroundTransparency = 1
+desc.TextWrapped = true
+desc.TextScaled = true
+desc.Font = Enum.Font.Gotham
+desc.TextColor3 = Color3.fromRGB(220,220,220)
+desc.Text = "You have been banned for "..banDays.." day(s)\n\nReason:\nUsing cheat / exploit\n\nPlease wait for system review."
+
+-- countdown
+local countdown = Instance.new("TextLabel", box)
+countdown.Position = UDim2.fromScale(0,0.82)
+countdown.Size = UDim2.fromScale(1,0.15)
+countdown.BackgroundTransparency = 1
+countdown.Font = Enum.Font.Gotham
+countdown.TextColor3 = Color3.fromRGB(180,180,180)
+countdown.TextScaled = true
+
+-- đếm ngược
+for i = 5,1,-1 do
+	countdown.Text = "Disconnecting in "..i.."s"
+	task.wait(1)
+end
+
+-- kick
+player:Kick("You are banned for "..banDays.." day(s). Reason: cheat / exploit.")
