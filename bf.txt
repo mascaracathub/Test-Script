@@ -3665,8 +3665,8 @@ function CheckItemBPCRBPCR(v463)
     end
 end
 local v466 = loadstring(game:HttpGet("https://raw.githubusercontent.com/AnhDangNhoEm/UiRedz/refs/heads/main/RedzUiV.txt"))():MakeWindow({
-    Title = "Night Slayer Hub",
-    SubTitle = "by real_danno",
+    Title = "lxIlIlIlxlIlIlIxl Hub",
+    SubTitle = "by real_lxIlIlIlxlIlIlIxl",
     SaveFolder = "Redz | redz lib v5.lua"
 })
 local l_ScreenGui_0 = Instance.new("ScreenGui")
@@ -3675,7 +3675,7 @@ l_ScreenGui_0.Parent = game.CoreGui
 local l_ImageButton_0 = Instance.new("ImageButton")
 l_ImageButton_0.Size = UDim2.new(0, 50, 0, 50)
 l_ImageButton_0.Position = UDim2.new(0.10, 0, 0.10, 0)
-l_ImageButton_0.Image = "rbxassetid://125003246208510"
+l_ImageButton_0.Image = "rbxassetid://114207146879405"
 l_ImageButton_0.BackgroundTransparency = 1
 l_ImageButton_0.Parent = l_ScreenGui_0
 local l_UICorner_0 = Instance.new("UICorner")
@@ -3743,7 +3743,6 @@ l_ImageButton_0.MouseButton1Click:Connect(function()
 end)
 local v484 = v466:MakeTab({"Info", "info"})
 local v485 = v466:MakeTab({"Farming", "home"})
-local v496 = v466:MakeTab({"Settings", "settings"})
 local v486 = v466:MakeTab({"Auto Fishing", "rbxassetid://127664059821666"})
 local v487 = v466:MakeTab({"Quest | Items", "swords"})
 local v488 = v466:MakeTab({"Volcano Dojo", "cake"})
@@ -3754,11 +3753,30 @@ local v492 = v466:MakeTab({"Fruits | Check Stock", "apple"})
 local v493 = v466:MakeTab({"Teleport", "locate"})
 local v494 = v466:MakeTab({"PvP,Player", "user"})
 local v495 = v466:MakeTab({"Shop", "shoppingCart"})
+local v496 = v466:MakeTab({"Settings", "settings"})
 v484:AddDiscordInvite({
     Name = "Tham Gia Discord",
     Description = "Link Sever Discord",
-    Logo = "rbxassetid://125003246208510",
-    Invite = "https://discord.gg/97NybfMde"
+    Logo = "rbxassetid://110657725541747",
+    Invite = "https://discord.gg/TnEvytWux"
+})
+v484:AddDiscordInvite({
+    Name = "Văn Nguyên",
+    Description = "Facebook C\225\187\167a B\225\187\145 \196\144\195\162y Nh\195\179c",
+    Logo = "rbxassetid://114207146879405",
+    Invite = "https://www.facebook.com/share/14UpCxDquqW/"
+})
+v484:AddDiscordInvite({
+    Name = "Dryer Flume",
+    Description = "YouTube C\225\187\167a B\225\187\145 \196\144\195\162y Nh\195\179c",
+    Logo = "rbxassetid://114207146879405",
+    Invite = "https://www.youtube.com/@dryer-Flume"
+})
+v484:AddDiscordInvite({
+    Name = "Nguyễn Anh Tuấn 🥰",
+    Description = "TikTok C\225\187\167a B\225\187\145 \196\144\195\162y Nh\195\179c",
+    Logo = "rbxassetid://114207146879405",
+    Invite = "tiktok.com/@mascara6436"
 })
 local _ = v485:AddSection({"Select Melee,Sword,Gun,Fruit"})
 _G.SelectWeapon = "Melee"
@@ -9363,15 +9381,6 @@ v496:AddToggle({
     Value = false,
     Callback = function(v1169)
         _G.CheckPoint = v1169
-    end
-})
-local _ = v496:AddSection({"God Mode"})
-v496:AddToggle({
-    Title = "God Mode",
-    Description = "Bất tử Quái không đánh chết",
-    Value = false,
-    Callback = function(v1169)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/miglels33/God-Mode-Script/refs/heads/main/GodModeScript.md"))()
     end
 })
 spawn(function()
