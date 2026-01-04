@@ -1,0 +1,1817 @@
+-- Load WindUI safely
+local success, WindUI = pcall(function()
+    print("Attempting to load WindUI...")
+    local result = loadstring(game:HttpGet(
+        "https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"
+    ))()
+    print("WindUI loaded successfully.")
+    return result
+end)
+
+if not success or not WindUI then
+    warn("Failed to load WindUI: " .. tostring(WindUI))
+    game:GetService("Players").LocalPlayer:Kick(
+        "Failed to load UI library. Please check your network or the script URL."
+    )
+    return
+end
+
+print("Script running on client at: " .. os.date("%H:%M:%S %d/%m/%Y"))
+
+-- Detect Mobile
+local UserInputService = game:GetService("UserInputService")
+local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
+
+-- Create Window (NO KEYSYSTEM)
+local Window = WindUI:CreateWindow({
+    Title = "Night Slayer Hub",
+    Icon = "swords",
+    Author = "by danno_ue",
+    Folder = "LegendsBattlegroundsHub",
+    Size = UDim2.fromOffset(670, 579),
+    MinSize = Vector2.new(580, 500),
+    MaxSize = Vector2.new(900, 700),
+    Transparent = true,
+    Theme = "Dark",
+    Resizable = true,
+    SideBarWidth = 200,
+    BackgroundImageTransparency = 0.1,
+    HideSearchBar = false,
+    ScrollBarEnabled = true,
+    User = {
+        Enabled = true,
+        Anonymous = false,
+        Callback = function()
+            print("User clicked")
+        end,
+    },
+})
+
+-- Tabs - Sửa 99days thành Nights99
+local Tabs = {
+    BloxFruit = Window:Tab({ Title = "Blox Fruit", Icon = "zap" }),
+    Nights99 = Window:Tab({ Title = "99 Night In the Forest", Icon = "trending-up" }),
+    Arsenal = Window:Tab({ Title = "Arsenal", Icon = "crosshair" }),
+    Dead = Window:Tab({ Title = "Dead Rails", Icon = "eye" }),
+    Brookhave = Window:Tab({ Title = "Brookhave RP", Icon = "scan" }),
+    TheForge = Window:Tab({ Title = "The Forge", Icon = "map-pin" }),
+    Fick = Window:Tab({ Title = "Fick", Icon = "user" }),
+    TSB = Window:Tab({ Title = "The Strongest Battlegrounds", Icon = "package" }),
+    Script = Window:Tab({ Title = "Get Script", Icon = "code" }),
+}
+
+-- BloxFruit Tab
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - NO KEY (Christmas)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - QuantumOnyx Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Blue X Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Apple Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SuperIkka/Main/refs/heads/main/AppleHub", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Cookie Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Jadelly261/BloxFruits/refs/heads/main/Cookie", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Zee Hub (NO KEY)",
+    Callback = function()
+        loadstring(game:HttpGet("https://link.trwxz.com/LS-Zee-Hub-VIP"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - NazuX Hub [Key]",
+    Callback = function()
+        script_key="PUT YOUR KEY HERE"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NguyenAnhKhoaX/Anhkhoa2279/refs/heads/main/BloxFruits.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - TuanAnhIOS",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AnhTuanDzai-Hub/TuanAnhIOS/refs/heads/main/TuanAnhIOS-Main.Lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Vector HUB",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AAwful/Vector_Hub/0/v2"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Foggy Hub (Event)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FOGOTY/foggy-bloxfruit/refs/heads/main/script"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Xeter Hub (Mobile)",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/tKj6eONN/raw", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - DatThg Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/Bu9WxdDv/raw", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Blue X (Pastebin)",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/yL0smCmb", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - XeraUltron [Key]",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/QRkQcg6v/raw", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Volcano Hub v3",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/uV4rvX5k", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Nat Hub (Pastebin)",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/hSer5Sf8", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Vxeze Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/xpQNRJAv", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Quantum Onyx (Mobile)",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/r5h2r57F"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Mod Attack Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KOBENFF/sdfd/refs/heads/main/Koatta.txt"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Zen Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Zenhubtop/zen_hub_pr/main/zennewwwwui.lua", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - EgoHub GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SuperIkka/Main/main/EgoLoaderMain", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - YuriMain",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Jadelly261/BloxFruits/main/YuriMain", true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Banana Hub (Jun 2025)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Chiriku2013/BananaCatHub/refs/heads/main/BananaCatHub.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Nicuse [GRAVITY]",
+    Callback = function()
+        loadstring(game:HttpGet("https://nicuse.xyz/MainHub.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Tsuo Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Tsuo7/TsuoHub/main/Tsuoscripts"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - No Key Mobile",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/KevinGithubUsers/KevinGithubUsers/refs/heads/main/VScript(Blox%20Fruits).txt"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - SolixHub v2",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/p7Wiyps2"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - NatHub (Auto Chests)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/bf.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - RoHub",
+    Callback = function()
+        _G.settings = {
+            autoLoadConfig = false,
+            joinTeam = "Pirates"
+        }
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RO-HUB-CODEX/RO-HUB/refs/heads/main/bloxfruits.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Maru Copy",
+    Callback = function()
+        getgenv().Team = "Marines"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Quartyz Mobile",
+    Callback = function()
+        getgenv().Mode = "OneClick"
+        getgenv().Setting = {
+            ["Team"] = "Pirates",
+            ["FucusOnLevel"] = true,
+            ["Fruits"] = {
+                ["Primary"] = {"Dough-Dough","Dragon-Dragon","Buddha-Buddha"},
+                ["Normal"] = {"Flame-Flame","Light-Light","Magma-Magma"}
+            },
+            ["Lock Fruits"] = {"Yeti-Yeti", "T-Rex-T-Rex"},
+            ["IdleCheck"] = 300
+        }
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScript/main/Loader.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Zinner Hub",
+    Callback = function()
+        getgenv().Team = "Pirates"
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/HoangNguyenk8/Scripts/refs/heads/main/Loader.lua'))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Monster Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/giahuy2511-coder/MonsterHub/refs/heads/main/MonsterHub"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Mukuro Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://auth.quartyz.com/scripts/Loader.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - TheBillDevHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/selciawashere/screepts/refs/heads/main/BFKEYSYS",true))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Forge Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Skzuppy/forge-hub/main/loader.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Ronix Hub v2.0.0",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b5f968ca22436160479678e830766cc4.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Lumin Hub",
+    Callback = function()
+        loadstring(game:HttpGet("http://lumin-hub.lol/BloxFruits.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Ziner Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Tienvn123tkvn/Test/main/ZINERHUB.lua"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Auto Farm GUI (Onyx)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zenzon23/new-bf/refs/heads/main/onyx%20f"))()
+    end,
+})
+
+Tabs.BloxFruit:Button({
+    Title = "BloxFruits - Lap Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Jadelly261/BloxFruits/refs/heads/main/LapHub", true))()
+    end,
+})
+
+-- 99 Nights Tab (ĐÃ SỬA: Tabs.Nights99 thay vì Tabs["99days"])
+Tabs.Nights99:Button({
+    Title = "99 Nights - VoidWare",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Christmas Event",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.junkie-development.de/api/v1/luascripts/public/d649d6814b8489e7abd4f0646c1445019f10c4eefe8d77e7ce84336f33ad4263/download"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - FoxnameHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/FoxnameHub.lua"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - SolvexGUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Solvexxxx/Scripts/refs/heads/main/SolvexGUI99nights.lua"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Somtank Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/MQPS7/99-Night-in-the-Forset/refs/heads/main/99Nightv1'))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Infinity X",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-Infinity-X/refs/heads/main/main.lua"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Ringta Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/wehibuyfgyuwe/99nights.github.io/refs/heads/main/ringta.lua"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - FourHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jokerbiel13/FourHub/refs/heads/main/FourHub.lua"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Elude Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkenedEssence/Elude/refs/heads/main/Loader.lua"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Keyless (Auto Day)",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/LPbPPNpC"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - NTT HUB",
+    Callback = function()
+        loadstring(game:HttpGet('https://ntt-hub.xyz/api/repo?id1=main&id2=lua'))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - NEW HALLOWEEN",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/husyDTrd"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - CpsHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Rx1m/CpsHub/refs/heads/main/Hub",true))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - ToastyXD Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/nouralddin-abdullah/ToastyHub-XD/refs/heads/main/hub-main.lua"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Roblox US",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/K9b3Fd7Z"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Combo Wick [Key]",
+    Callback = function()
+        loadstring(game:HttpGet("https://cdn.authguard.org/virtual-file/4cc9b982299840008b7d08796f54aaea"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - No Key (Seriously56)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Seriously56/99-Nights/refs/heads/main/99%20nights", true))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - SpeedHubX",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - ESP, Teleports",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/YgRSs7Pf"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Vortex Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/qxDbSVlo/raw"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Horizon Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Laspard69/HorizonHub/refs/heads/main/loader.lua", true))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Vex OP",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/ibClJUjE/raw"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Mobile/PC No Key",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/bhi4LinA"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Auto Keyless",
+    Callback = function()
+        loadstring(game:HttpGet("https://nazuro.xyz/99nights"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - DarkEsc Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkenedEssence/DarkEsc/refs/heads/main/Loader.lua"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Mobile GUI",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/Other-Scripts/refs/heads/main/99%20Nights%20In%20The%20Forest%20GUI'))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Gec Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/NTpCMwn8"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Best AutoFarm Diamonds",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/7hfV4s5s"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - HoHo Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/QRfGNELm"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - PolleserHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/Y4ic4T1s/raw"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Kill Aura, ESP",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/53h15jAV"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - OverFlow Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/3T1VunNZ"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Cat Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/sQ6t8MU7"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - FoggyHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/5rwbL0v9"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - AnbuWin",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/quQbccDD"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Alchemy Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/FmDrhT3m"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - GUI Fun",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/pMVn317S"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Auto Diamonds",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/thiennrb7/Script/refs/heads/main/autodiamonds.txt"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Arvotheon Mod",
+    Callback = function()
+        loadstring(game:HttpGet("https://get-arvotheon-ontop.netlify.app/Loader.lua"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - [SNOW BIOME]",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/thiennrb7/Script/refs/heads/main/key 99.txt"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Auto Farm Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/gHQGTNYH"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Auto Win, Chest",
+    Callback = function()
+        loadstring(game:HttpGet("https://get-arvotheon-ontop.netlify.app/Loader.lua"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Mobile (Fly, ESP)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Iliankytb/Iliankytb/main/Best99NightsInTheForest"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Mobile Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/alwaysmesmerizingyou/Soluna-API/refs/heads/main/99-Nights-in-the-Forest.lua",true))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - SpaceHub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ago106/SpaceHub/refs/heads/main/loader.lua'))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Farm All Item",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/m00ndiety/99-nights-in-the-forest/refs/heads/main/Main"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - ExploitingIsFun",
+    Callback = function()
+        loadstring(game:HttpGet('https://api.exploitingis.fun/loader', true))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - VWExtra",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VWExtra/main/NightsInTheForest.lua", true))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - Hutao Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SLK-gaming/Hutao-Hub/refs/heads/main/99-Nights-In-The-Forest.txt"))()
+    end,
+})
+
+Tabs.Nights99:Button({
+    Title = "99 Nights - No Key (adibhub1)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/adibhub1/99-nighit-in-forest/refs/heads/main/99%20night%20in%20forest"))()
+    end,
+})
+
+-- TSB Tab
+Tabs.TSB:Button({
+    Title = "TSB - Express Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/d8824b23a4d9f2e0d62b4e69397d206b.lua"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Auto Farm, ESP (NEW)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/needanewphone32-eng/tsbfiles/refs/heads/main/Main1.lua"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Unlock Cosmic Garou",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JNHHGaming/The-strong-battlegrounds/refs/heads/main/Tsb",true))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Senpai Hub (Aim lock)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Senpai1997/Scripts/refs/heads/main/SenpaihubTheStrongestBattlegroundsAimlockAutoblock.lua"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - VexonHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Auto Farm GUI",
+    Callback = function()
+        _G.Settings = {}
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Nicuse101/CustomScripts/refs/heads/master/GrowAGarden', true))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Hater Hub v3.25",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Perfixt/Hater-Hub-v3.25/refs/heads/main/ByDizzyHax"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - No Dash Cooldown",
+    Callback = function()
+        loadstring(game:HttpGet('https://pastefy.app/cQIqp9xa/raw'))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Arch-Vault No Key",
+    Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/R2N7cb9z'))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Napoleon Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/md6KzXD6'))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Mobile (GamePass)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Mikasuru/Arc/refs/heads/main/Arc.lua"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Anti Death Counter",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Iyreeee/Antimony-Loader/main/loader.luau'))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Nicuse.xyz",
+    Callback = function()
+        loadstring(game:HttpGet("https://nicuse.xyz/MainHub.lua"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - No Key (FullScript)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Loolybooly/TheVaultScripts/refs/heads/main/FullScript"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Auto Farm Kill",
+    Callback = function()
+        loadstring(game:HttpGet("https://gist.githubusercontent.com/Noro-ded/add5f50deb5351b84a58f9e26784d421/raw/f4fe60235768436d96a1bd61802ae79eebcab3ce/mainguitsb", true))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Anti Ragdoll",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ATrainz/Phantasm/refs/heads/main/Games/TSB.lua"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - NS Hub (Solara)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/TSBG/main/Solara"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Auto Farm",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Star Hub v4",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/bc25e1f8ef8aa59092de8f8f4c4fb95c.lua"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Spooks Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/ApparentlySpooks/spookshubTSB/refs/heads/main/SHTSB.txt'))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Forge Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Skzuppy/forge-hub/main/loader.lua"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Speed Hub X",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Hack (Mautiku)",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Mautiku/ehh/main/strong%20guest.lua.txt'))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Infinite Jump",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/v9VSOfM5/raw"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - TamHub Mobile",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/tamarixr/tamhub/main/bettertamhub.lua"))()
+    end,
+})
+
+Tabs.TSB:Button({
+    Title = "TSB - Rinns Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/SkibidiCen/MainMenu/main/Code'))()
+    end,
+})
+
+-- The Forge Tab
+Tabs.TheForge:Button({
+    Title = "The Forge - 2pac Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/getallthreads/2pac/refs/heads/main/Forge.luau"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Lazy Hub",
+    Callback = function()
+        getgenv().mobileMode = true
+        repeat wait() until game:IsLoaded()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LioK251/RbScripts/refs/heads/main/lazyuhub_theforge.lua"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - PepeHook NO KEY",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GiftStein1/pepehook-loader/refs/heads/main/loader.lua"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - RBX (Có Key)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nisulrocks/The-Forge/refs/heads/main/main"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Ajjans Hub (Có Key)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/onliengamerop/Roblox-scripthsiaoioaka/refs/heads/main/Ajjans%20forge%20script"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - FourHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jokerbiel13/FourHub/refs/heads/main/TheForgeFH.lua",true))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - VoidWare",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/sUvho2d7/raw"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Lumin Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6f9e8a4664c53863bafc2e0c13e69e47.lua"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Rift Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Speed Hub X",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Mirage Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2075c39b9a5a2e4414c59c93fe8a5f06.lua"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Simca Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/notmydaisy/simca/main/games/the-forge"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - NO KEY",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiHub111/Forge/refs/heads/main/No1Dev"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Chiyo Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/kaisenlmao/loader/refs/heads/main/chiyo.lua"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Lunor.dev",
+    Callback = function()
+        loadstring(game:HttpGet("https://lunor.dev/loader"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Solix Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/tWslZUaE/raw"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Haze Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://haze.wtf/api/script"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Hack/Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/RpcM27HB/raw"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - AirflowScript",
+    Callback = function()
+        loadstring(game:HttpGet("https://airflowscript.com/loader"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - NS Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/OhhMyGehlee/sh/refs/heads/main/a"))()
+    end,
+})
+
+Tabs.TheForge:Button({
+    Title = "The Forge - Legend Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/ULaWpxKm/raw"))()
+    end,
+})
+
+-- Arsenal Tab
+Tabs.Arsenal:Button({
+    Title = "Arsenal - DMON Hub (Keyless)",
+    Callback = function()
+        loadstring(game:HttpGet("http://dmonmods.xyz/loader.txt"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal Script 2025",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Luigi4k85/Arsenal-v5.3/refs/heads/main/Arsenal%20v5.3"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal X Script GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/helldevelopment/RobloxScripts/main/SanityLoader.lua"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - Z3US Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/blackowl1231/Z3US/refs/heads/main/main.lua"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal Keyless",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/QtT1U8dK/raw"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal Mobile",
+    Callback = function()
+        loadstring(game:HttpGet("http://pastebin.com/raw/9ArrNC4L"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal Mobile - Auto Farm",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/WinzeTim/timmyhack2/refs/heads/main/arsenal.lua'))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal No Key",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ArtChivegroup/Roblox/refs/heads/main/script/arsenal-esp-aimbot.lua"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal GUI 2025",
+    Callback = function()
+        loadstring(game:HttpGet("https://soluna-script.vercel.app/arsenal.lua",true))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - TriggerBot, ESP",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vzyxer/Aether-Hub-Global-Roblox-Script-Hub/refs/heads/main/Arsenal"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal New No Key",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ex55/weed-client/refs/heads/main/main.lua"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal New GUI 2025",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NoDollManB/roblox_scripts/refs/heads/main/arsenal.lua"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal Mobile Pastebin",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/Hbnb70Hn"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - Ronix Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/93f86be991de0ff7d79e6328e4ceea40.lua"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - QuotasHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - ProjectWare GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FishyPlayzThis/Projecthub-Arsenal/refs/heads/main/obf_QoCPBEH6oZ3Bsrk9saw8oegnmuMZtW0z764FNNfvFwGDACIespPcUZd9NU7P6uq6.lua"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - Vapa v2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nickyangtpe/Vapa-v2/refs/heads/main/Vapav2-Arsenal.lua", true))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - Silent AimBot",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Malrand/Malrand/main/Arsenal"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal: Gun ESP",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NoobExploits/Dumpster-Fire/main/MM2/DroppedGunESP.lua"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal Mobile 2025 Pastebin",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/14xXHZQW"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - EZ Hub",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug42O/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - Tbao Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - Gun Mods, FPS Booster",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GuizzyisbackV2LOL/Arsenallua/main/Arsenal.lua"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal GUI - Leg Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/G6Ubkkuv"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal Aimbot Script",
+    Callback = function()
+        getgenv().Settings = {Radius = 100}
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/diglt/Luau-Scripts/main/Test%20Project%209/Arsenal%20Aimbot.lua'))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal ESP Script",
+    Callback = function()
+        getgenv().Settings = {IsRainbow = false}
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/diglt/Luau-Scripts/main/Test%20Project%208%20/Arsenal%20ESP.lua'))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal - Reaper Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AyoReaper/Reaper-Hub/main/loader.lua"))()
+    end,
+})
+
+Tabs.Arsenal:Button({
+    Title = "Arsenal Mobile - LTHub",
+    Callback = function()
+        loadstring(game:HttpGet("http://bin.shortbin.eu:8080/raw/XBkUJpZcPi",true))()
+    end,
+})
+
+-- Dead Rails Tab
+Tabs.Dead:Button({
+    Title = "Dead Rails - Alchemy Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://getalchemy.net/r"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - New Auto Farm Bond",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JustKondzio0010/deadrailsbondfarm/refs/heads/main/dead", true))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails Hack Mod",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/9xvD1pig", true))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Auto Complete UFO",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yoursvexyyy/deadrails/refs/heads/main/autoufo"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - NEW Auto Store",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/thiennrb7/Script/refs/heads/main/Bringall"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - HoHo Hub Mobile",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Moon Hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Moondiety/refs/heads/main/Loader'))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Best Auto Bone",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zzxzsss/zxs/refs/heads/main/xxzz"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - ESP, Kill Aura",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Qiwikox12/stubrawl/refs/heads/main/DeadRails.txt"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Best Script GUI",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/Other-Scripts/refs/heads/main/Dead%20Rails%20GUI'))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Item bringer",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Dead-rails/refs/heads/main/Full-GUI'))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Alpha Script GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/luwriy/jwhub/refs/heads/main/loader"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - kiciahook",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/kiciahook/kiciahook/refs/heads/main/loader.lua"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - NPC Lock, TP",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/m00ndiety/Teleport-to-End-final/refs/heads/main/obf_tp_to_end_final.lua.txt"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "DRAG PLayer",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/4BRUnUH2"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - NatHub Mobile",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/NatHub.lua"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails Hack Keyless",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Stillwater/refs/heads/main/obf_Prisonteleport.lua.txt'))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Paste",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/dQsW9tQ8/raw"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Auto Farm, Sell",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineWare/UniversalLoader/refs/heads/main/Load"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Farm Auto Bonds",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/8rwA08Ch"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Rift Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - OP Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://nicuse.xyz/MainHub.lua"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - NO KEY (GunAura)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Unknownlodfc/Zephyr/refs/heads/main/DeadRails/Main"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - ESP Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrustsenseDev/MicroHub/refs/heads/main/loader.lua"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Auto End",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DeadRailsAuto"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Aimbot, ESP",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ducknovis/DHHz-hub/refs/heads/main/Dead-Rails.lua"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails Farm No Key",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Mrpopcatfrombupge/FernHub/refs/heads/main/DeadRailsFarm", true))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Tbao Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/refs/heads/main/TbaoHubDeadRails"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - NEOX HUB",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/hassanxzayn-lua/NEOXHUBMAIN/refs/heads/main/loader", true))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - No Key Aimbot",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Markklol/AnimalSimulator/refs/heads/main/DRails.lua"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - SolixHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/debunked69/Solixreworkkeysystem/refs/heads/main/solix%20new%20keyui.lua"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - SpiderXHub Alpha",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/Dead-Rails-SpiderXHub-Script/refs/heads/main/SpiderXHub%202.0.txt"))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - Bonds Farm, End Game",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DeadRails", true))()
+    end,
+})
+
+Tabs.Dead:Button({
+    Title = "Dead Rails - SpeedHubX",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    end,
+})
+
+-- Brookhaven Tab
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - SP HUB",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Dragon Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/paoplays958-coder/update/refs/heads/main/update"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - SanderXHub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/kigredns/testUIDK/refs/heads/main/panel.lua"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Goto Event",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/kontrollall/Auto-Finish-Event/refs/heads/main/revampedbrook'))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven Halloween 2025",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/BrookhavenHalloween", true))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven OP Pastebin",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/xAhueyVg"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven Download (No Key)",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/4ijbVM3c/raw", true))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - New Kick Players",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zzxzsss/zxs/refs/heads/main/xxzz"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Zynora Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/PwyJLxeJ"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - No Key Speed X3",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/E2rnJA1p"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Soluna Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Patheticcs/Soluna-API/refs/heads/main/brookhaven.lua",true))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven RP Pastebin",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/LCmR8qkj"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Admin, GamePass",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/OpenSourceEngine/Script/refs/heads/main/Brookhaven.lua"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Mobile Teleport",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Waza80/scripts-new/main/IceHubBrookhaven.lua"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - June (Rainbow)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RFR-R1CH4RD/Loader/mainalvatore.lua"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Admin GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Cat558-uz/IntTeste/refs/heads/main/N9999"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Loot All Storages",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/decentholograms/TheStorage/refs/heads/main/TheStorage.lua", true))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Best Troll Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rogelioajax/lua/main/MangoHub", true))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Troll, Fun",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RFR-R1CH4RD/Loader/main/Salvatore.lua"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Chaos HUB",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/58jNvV3h"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Real Hub Pastebin",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/EYs5T7Yg",true))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Script Hub (BROKEY)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptBrv/BROKEY/refs/heads/main/BROKEY.md",true))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Fly Hack",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/mikeexc/Dsc-Mike-Fly-Gui/main/Fly%20Gui"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Different hubs",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Alexcirer/Alexcirer/refs/heads/main/Station"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - HYZ0R HUB",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Hyz0r-Dev404/Hyz0/refs/heads/main/Working%25Hyz0r-Hub.md'))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - SpeedWave HUB",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/speedwavevip/scriptspeed/refs/heads/main/Brookhaven_lraq"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - YHub (2025)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Luarmor123/community-Y-HUB/refs/heads/main/YHUB%20ENGLISH"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Auto Farm Candy",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/r4mpage4/BrookHavenRP/refs/heads/main/AutoFarmCandy.lua",true))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - ImperialHub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Trev0rZ/LoaderM/refs/heads/main/ImperiaHub-lWorking.lua'))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven PasteBin NoKey 2025",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/GYyWRWHJ"))()
+    end,
+})
+
+Tabs.Brookhave:Button({
+    Title = "Brookhaven - Jul hub",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Jfdedit3/z4trox-hub-v1/main/z4trox%20hub'))()
+    end,
+})
+
+-- Fick Tab
+Tabs.Fick:Button({
+    Title = "Flick - Neverlose Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CludeHub/GameScript/refs/heads/main/FLICK-NEVERLOSE.lua"))()
+    end,
+})
+
+Tabs.Fick:Button({
+    Title = "Flick - Heavenly Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HeavenlyScripts/HeavenlyFlick/refs/heads/main/HeavenlyFlick.lua"))()
+    end,
+})
+
+Tabs.Fick:Button({
+    Title = "Flick - Aimbot, ESP",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/abramsonhan/RScritps/refs/heads/main/df1ewrvwevwevwe", true))()
+    end,
+})
+
+Tabs.Fick:Button({
+    Title = "Flick - GUI NO KEY",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ttwizz/Open-Aimbot/master/source.lua", true))()
+    end,
+})
+
+Tabs.Fick:Button({
+    Title = "Flick - Roblox Aimbot",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/D3uy9ypJ", true))()
+    end,
+})
+
+Tabs.Fick:Button({
+    Title = "Flick Hack - Aimbot + Key",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Minirick0-0/MinirickHub/refs/heads/main/Flick%20Delta'))()
+    end,
+})
+
+Tabs.Fick:Button({
+    Title = "Flick Keyless (Mobile)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nisulrocks/FPS-flick/refs/heads/main/main"))()
+    end,
+})
+
+Tabs.Fick:Button({
+    Title = "Flick GUI - Auto Fire",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/6v6xxMm4", true))()
+    end,
+})
+
+Tabs.Script:Button({
+    Title = "Brookhave RP - c00Iikb",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-skybox-c00lkidd-59724"))()
+    end,
+})
+
+Tabs.Script:Button({
+    Title = "c00Gui",
+    Callback = function()
+        loadstring(game:GetObjects("rbxassetid://11801763945")[1].Source)()
+    end,
+})
+
+Tabs.Script:Button({
+    Title = "Davi999",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Davi999z/Cartola-Hub/refs/heads/main/Brookhaven",true))()
+    end,
+})
+
+Tabs.Script:Button({
+    Title = "Brookhave RP - c00Iikb",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-skybox-c00lkidd-59724"))()
+    end,
+})
+
+Tabs.Script:Button({
+    Title = "Tubers93",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-tubers93-26163"))()
+    end,
+})
+
+Tabs.Script:Button({
+    Title = "4x2x9x4x0-v6-Gui",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-4x2x9x4x0-v6-gui-57588"))()
+    end,
+})
+
+Tabs.Script:Button({
+    Title = "1x1x1x1-Rainbow-Gui",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-1x1x1x1-rainbow-gui-64138"))()
+    end,
+})
+
+-- Kết thúc script
+print("Night Slayer Hub loaded successfully!")
