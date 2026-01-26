@@ -9,7 +9,7 @@ if not game:IsLoaded() then
 end
 		-- Instances:
 local Converted = {
-	["_NIGHTSLAYERHUB"] = Instance.new("ScreenGui");
+	["_NIGHT SLAYER HUB"] = Instance.new("ScreenGui");
 	["_FUNCTIONS"] = Instance.new("ModuleScript");
 	["_Flee the Facility"] = Instance.new("LocalScript");
 	["_Universal"] = Instance.new("LocalScript");
@@ -239,15 +239,15 @@ local Converted = {
 	["_FloatingButtons1"] = Instance.new("Frame");
 }
 -- Properties:
-Converted["_NIGHTSLAYERHUB"].DisplayOrder = 3
-Converted["_NIGHTSLAYERHUB"].IgnoreGuiInset = true
-Converted["_NIGHTSLAYERHUB"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-Converted["_NIGHTSLAYERHUB"].ResetOnSpawn = false
-Converted["_NIGHTSLAYERHUB"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Converted["_NIGHTSLAYERHUB"].Name = "NIGHTSLAYERHUB"
-Converted["_NIGHTSLAYERHUB"].Parent = game:GetService("CoreGui")
+Converted["_NIGHT SLAYER HUB"].DisplayOrder = 3
+Converted["_NIGHT SLAYER HUB"].IgnoreGuiInset = true
+Converted["_NIGHT SLAYER HUB"].ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+Converted["_NIGHT SLAYER HUB"].ResetOnSpawn = false
+Converted["_NIGHT SLAYER HUB"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_NIGHT SLAYER HUB"].Name = "NIGHT SLAYER HUB"
+Converted["_NIGHT SLAYER HUB"].Parent = game:GetService("CoreGui")
 Converted["_Open"].Font = Enum.Font.Gotham
-Converted["_Open"].Text = "Triple-click this region to open NIGHTSLAYERHUB."
+Converted["_Open"].Text = "Triple-click this region to open NIGHT SLAYER HUB."
 Converted["_Open"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Open"].TextScaled = true
 Converted["_Open"].TextSize = 14
@@ -263,7 +263,7 @@ Converted["_Open"].Selectable = false
 Converted["_Open"].Size = UDim2.new(0, 493, 0, 50)
 Converted["_Open"].Visible = false
 Converted["_Open"].Name = "Open"
-Converted["_Open"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_Open"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_UICorner"].Parent = Converted["_Open"]
 Converted["_UIPadding"].PaddingBottom = UDim.new(0, 10)
 Converted["_UIPadding"].PaddingLeft = UDim.new(0, 20)
@@ -277,7 +277,7 @@ Converted["_DropdownFrameSample"].BorderSizePixel = 0
 Converted["_DropdownFrameSample"].Size = UDim2.new(0, 108, 0, 239)
 Converted["_DropdownFrameSample"].Visible = false
 Converted["_DropdownFrameSample"].Name = "DropdownFrameSample"
-Converted["_DropdownFrameSample"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_DropdownFrameSample"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_UICorner1"].Parent = Converted["_DropdownFrameSample"]
 Converted["_UIGradient"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(36.00000165402889, 36.00000165402889, 36.00000165402889)),
@@ -349,7 +349,7 @@ Converted["_ListButton"].Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
 Converted["_ListButton"].Size = UDim2.new(1, 0, 0, 50)
 Converted["_ListButton"].Visible = false
 Converted["_ListButton"].Name = "ListButton"
-Converted["_ListButton"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_ListButton"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_UICorner3"].Parent = Converted["_ListButton"]
 Converted["_Notifications"].AnchorPoint = Vector2.new(1, 0.5)
 Converted["_Notifications"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -359,7 +359,7 @@ Converted["_Notifications"].BorderSizePixel = 0
 Converted["_Notifications"].Position = UDim2.new(0.99000001, 0, 0.5, 0)
 Converted["_Notifications"].Size = UDim2.new(0, 242, 1, 0)
 Converted["_Notifications"].Name = "Notifications"
-Converted["_Notifications"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_Notifications"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_UIListLayout1"].Padding = UDim.new(0, 10)
 Converted["_UIListLayout1"].HorizontalAlignment = Enum.HorizontalAlignment.Center
 Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
@@ -398,7 +398,7 @@ Converted["_TextBoxPlaceholder"].BorderSizePixel = 0
 Converted["_TextBoxPlaceholder"].Size = UDim2.new(1, 0, 0, 50)
 Converted["_TextBoxPlaceholder"].Visible = false
 Converted["_TextBoxPlaceholder"].Name = "TextBoxPlaceholder"
-Converted["_TextBoxPlaceholder"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_TextBoxPlaceholder"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_UIListLayout2"].Padding = UDim.new(0, 5)
 Converted["_UIListLayout2"].FillDirection = Enum.FillDirection.Horizontal
 Converted["_UIListLayout2"].HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -448,7 +448,7 @@ Converted["_FloatingButton"].Position = UDim2.new(0, 125, 0, 40)
 Converted["_FloatingButton"].Size = UDim2.new(0, 50, 0, 100)
 Converted["_FloatingButton"].Visible = false
 Converted["_FloatingButton"].Name = "FloatingButton"
-Converted["_FloatingButton"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_FloatingButton"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_UIPadding5"].PaddingBottom = UDim.new(0, 5)
 Converted["_UIPadding5"].PaddingLeft = UDim.new(0, 5)
 Converted["_UIPadding5"].PaddingRight = UDim.new(0, 5)
@@ -494,7 +494,7 @@ Converted["_Dropdown"].BorderSizePixel = 0
 Converted["_Dropdown"].Size = UDim2.new(1, 0, 0, 35)
 Converted["_Dropdown"].Visible = false
 Converted["_Dropdown"].Name = "Dropdown"
-Converted["_Dropdown"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_Dropdown"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_TextLabel1"].FontFace = Font.new("rbxassetid://12187365364")
 Converted["_TextLabel1"].Text = "Loop walkspeed and FOV"
 Converted["_TextLabel1"].TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -545,7 +545,7 @@ Converted["_AddCustomModule"].Position = UDim2.new(0.5, 0, -0.5, 0)
 Converted["_AddCustomModule"].Size = UDim2.new(0, 440, 0, 268)
 Converted["_AddCustomModule"].ZIndex = 3
 Converted["_AddCustomModule"].Name = "AddCustomModule"
-Converted["_AddCustomModule"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_AddCustomModule"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_UICorner10"].Parent = Converted["_AddCustomModule"]
 Converted["_UIStroke2"].Color = Color3.fromRGB(255, 255, 255)
 Converted["_UIStroke2"].Thickness = 2
@@ -671,7 +671,7 @@ Converted["_Menu"].BorderSizePixel = 0
 Converted["_Menu"].Position = UDim2.new(0.5, 0, 0.0500000007, 0)
 Converted["_Menu"].Size = UDim2.new(0, 441, 0, 268)
 Converted["_Menu"].Name = "Menu"
-Converted["_Menu"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_Menu"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_UICorner14"].CornerRadius = UDim.new(0, 16)
 Converted["_UICorner14"].Parent = Converted["_Menu"]
 Converted["_UIStroke5"].Color = Color3.fromRGB(255, 255, 255)
@@ -721,7 +721,7 @@ Converted["_HubDesc"].Name = "HubDesc"
 Converted["_HubDesc"].Parent = Converted["_Menu"]
 Converted["_HubName"].Font = Enum.Font.GothamBold
 Converted["_HubName"].RichText = true
-Converted["_HubName"].Text = "NIGHTSLAYERHUB "
+Converted["_HubName"].Text = "NIGHT SLAYER HUB "
 Converted["_HubName"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_HubName"].TextScaled = true
 Converted["_HubName"].TextSize = 14
@@ -869,7 +869,7 @@ Converted["_TextLabel6"].Position = UDim2.new(0.4923051, 0, 0.46438089, 0)
 Converted["_TextLabel6"].Size = UDim2.new(0, 200, 0, 50)
 Converted["_TextLabel6"].Parent = Converted["_Area1"]
 Converted["_TextLabel7"].Font = Enum.Font.GothamBold
-Converted["_TextLabel7"].Text = "NIGHTSLAYERHUB"
+Converted["_TextLabel7"].Text = "NIGHT SLAYER HUB"
 Converted["_TextLabel7"].TextColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_TextLabel7"].TextScaled = true
 Converted["_TextLabel7"].TextSize = 14
@@ -987,7 +987,7 @@ Converted["_Toggle"].BorderSizePixel = 0
 Converted["_Toggle"].Size = UDim2.new(1, 0, 0, 35)
 Converted["_Toggle"].Visible = false
 Converted["_Toggle"].Name = "Toggle"
-Converted["_Toggle"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_Toggle"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_TextLabel8"].FontFace = Font.new("rbxassetid://12187365364")
 Converted["_TextLabel8"].Text = "Loop walkspeed and FOV"
 Converted["_TextLabel8"].TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1049,7 +1049,7 @@ Converted["_ImageLabel1"].Parent = Converted["_Toggler"]
 Converted["_UIPadding14"].PaddingRight = UDim.new(0.0700000003, 0)
 Converted["_UIPadding14"].Parent = Converted["_Toggle"]
 Converted["_Modules"].Name = "Modules"
-Converted["_Modules"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_Modules"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_NotificationSample"].AnchorPoint = Vector2.new(0.5, 0)
 Converted["_NotificationSample"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_NotificationSample"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1060,7 +1060,7 @@ Converted["_NotificationSample"].Size = UDim2.new(0, 400, 0, 50)
 Converted["_NotificationSample"].Visible = false
 Converted["_NotificationSample"].ZIndex = 5
 Converted["_NotificationSample"].Name = "NotificationSample"
-Converted["_NotificationSample"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_NotificationSample"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_UICorner23"].CornerRadius = UDim.new(0, 10)
 Converted["_UICorner23"].Parent = Converted["_NotificationSample"]
 Converted["_UIStroke8"].Color = Color3.fromRGB(255, 255, 255)
@@ -1129,7 +1129,7 @@ Converted["_Dialog"].Size = UDim2.new(0, 313, 0, 147)
 Converted["_Dialog"].Visible = false
 Converted["_Dialog"].ZIndex = 5
 Converted["_Dialog"].Name = "Dialog"
-Converted["_Dialog"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_Dialog"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_UICorner25"].Parent = Converted["_Dialog"]
 Converted["_UIGradient8"].Color = ColorSequence.new{
 	ColorSequenceKeypoint.new(0, Color3.fromRGB(36.00000165402889, 36.00000165402889, 36.00000165402889)),
@@ -1246,7 +1246,7 @@ Converted["_Range"].BorderSizePixel = 0
 Converted["_Range"].Size = UDim2.new(1, 0, 0, 35)
 Converted["_Range"].Visible = false
 Converted["_Range"].Name = "Range"
-Converted["_Range"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_Range"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_TextLabel10"].FontFace = Font.new("rbxassetid://12187365364")
 Converted["_TextLabel10"].Text = "something something idk lol"
 Converted["_TextLabel10"].TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1363,7 +1363,7 @@ Converted["_FloatingButtonSetting"].Size = UDim2.new(1, 0, 1, 0)
 Converted["_FloatingButtonSetting"].Visible = false
 Converted["_FloatingButtonSetting"].ZIndex = 10
 Converted["_FloatingButtonSetting"].Name = "FloatingButtonSetting"
-Converted["_FloatingButtonSetting"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_FloatingButtonSetting"].Parent = Converted["_NIGHT SLAYER HUB"]
 Converted["_ControlBarContainer"].AnchorPoint = Vector2.new(0.5, 1)
 Converted["_ControlBarContainer"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_ControlBarContainer"].BackgroundTransparency = 1
@@ -1494,13 +1494,13 @@ Converted["_FloatingButtons1"].Position = UDim2.new(0.5, 0, 0.5, 0)
 Converted["_FloatingButtons1"].Size = UDim2.new(1, 0, 1, 0)
 Converted["_FloatingButtons1"].ZIndex = 3
 Converted["_FloatingButtons1"].Name = "FloatingButtons"
-Converted["_FloatingButtons1"].Parent = Converted["_NIGHTSLAYERHUB"]
+Converted["_FloatingButtons1"].Parent = Converted["_NIGHT SLAYER HUB"]
 -- Module Scripts:
 local module_scripts = {}
-do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
+do -- Module: StarterGui.NIGHT SLAYER HUB.FUNCTIONS
     local script = Instance.new("ModuleScript")
     script.Name = "FUNCTIONS"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local function module_script()
 		local FUNCTIONSmodule = {}
 		FUNCTIONSmodule.__v = "1.20"
@@ -1526,7 +1526,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 		local PointSave = PointSavef()
 		function SBTf()
 			-- Spring-based tweening module
-			-- Implementation by NIGHTSLAYERHUB Team, respective credits towards the original creators for spring physics
+			-- Implementation by NIGHT SLAYER HUB Team, respective credits towards the original creators for spring physics
 		
 			local a=function()local a=function()local a={}local function b(c,d,e,f,g,h)local i=d*d-4*e/c;local j=-0.5;local k=d+math.sqrt(i)local l=d-math.sqrt(i)local m,n=j*k,j*l;local o,p=(n*f-g)/(n-m),(m*f-g)/(m-n)local q=h/e;return{Offset=function(r)return o*math.exp(m*r)+p*math.exp(n*r)+q end,Velocity=function(r)return o*m*math.exp(m*r)+p*n*math.exp(n*r)end,Acceleration=function(r)return o*m*m*math.exp(m*r)+p*n*n*math.exp(n*r)end}end;local function s(c,d,e,f,g,h)local i=-d/2;local j,k=f,g-i*f;local l=h/e;return{Offset=function(m)return math.exp(i*m)*(j+k*m)+l end,Velocity=function(m)return math.exp(i*m)*(k*i*m+j*i+k)end,Acceleration=function(m)return i*math.exp(i*m)*(k*i*m+j*i+2*k)end}end;local function t(c,d,e,f,g,h)local i=d*d-4*e/c;local j=-d/2;local k=math.sqrt(-i)local l,m=f,(g-j*f)/k;local n=h/e;return{Offset=function(o)return math.exp(j*o)*(l*math.cos(k*o)+m*math.sin(k*o))+n end,Velocity=function(o)return-math.exp(j*o)*((l*k-m*j)*math.sin(k*o)+(-m*k-l*j)*math.cos(k*o))end,Acceleration=function(o)return-math.exp(j*o)*((m*k*k+2*l*j*k-m*j*j)*math.sin(k*o)+(l*k*k-2*m*j*k-l*j*j)*math.cos(k*o))end}end;function a.F(c)local d,e,f=c.InitialOffset,c.InitialVelocity,c.ExternalForce;local g,h,i=c.Mass,c.Damping,c.Constant;local j=h*h-4*i/g;if j>0 then return b(g,h,i,d,e,f)elseif j==0 then return s(g,h,i,d,e,f)else return t(g,h,i,d,e,f)end end;return a end;local c=a()local d=math.sqrt;local e=math.pi;local f={OFFSET="Offset",VELOCITY="Velocity",ACCELERATION="Acceleration",GOAL="Goal",FREQUENCY="Frequency"}local g=""local h=""local i={}local j={}j.__index=function(k,l)local m={[f.OFFSET]=function()local m=tick()-k.StartTick;local n=k.F;local o=n.Offset(m)return o end,[f.VELOCITY]=function()local m=tick()-k.StartTick;local n=k.F;local o=n.Velocity(m)return o end,[f.ACCELERATION]=function()local m=tick()-k.StartTick;local n=k.F;local o=n.Acceleration(m)return o end,[f.GOAL]=function()local m=k.ExternalForce;local n=k.Constant;return m/n end,[f.FREQUENCY]=function()local m=k.Damping;local n=k.Constant;local o=k.Mass;return d(-m*m+4*n/o)/(2*e)end}local n=rawget(k,l)if n~=nil then return n end;local o=m[l]if o~=nil then return o()end;return j[l]end;j.__tostring=function(k)local l=tick()-k.StartTick;local m=k.F;local n=k.AdvancedObjectStringEnabled;local o;if not n then o=string.format(g,m.Offset(l),m.Velocity(l),m.Acceleration(l))else o=string.format(h,k.Mass,k.Damping,k.Constant,k.Goal,k.Frequency,k.InitialOffset,k.InitialVelocity,k.ExternalForce,k.StartTick,m.Offset(l),m.Velocity(l),m.Acceleration(l))end;return o end;function i.fromDurationAndBounce(k,l)local m=1;local n=(2*math.pi/k)^2*m;local o=2*l*math.sqrt(m*n)return{m,o,n}end;function i.new(k,l,m,n,o,p)assert(k>0,"Mass for spring system cannot be less than or equal to 0")assert(m>0,"Spring constant for spring system cannot be less than or equal to 0")n=n or 0;o=o or 0;p=p or 0;local q=p*m;local r={Mass=k,Damping=l,Constant=m,InitialOffset=n-p,InitialVelocity=o,ExternalForce=q,AdvancedObjectStringEnabled=false,StartTick=0}setmetatable(r,j)r:Reset()return r end;function i.fromFrequency(k,l,m,n,o,p)assert(k>0,"Mass for spring system cannot be less than or equal to 0")assert(m>0,"Spring frequency for spring system cannot be less than or equal to 0")local q=0.25*k*(4*e*e*m*m+l*l)n=n or 0;o=o or 0;p=p or 0;local r=p*q;local u={Mass=k,Damping=l,Constant=q,InitialOffset=n-p,InitialVelocity=o,ExternalForce=r,AdvancedObjectStringEnabled=false,StartTick=0}setmetatable(u,j)u:Reset()return u end;function j.Reset(k)k.F=c.F(k)k.StartTick=tick()end;function j.SetExternalForce(k,l)k.ExternalForce=l;k.InitialOffset=k.Offset-l/k.Constant;k.InitialVelocity=k.Velocity;k:Reset()end;function j.SetGoal(k,l)k.ExternalForce=l*k.Constant;k.InitialOffset=k.Offset-l;k.InitialVelocity=k.Velocity;k:Reset()end;function j.SetFrequency(k,l)k.Constant=0.25*k.Mass*(4*e*e*l*l+k.Damping*k.Damping)k.InitialOffset=k.Offset;k.InitialVelocity=k.Velocity;k:Reset()end;function j.SnapToCriticalDamping(k)k.Damping=2*d(k.Constant/k.Mass)k.InitialOffset=k.Offset;k.InitialVelocity=k.Velocity;k:Reset()end;function j.SetOffset(k,l,m)k.InitialOffset=l-k.Goal;k.InitialVelocity=m and 0 or k.Velocity;k:Reset()end;function j.AddOffset(k,l)k.InitialOffset=k.Offset+l;k.InitialVelocity=k.Velocity;k:Reset()end;function j.SetVelocity(k,l)k.InitialOffset=k.Offset;k.InitialVelocity=l;k:Reset()end;function j.AddVelocity(k,l)k.InitialOffset=k.Offset;k.InitialVelocity=k.Velocity+l;k:Reset()end;function j.Print(k)local l=tostring(k)print(l)end;return i end;local c=a()local d=game:GetService"RunService"local e={}e.__index=e;function e.fromDurationAndBounce(f,g)local h=1;local i=(2*math.pi/f)^2*h;local j=2*(1-g)*math.sqrt(h*i)return{h,j,i}end;local f={number=function(f,g,h,i,j)local k=c.new(h,i,j,f[g],0,f[g])return{springType="number",springSet={k},updateFunc=function()f[g]=k.Offset end,setGoal=function(l)k:SetGoal(l)end}end,UDim2=function(f,g,h,i,j)local k=c.new(h,i,j,f[g].X.Offset,0,f[g].X.Offset)local l=c.new(h,i,j,f[g].X.Scale,0,f[g].X.Scale)local m=c.new(h,i,j,f[g].Y.Offset,0,f[g].Y.Offset)local n=c.new(h,i,j,f[g].Y.Scale,0,f[g].Y.Scale)return{springType="UDim2",springSet={XOffset=k,XScale=l,YOffset=m,YScale=n},updateFunc=function()f[g]=UDim2.new(l.Offset,k.Offset,n.Offset,m.Offset)end,setGoal=function(o)k:SetGoal(o.X.Offset)l:SetGoal(o.X.Scale)m:SetGoal(o.Y.Offset)n:SetGoal(o.Y.Scale)end}end,Vector2=function(f,g,h,i,j)local k=c.new(h,i,j,f[g].X,0,f[g].X)local l=c.new(h,i,j,f[g].Y,0,f[g].Y)return{springType="Vector2",springSet={X=k,Y=l},updateFunc=function()f[g]=Vector2.new(k.Offset,l.Offset)end,setGoal=function(m)k:SetGoal(m.X)l:SetGoal(m.Y)end}end,Vector3=function(f,g,h,i,j)local k=c.new(h,i,j,f[g].X,0,f[g].X)local l=c.new(h,i,j,f[g].Y,0,f[g].Y)local m=c.new(h,i,j,f[g].Z,0,f[g].Z)return{springType="Vector3",springSet={k,l,m},updateFunc=function()f[g]=Vector3.new(k.Offset,l.Offset,m.Offset)end,setGoal=function(n)k:SetTarget(n.X)l:SetTarget(n.Y)m:SetTarget(n.Z)end}end}function e.new(g,h,i,j,k)assert(g[h],"Property does not exist on object")local l=typeof(g[h])local m=f[l]if m then local n=setmetatable({},e)n.obj=g;n.propertyName=h;n.updater=nil;local o=m(g,h,i,j,k)n.springType=o.springType;n.springSet=o.springSet;n.updateFunc=o.updateFunc;n.setGoal=o.setGoal;return n else error("Type not supported: "..l)end end;function e.Start(g)if g.updater then return end;for h,i in pairs(g.springSet)do i:Reset()end;g.updater=d.RenderStepped:Connect(function(h)g.updateFunc()end)end;function e.Stop(g)if g.updater then g.updater:Disconnect()g.updater=nil end end;function e.SetGoal(g,h)g.setGoal(h)end;function e.SetParameters(g,h,i,j)for k,l in pairs(g.springSet)do l.Mass=h;l.Stiffness=i;l.Damping=j;l:Reset()end end;return e
 		end
@@ -1534,7 +1534,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 		
 		
 		
-		local NIGHTSLAYERHUBPointSave = PointSave.new("NIGHTSLAYERHUB")
+		local NIGHT SLAYER HUBPointSave = PointSave.new("NIGHT SLAYER HUB")
 		
 		local States = {}
 		local toggleStates = {}
@@ -1590,14 +1590,14 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 		
 		function FUNCTIONSmodule.getTheme()
 			if getgenv then
-				return getgenv().NIGHTSLAYERHUB_THEME or FUNCTIONSmodule.theme
+				return getgenv().NIGHT SLAYER HUB_THEME or FUNCTIONSmodule.theme
 			else
 				return FUNCTIONSmodule.theme
 			end
 		end
 		function FUNCTIONSmodule.setTheme(t)
 			FUNCTIONSmodule.theme = t
-			if getgenv then getgenv().NIGHTSLAYERHUB_THEME = t end
+			if getgenv then getgenv().NIGHT SLAYER HUB_THEME = t end
 		end
 		
 		local floatingButtonObjects = {}
@@ -1788,7 +1788,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 					Size = newSize
 				}):Play()
 				button.Size = newSize
-				NIGHTSLAYERHUBPointSave:set(string.gsub(button.Name, "_", ""), udim2Serializer(button.Position) .. "|" .. udim2Serializer(button.Size) .. "|" .. tostring(button.Visible) .. "|" .. tostring(dragger.CanBeDragged))
+				NIGHT SLAYER HUBPointSave:set(string.gsub(button.Name, "_", ""), udim2Serializer(button.Position) .. "|" .. udim2Serializer(button.Size) .. "|" .. tostring(button.Visible) .. "|" .. tostring(dragger.CanBeDragged))
 			end
 			fBSFResizeDragger:Enable()
 		
@@ -1834,7 +1834,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 					Scale = 0
 				}):Play()
 			end
-			NIGHTSLAYERHUBPointSave:set(string.gsub(getgenv().fBSFRealButton.Name, "_", ""), udim2Serializer(getgenv().fBSFRealButton.Position) .. "|" .. udim2Serializer(getgenv().fBSFRealButton.Size) .. "|" .. tostring(getgenv().fBSFRealButton.Visible) .. "|" .. tostring(getgenv().fBSF_ButtonDragger.CanBeDragged))
+			NIGHT SLAYER HUBPointSave:set(string.gsub(getgenv().fBSFRealButton.Name, "_", ""), udim2Serializer(getgenv().fBSFRealButton.Position) .. "|" .. udim2Serializer(getgenv().fBSFRealButton.Size) .. "|" .. tostring(getgenv().fBSFRealButton.Visible) .. "|" .. tostring(getgenv().fBSF_ButtonDragger.CanBeDragged))
 		end
 		
 		function FUNCTIONSmodule.ftToggleVisibility()
@@ -1865,20 +1865,20 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 					Transparency = 0
 				}):Play()
 			end
-			NIGHTSLAYERHUBPointSave:set(string.gsub(getgenv().fBSFRealButton.Name, "_", ""), udim2Serializer(getgenv().fBSFRealButton.Position) .. "|" .. udim2Serializer(getgenv().fBSFRealButton.Size) .. "|" .. tostring(getgenv().fBSFRealButton.Visible) .. "|" .. tostring(getgenv().fBSF_ButtonDragger.CanBeDragged))
+			NIGHT SLAYER HUBPointSave:set(string.gsub(getgenv().fBSFRealButton.Name, "_", ""), udim2Serializer(getgenv().fBSFRealButton.Position) .. "|" .. udim2Serializer(getgenv().fBSFRealButton.Size) .. "|" .. tostring(getgenv().fBSFRealButton.Visible) .. "|" .. tostring(getgenv().fBSF_ButtonDragger.CanBeDragged))
 		end
 		
 		function FUNCTIONSmodule.createFloatingButton(item,button,buttonname,fromload)
-			if not getgenv().NIGHTSLAYERHUB.FloatingButtons:FindFirstChild(string.gsub(buttonname, "_", "")) then
+			if not getgenv().NIGHT SLAYER HUB.FloatingButtons:FindFirstChild(string.gsub(buttonname, "_", "")) then
 				
 				
 				local UserInputService = game:GetService("UserInputService")
 				if not fromload then
-					NIGHTSLAYERHUBPointSave:set(string.gsub(buttonname, "_", ""), udim2Serializer(UDim2.fromOffset(125, 90)) .. "|" .. udim2Serializer(UDim2.fromOffset(200,50)) .. "|true|true")
+					NIGHT SLAYER HUBPointSave:set(string.gsub(buttonname, "_", ""), udim2Serializer(UDim2.fromOffset(125, 90)) .. "|" .. udim2Serializer(UDim2.fromOffset(200,50)) .. "|true|true")
 				end
 		
-				local newFloatingButton = getgenv().NIGHTSLAYERHUB.FloatingButton:Clone()
-				newFloatingButton.Parent = getgenv().NIGHTSLAYERHUB.FloatingButtons
+				local newFloatingButton = getgenv().NIGHT SLAYER HUB.FloatingButton:Clone()
+				newFloatingButton.Parent = getgenv().NIGHT SLAYER HUB.FloatingButtons
 				
 				newFloatingButton.Name = string.gsub(buttonname, "_", "")
 				newFloatingButton.Text = string.gsub(buttonname, "_", " ")
@@ -1949,8 +1949,8 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 				local shouldBeDraggable = true
 				if not fromload then
 					newFloatingButton.Position = UDim2.fromOffset(-125, 90)
-				elseif NIGHTSLAYERHUBPointSave:get(string.gsub(buttonname, "_", "")) then
-					local data = NIGHTSLAYERHUBPointSave:get(string.gsub(buttonname, "_", "")):split("|")
+				elseif NIGHT SLAYER HUBPointSave:get(string.gsub(buttonname, "_", "")) then
+					local data = NIGHT SLAYER HUBPointSave:get(string.gsub(buttonname, "_", "")):split("|")
 					newFloatingButton.Position = udim2Serializer(data[1])
 					ts:Create(newFloatingButton, TweenInfo.new(2, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
 						Size = udim2Serializer(data[2])
@@ -1978,7 +1978,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 					floatingButtonDraggers[string.gsub(buttonname, "_", "")]:Enable()
 				end
 				floatingButtonDraggers[string.gsub(buttonname, "_", "")].Dragged = function(newPos)
-					NIGHTSLAYERHUBPointSave:set(string.gsub(buttonname, "_", ""), udim2Serializer(newPos) .. "|" .. udim2Serializer(newFloatingButton.Size) .. "|" .. tostring(newFloatingButton.Visible) .. "|" .. tostring(floatingButtonDraggers[string.gsub(buttonname, "_", "")].CanBeDragged))
+					NIGHT SLAYER HUBPointSave:set(string.gsub(buttonname, "_", ""), udim2Serializer(newPos) .. "|" .. udim2Serializer(newFloatingButton.Size) .. "|" .. tostring(newFloatingButton.Visible) .. "|" .. tostring(floatingButtonDraggers[string.gsub(buttonname, "_", "")].CanBeDragged))
 				end
 		
 				local holder = ClickAndHold.new(newFloatingButton)
@@ -2024,9 +2024,9 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 				if floatingButtonConnections[string.gsub(buttonname, "_", "")] then
 					floatingButtonConnections[string.gsub(buttonname, "_", "")]:Disconnect()
 				end
-				NIGHTSLAYERHUBPointSave:remove(string.gsub(buttonname, "_", ""))
+				NIGHT SLAYER HUBPointSave:remove(string.gsub(buttonname, "_", ""))
 				task.spawn(function()
-					local buttontodestroy = getgenv().NIGHTSLAYERHUB.FloatingButtons:FindFirstChild(string.gsub(buttonname, "_", ""))
+					local buttontodestroy = getgenv().NIGHT SLAYER HUB.FloatingButtons:FindFirstChild(string.gsub(buttonname, "_", ""))
 					local btdtween = ts:Create(buttontodestroy, TweenInfo.new(0.5, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
 						Size = UDim2.new(0,0,0,0)
 					})
@@ -2043,7 +2043,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 				for _, item in ipairs(module) do
 					if item["Type"] == "Button" then
 						local key = string.gsub(item["Args"][1], "_", "")
-						local saved = NIGHTSLAYERHUBPointSave:get(key)
+						local saved = NIGHT SLAYER HUBPointSave:get(key)
 						if saved then
 							FUNCTIONSmodule.createFloatingButton(item, Instance.new("TextButton"), item["Args"][1], true)
 						end
@@ -2209,7 +2209,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 		
 		
 				elseif item["Type"] == "Input" then
-					local cloneinput = getgenv().NIGHTSLAYERHUB.TextBoxPlaceholder:Clone()
+					local cloneinput = getgenv().NIGHT SLAYER HUB.TextBoxPlaceholder:Clone()
 					cloneinput.Parent = frameHolder
 					cloneinput.Visible = true
 					
@@ -2227,7 +2227,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 						item["Args"][3](cloneinput.TextButton, cloneinput.TextBox.Text)
 					end)
 				elseif item["Type"] == "Toggle" then
-					local clonetoggle = getgenv().NIGHTSLAYERHUB.Toggle:Clone()
+					local clonetoggle = getgenv().NIGHT SLAYER HUB.Toggle:Clone()
 					clonetoggle.Parent = frameHolder
 					clonetoggle.Visible = true
 		
@@ -2263,8 +2263,8 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 						item["Args"][2](clonetoggletoggler, toggleStates[item["Args"][1] .. module.Name])
 					end)
 				elseif item["Type"] == "Dropdown" then	
-					local clonedropdown = getgenv().NIGHTSLAYERHUB.Dropdown:Clone()
-					local dropdownFrame = getgenv().NIGHTSLAYERHUB.DropdownFrameSample
+					local clonedropdown = getgenv().NIGHT SLAYER HUB.Dropdown:Clone()
+					local dropdownFrame = getgenv().NIGHT SLAYER HUB.DropdownFrameSample
 					clonedropdown.Parent = frameHolder
 					clonedropdown.Visible = true
 		
@@ -2307,7 +2307,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 						end
 					end)
 				elseif item["Type"] == "Range" then
-					local clonerange = getgenv().NIGHTSLAYERHUB.Range:Clone()
+					local clonerange = getgenv().NIGHT SLAYER HUB.Range:Clone()
 					clonerange.Parent = frameHolder
 					clonerange.Visible = true
 		
@@ -2455,7 +2455,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 			for i, module in ipairs(dense) do
 				local success, err = pcall(function()
 		
-					local listbutton = getgenv().NIGHTSLAYERHUB.ListButton:Clone()
+					local listbutton = getgenv().NIGHT SLAYER HUB.ListButton:Clone()
 					listbutton.Parent           = script.Parent.Menu.List.ScrollingFrame
 					listbutton.Name             = module.Name
 					listbutton.Text             = module.Name
@@ -2505,7 +2505,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 				end)
 		
 				if not success then
-					warn(("[NIGHTSLAYERHUB] Error loading module %q: %s"):format(module.Name, err))
+					warn(("[NIGHT SLAYER HUB] Error loading module %q: %s"):format(module.Name, err))
 				end
 			end
 		end
@@ -2559,81 +2559,81 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.FUNCTIONS
 		end
 		
 		
-		getgenv().NIGHTSLAYERHUBFUNCTIONS = FUNCTIONSmodule
+		getgenv().NIGHT SLAYER HUBFUNCTIONS = FUNCTIONSmodule
 		return FUNCTIONSmodule
 		
     end
     module_scripts[script] = module_script
 end
-do -- Module: StarterGui.NIGHTSLAYERHUB.DraggableObject
+do -- Module: StarterGui.NIGHT SLAYER HUB.DraggableObject
     local script = Instance.new("ModuleScript")
     script.Name = "DraggableObject"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local function module_script()
 		local function a(b,c)local d=c.AbsoluteSize;local e=c.AbsolutePosition;local f=b.X.Scale*d.X+b.X.Offset;local g=b.Y.Scale*d.Y+b.Y.Offset;local h=math.clamp(f,0,d.X)local i=math.clamp(g,0,d.Y)local j=UDim2.new(b.X.Scale,h-b.X.Scale*d.X,b.Y.Scale,i-b.Y.Scale*d.Y)return j end;local k=UDim2.new;local l=game:GetService("UserInputService")local m=game:GetService("TweenService")local n={}n.__index=n;function n.new(o,p,q,r)local self={}self.Object=o;self.ToMove=p;self.Smooth=q;self.CallbackOnly=r;self.DragStarted=nil;self.DragEnded=nil;self.Dragged=nil;self.Dragging=false;self.LastPosition=nil;self.Velocity=Vector2.new(0,0)setmetatable(self,n)return self end;function n:Enable()local s=self.Object;local t=self.ToMove;local u=nil;local v=nil;local w=nil;local x=false;local function y(z)local A=z.Position-v;local B=UDim2.new(w.X.Scale,w.X.Offset+A.X,w.Y.Scale,w.Y.Offset+A.Y)if self.CallbackOnly then else B=a(B,self.Object:FindFirstAncestorWhichIsA("ScreenGui"))if(self.Smooth==nil or self.Smooth==true)and self.Smooth~=false then m:Create(t and t or s,TweenInfo.new(0.5,Enum.EasingStyle.Cubic,Enum.EasingDirection.Out),{Position=B}):Play()else local C=t and t or s;C.Position=B end end;return B end;self.InputBegan=s.InputBegan:Connect(function(z)if z.UserInputType==Enum.UserInputType.MouseButton1 or z.UserInputType==Enum.UserInputType.Touch then x=true;local D;D=z.Changed:Connect(function()if z.UserInputState==Enum.UserInputState.End and(self.Dragging or x)then self.Dragging=false;D:Disconnect()if self.DragEnded and not x then self.DragEnded(self.Velocity)end;x=false end end)end end)self.InputChanged=s.InputChanged:Connect(function(z)if z.UserInputType==Enum.UserInputType.MouseMovement or z.UserInputType==Enum.UserInputType.Touch then u=z end end)self.InputChanged2=l.InputChanged:Connect(function(z)if s.Parent==nil then self:Disable()return end;if x then x=false;if self.DragStarted then self.DragStarted()end;self.Dragging=true;v=z.Position;if t then w=t.Position else w=s.Position end;self.LastPosition=z.Position end;if z==u and self.Dragging then local B=y(z)self.Velocity=z.Position-self.LastPosition;self.LastPosition=z.Position;if self.Dragged then self.Dragged(B)end end end)end;function n:Disable()self.InputBegan:Disconnect()self.InputChanged:Disconnect()self.InputChanged2:Disconnect()if self.Dragging then self.Dragging=false;if self.DragEnded then self.DragEnded(self.Velocity)end end end;return n
 		
     end
     module_scripts[script] = module_script
 end
-do -- Module: StarterGui.NIGHTSLAYERHUB.ClickAndHold
+do -- Module: StarterGui.NIGHT SLAYER HUB.ClickAndHold
     local script = Instance.new("ModuleScript")
     script.Name = "ClickAndHold"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local function module_script()
 		local a={}a.__index=a;local b=game:GetService("UserInputService")function a.new(c,d)local self=setmetatable({},a)self.textButton=c;self.holdTime=d or 0.5;self.holdTask=nil;self.initialPosition=nil;self.Holded=Instance.new("BindableEvent")local function e(f,g)return math.sqrt((g.X-f.X)^2+(g.Y-f.Y)^2)end;self.textButton.MouseButton1Down:Connect(function(h,i)self.initialPosition=Vector2.new(h,i)self.holdTask=task.spawn(function()task.wait(self.holdTime)if self.holdTask then self.Holded:Fire()end end)end)b.InputChanged:Connect(function(j)if j.UserInputType==Enum.UserInputType.MouseMovement or j.UserInputType==Enum.UserInputType.Touch then if self.holdTask and self.initialPosition then local k=j.Position;local l=e(self.initialPosition,k)if l>10 then coroutine.close(self.holdTask)self.holdTask=nil end end end end)b.InputEnded:Connect(function(j)if j.UserInputType==Enum.UserInputType.MouseButton1 or j.UserInputType==Enum.UserInputType.Touch then if self.holdTask then coroutine.close(self.holdTask)self.holdTask=nil end;self.initialPosition=nil end end)return self end;return a
     end
     module_scripts[script] = module_script
 end
-do -- Module: StarterGui.NIGHTSLAYERHUB.Spring
+do -- Module: StarterGui.NIGHT SLAYER HUB.Spring
     local script = Instance.new("ModuleScript")
     script.Name = "Spring"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local function module_script()
 		local a=game:GetService("RunService")local b={}function OverDamping(c,d,e,f,g,h)local i=d*d-4*e/c;local j=-1/2;local k=d+math.sqrt(i)local l=d-math.sqrt(i)local m,n=j*k,j*l;local o,p=(n*f-g)/(n-m),(m*f-g)/(m-n)local q=h/e;return{Offset=function(r)return o*math.exp(m*r)+p*math.exp(n*r)+q end,Velocity=function(r)return o*m*math.exp(m*r)+p*n*math.exp(n*r)end,Acceleration=function(r)return o*m*m*math.exp(m*r)+p*n*n*math.exp(n*r)end}end;function CriticalDamping(c,d,e,f,g,h)local s=-d/2;local o,p=f,g-s*f;local q=h/e;return{Offset=function(r)return math.exp(s*r)*(o+p*r)+q end,Velocity=function(r)return math.exp(s*r)*(p*s*r+o*s+p)end,Acceleration=function(r)return s*math.exp(s*r)*(p*s*r+o*s+2*p)end}end;function UnderDamping(c,d,e,f,g,h)local i=d*d-4*e/c;local s=-d/2;local t=math.sqrt(-i)local o,p=f,(g-s*f)/t;local q=h/e;return{Offset=function(r)return math.exp(s*r)*(o*math.cos(t*r)+p*math.sin(t*r))+q end,Velocity=function(r)return-math.exp(s*r)*((o*t-p*s)*math.sin(t*r)+(-p*t-o*s)*math.cos(t*r))end,Acceleration=function(r)return-math.exp(s*r)*((p*t*t+2*o*s*t-p*s*s)*math.sin(t*r)+(o*t*t-2*p*s*t-o*s*s)*math.cos(t*r))end}end;function b.F(u)local f,g,h=u.InitialOffset,u.InitialVelocity,u.ExternalForce;local c,d,e=u.Mass,u.Damping,u.Constant;local i=d*d-4*e/c;if i>0 then return OverDamping(c,d,e,f,g,h)elseif i==0 then return CriticalDamping(c,d,e,f,g,h)else return UnderDamping(c,d,e,f,g,h)end end;local v=b;local w=math.sqrt;local x=math.pi;local y={OFFSET="Offset",VELOCITY="Velocity",ACCELERATION="Acceleration",GOAL="Goal",FREQUENCY="Frequency"}local z=[[.]]local A=[[.]]local u={}local B={}B.__index=function(self,C)local D={[y.OFFSET]=function()local r=tick()-self.StartTick;local E=self.F;local F=E.Offset(r)return F end,[y.VELOCITY]=function()local r=tick()-self.StartTick;local E=self.F;local G=E.Velocity(r)return G end,[y.ACCELERATION]=function()local r=tick()-self.StartTick;local E=self.F;local H=E.Acceleration(r)return H end,[y.GOAL]=function()local I=self.ExternalForce;local J=self.Constant;return I/J end,[y.FREQUENCY]=function()local K=self.Damping;local L=self.Constant;local M=self.Mass;return w(-K*K+4*L/M)/(2*x)end}local N=rawget(self,C)if N~=nil then return N end;local O=D[C]if O~=nil then return O()end;return B[C]end;B.__tostring=function(self)local r=tick()-self.StartTick;local E=self.F;local P=self.AdvancedObjectStringEnabled;local Q;if P==false then Q=string.format(z,E.Offset(r),E.Velocity(r),E.Acceleration(r))elseif P==true then Q=string.format(A,self.Mass,self.Damping,self.Constant,self.Goal,self.Frequency,self.InitialOffset,self.InitialVelocity,self.ExternalForce,self.StartTick,E.Offset(r),E.Velocity(r),E.Acceleration(r))end;return Q end;function u.new(M,K,L,f,g,R)assert(M>0,"Mass for spring system cannot be less than or equal to 0")assert(L>0,"Spring constant for spring system cannot be less than or equal to 0")f=f or 0;g=g or 0;R=R or 0;local S=R*L;local T={Mass=M,Damping=K,Constant=L,InitialOffset=f-R,InitialVelocity=g,ExternalForce=S,AdvancedObjectStringEnabled=false,StartTick=0}setmetatable(T,B)T:Reset()return T end;function u.fromFrequency(M,K,U,f,g,R)assert(M>0,"Mass for spring system cannot be less than or equal to 0")assert(U>0,"Spring frequency for spring system cannot be less than or equal to 0")local L=0.25*M*(4*x*x*U*U+K*K)f=f or 0;g=g or 0;R=R or 0;local S=R*L;local T={Mass=M,Damping=K,Constant=L,InitialOffset=f-R,InitialVelocity=g,ExternalForce=S,AdvancedObjectStringEnabled=false,StartTick=0}setmetatable(T,B)T:Reset()return T end;function B:Reset()self.F=v.F(self)self.StartTick=tick()end;function B:SetExternalForce(V)self.ExternalForce=V;self.InitialOffset=self.Offset-V/self.Constant;self.InitialVelocity=self.Velocity;self:Reset()end;function B:SetGoal(R)self.ExternalForce=R*self.Constant;self.InitialOffset=self.Offset-R;self.InitialVelocity=self.Velocity;self:Reset()end;function B:SetFrequency(U)self.Constant=0.25*self.Mass*(4*x*x*U*U+self.Damping*self.Damping)self.InitialOffset=self.Offset;self.InitialVelocity=self.Velocity;self:Reset()end;function B:SnapToCriticalDamping()self.Damping=2*w(self.Constant/self.Mass)self.InitialOffset=self.Offset;self.InitialVelocity=self.Velocity;self:Reset()end;function B:SetOffset(F,W)self.InitialOffset=F-self.Goal;self.InitialVelocity=W and 0 or self.Velocity;self:Reset()end;function B:AddOffset(F)self.InitialOffset=self.Offset+F;self.InitialVelocity=self.Velocity;self:Reset()end;function B:SetVelocity(G)self.InitialOffset=self.Offset;self.InitialVelocity=G;self:Reset()end;function B:AddVelocity(G)self.InitialOffset=self.Offset;self.InitialVelocity=self.Velocity+G;self:Reset()end;function B:Print()local X=tostring(self)print(X)end;return u
     end
     module_scripts[script] = module_script
 end
-do -- Module: StarterGui.NIGHTSLAYERHUB.ESPIndicator
+do -- Module: StarterGui.NIGHT SLAYER HUB.ESPIndicator
     local script = Instance.new("ModuleScript")
     script.Name = "ESPIndicator"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local function module_script()
 		-- Robust ESP module with distancing, arrows, and grouping
-		-- Designed and written by NIGHTSLAYERHUB
+		-- Designed and written by NIGHT SLAYER HUB
 		
 		local e={} e.__index=e local a=game:GetService("RunService") local _=game:GetService("Players") local b=game:GetService("HttpService") local l=game:GetService("TweenService") e.Groups={} e.TargetIndex={} e.Defaults={AccentColor=Color3.new(1,1,0),HighlightFillTransparency=0.7,HighlightOutlineTransparency=0,HighlightDepthMode=Enum.HighlightDepthMode.AlwaysOnTop,ArrowShow=false,ArrowEdgePadding=50,ArrowMinDistance=0,ArrowSize=UDim2.new(0,30,0,30),ArrowImage="rbxassetid://97136202386756",ArrowShowDistanceText=true,ArrowDistanceFont=Enum.Font.Montserrat,ArrowDistanceTextSize=18,ShowLabel=false,LabelText="Target",LabelMaxDistance=99999,LabelOffset=Vector3.new(0,2,0),Parent=game:GetService("CoreGui")} function e.new(b)local c=setmetatable({},e) c.Settings={} for a,_ in pairs(e.Defaults)do c.Settings[a]=(b and b[a]~=nil)and b[a]or _ end local _=c.Settings.Parent or _.LocalPlayer:WaitForChild("PlayerGui") c.ScreenGui=Instance.new("ScreenGui") c.ScreenGui.Name="ESPIndicators" c.ScreenGui.IgnoreGuiInset=true c.ScreenGui.ResetOnSpawn=false c.ScreenGui.Parent=_ c.ArrowTemplate=Instance.new("ImageLabel") c.ArrowTemplate.Name="ArrowTemplate" c.ArrowTemplate.Size=c.Settings.ArrowSize c.ArrowTemplate.AnchorPoint=Vector2.new(0.5,0.5) c.ArrowTemplate.BackgroundTransparency=1 c.ArrowTemplate.Image=c.Settings.ArrowImage c.ArrowTemplate.ImageColor3=c.Settings.AccentColor c.ArrowTemplate.Visible=false c.ArrowTemplate.Parent=c.ScreenGui c.Scaler=Instance.new("UIScale") c.Scaler.Name="Scaler" c.Scaler.Scale=0 c.Scaler.Parent=c.ArrowTemplate c.Indicators={} c._updateConn=a.RenderStepped:Connect(function()c:_update()end) c._cleanupConn=a.Heartbeat:Connect(function()c:_cleanupOrphanedArrows() c:_cleanupOrphanedHighlights() c:_cleanupOrphanedLabels()end) return c end function e:AddGroup(_)local a=e.Groups[_] if not a then a={enabled=true,properties={},targets={}} e.Groups[_]=a end return a end function e:GetGroup(_)return e.Groups[_]end function e:RemoveGroup(b)local _=e.Groups[b] if not _ then return false end for _,_ in ipairs(_.targets)do local c=e.TargetIndex[_] if c then for _,a in ipairs(c)do if a==b then table.remove(c,_) break end end if#c==0 then e.TargetIndex[_]=nil end end if not e.TargetIndex[_]then self:Remove(_)end end e.Groups[b]=nil return true end function e:ClearAllGroups()for a,_ in pairs(e.Groups)do self:RemoveGroup(a)end end function e:ToggleGroup(_,a)local b=e.Groups[_] if not b then return end b.enabled=(a~=nil)and a or not b.enabled for _,_ in ipairs(b.targets)do local _=self.Indicators[_] if _ then if _.Highlight then _.Highlight.Enabled=b.enabled end if _.Arrow then _.Arrow.Visible=b.enabled and self.Settings.ArrowShow end if _.Label then _.Label.Enabled=b.enabled end end end return b.enabled end function e:SetGroupProperty(_,a,b)local _=self:AddGroup(_) _.properties[a]=b for _,_ in ipairs(_.targets)do local _=self.Indicators[_] if _ then if a=="AccentColor"then if _.Highlight then _.Highlight.FillColor=b _.Highlight.OutlineColor=b end if _.Arrow then _.Arrow.ImageColor3=b end if _.DistanceLabel then _.DistanceLabel.TextColor3=b end if _.Label and _.Label:FindFirstChild("TextLabel")then _.Label.TextLabel.TextColor3=b end end end end end function e:Add(a,g)assert(a,"ESPIndicator:Add requires a non-nil target") g=g or{} local d=Instance.new("Highlight") d.Name="Highlight_"..b:GenerateGUID(false) d.Adornee=a d.FillTransparency=g.HighlightFillTransparency or self.Settings.HighlightFillTransparency d.FillColor=g.AccentColor or self.Settings.AccentColor d.OutlineColor=g.AccentColor or self.Settings.AccentColor d.OutlineTransparency=g.HighlightOutlineTransparency or self.Settings.HighlightOutlineTransparency d.DepthMode=g.HighlightDepthMode or self.Settings.HighlightDepthMode d.Parent=self.ScreenGui local c,_,e if(g.ArrowShow or self.Settings.ArrowShow)then c=self.ArrowTemplate:Clone() c.Name="Arrow_"..b:GenerateGUID(false) c.ImageColor3=g.AccentColor or self.Settings.AccentColor c.Visible=true c.Parent=self.ScreenGui _=c:FindFirstChild("Scaler") if(g.ArrowShowDistanceText or self.Settings.ArrowShowDistanceText)then e=Instance.new("TextLabel") e.Name="DistanceLabel" e.AnchorPoint=Vector2.new(0.5,0) e.BackgroundTransparency=1 e.Font=g.ArrowDistanceFont or self.Settings.ArrowDistanceFont e.TextSize=g.ArrowDistanceTextSize or self.Settings.ArrowDistanceTextSize e.TextColor3=g.AccentColor or self.Settings.AccentColor e.Parent=c end end local f if(g.ShowLabel or self.Settings.ShowLabel)then f=Instance.new("BillboardGui") f.Name="Label_"..b:GenerateGUID(false) f.AlwaysOnTop=true f.MaxDistance=self.Settings.LabelMaxDistance f.Size=UDim2.new(0,70,0,70) f.StudsOffset=self.Settings.LabelOffset f.Adornee=a f.Parent=self.ScreenGui local _=Instance.new("TextLabel") _.Name="TextLabel" _.Size=UDim2.new(1,0,1,0) _.AnchorPoint=Vector2.new(0.5,0.5) _.Position=UDim2.new(0.5,0,0.5,0) _.BackgroundTransparency=1 _.Font=Enum.Font.SourceSansBold _.TextScaled=true _.TextWrapped=true _.TextSize=14 _.TextColor3=g.AccentColor or self.Settings.AccentColor _.Text=g.LabelText or self.Settings.LabelText _.Parent=f Instance.new("UIStroke",_)end self.Indicators[a]={Highlight=d,Arrow=c,Scaler=_,DistanceLabel=e,Label=f,Options=g} local _=g.GroupName or self.Settings.GroupName if _ then self:AddToGroup(a,_)end end function e:Remove(c)local _=self.Indicators[c] if not _ then return end if _.Highlight then _.Highlight.Adornee=nil _.Highlight:Destroy()end if _.Arrow then _.Arrow:Destroy()end if _.Label then _.Label:Destroy()end local _=e.TargetIndex[c] if _ then for _,_ in ipairs(_)do local b=e.Groups[_] if b then for a,_ in ipairs(b.targets)do if _==c then table.remove(b.targets,a) break end end end end e.TargetIndex[c]=nil end self.Indicators[c]=nil end function e:AddToGroup(c,b)local _=self:AddGroup(b) if not table.find(_.targets,c)then table.insert(_.targets,c)end local a=e.TargetIndex[c] if not a then a={} e.TargetIndex[c]=a end if not table.find(a,b)then table.insert(a,b)end for a,_ in pairs(_.properties)do self:SetGroupProperty(b,a,_)end if not _.enabled then local _=self.Indicators[c] if _ and _.Highlight then _.Highlight.Enabled=false end end return true end function e:RemoveFromGroup(d,b)local c=e.Groups[b] if not c then return false end if table.find(c.targets,d)then for _,a in ipairs(c.targets)do if a==d then table.remove(c.targets,_) break end end else return false end local c=e.TargetIndex[d] if c then for a,_ in ipairs(c)do if _==b then table.remove(c,a) break end end if#c==0 then e.TargetIndex[d]=nil end end return true end function e:GetGroupTargets(_)local _=e.Groups[_] return _ and _.targets or{}end function e:GetTargetGroups(_)return e.TargetIndex[_]or{}end function e:_cleanupOrphanedHighlights()for _,_ in ipairs(self.ScreenGui:GetChildren())do if _:IsA("Highlight")and not table.find(self:_allHighlights(),_)then _.Adornee=nil _:Destroy()end end end function e:_allHighlights()local a={} for _,_ in pairs(self.Indicators)do if _.Highlight then table.insert(a,_.Highlight)end end return a end function e:_cleanupOrphanedArrows()for _,_ in ipairs(self.ScreenGui:GetChildren())do if _:IsA("ImageLabel")and _.Name:match("^Arrow_")then if not table.find(self:_allArrows(),_)then _:Destroy()end end end end function e:_allArrows()local a={} for _,_ in pairs(self.Indicators)do if _.Arrow then table.insert(a,_.Arrow)end end return a end function e:_cleanupOrphanedLabels()for _,_ in ipairs(self.ScreenGui:GetChildren())do if _:IsA("BillboardGui")and _.Name:match("^Label_")then if not table.find(self:_allLabels(),_)then _.Adornee=nil _:Destroy()end end end end function e:_allLabels()local a={} for _,_ in pairs(self.Indicators)do if _.Label then table.insert(a,_.Label)end end return a end function e:_update()local a=workspace.CurrentCamera local _=a.ViewportSize local f,i=_.X,_.Y for _,p in pairs(self.Indicators)do local j=p.Options local h=p.Arrow local k=p.Scaler if((not h)or(not k))and self.Settings.ArrowShow then self:Remove(_) continue end if not h then continue end local n if _:IsA("Model")then n=(_.PrimaryPart and _.PrimaryPart.Position)or _:GetModelCFrame().p elseif _:IsA("BasePart")then n=_.Position else continue end local m,e=a:WorldToViewportPoint(n) local c=(a.CFrame.p-n).Magnitude local _=j.ArrowMinDistance or self.Settings.ArrowMinDistance local o=j.ArrowEdgePadding or self.Settings.ArrowEdgePadding if e and c>_ then l:Create(k,TweenInfo.new(0.1,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{Scale=0}):Play()else l:Create(k,TweenInfo.new(0.1,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{Scale=1}):Play() local d,g=f-o*2,i-o*2 local b=a.CFrame local _=math.sqrt((d/2)^2+(g/2)^2) local a=n-b.Position local a=b:VectorToObjectSpace(a) local n=Vector2.new(a.X,a.Y).Unit local a=math.clamp(m.X,o,f-o) local b=math.clamp(m.Y,o,i-o) if a==m.X and b==m.Y and e then l:Create(k,TweenInfo.new(0.1,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{Scale=0}):Play()else local _=n*_ local b if math.abs(_.Y)>g/2 then b=n*math.abs((g/2)/n.Y)else b=n*math.abs((d/2)/n.X)end local a=f/2+b.X local _=i/2-b.Y local b=math.atan2(n.X,n.Y) l:Create(h,TweenInfo.new(0.1,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),{Position=UDim2.fromOffset(a,_),Rotation=math.deg(b)}):Play()end if p.DistanceLabel then p.DistanceLabel.Text=string.format("%dm",math.round(c)) local _=(j.ArrowSize and j.ArrowSize.Y.Offset or self.Settings.ArrowSize.Y.Offset)+16 p.DistanceLabel.Position=UDim2.new(0.5,0,0,_)end end end end function e:Destroy()if self._updateConn then self._updateConn:Disconnect()end if self._cleanupConn then self._cleanupConn:Disconnect()end self:ClearAllGroups() for _,_ in pairs(self.Indicators)do if _.Highlight then _.Highlight:Destroy()end if _.Arrow then _.Arrow:Destroy()end if _.Label then _.Label:Destroy()end end self.ScreenGui:Destroy() self.Indicators={} e.Groups={} e.TargetIndex={}end return e
     end
     module_scripts[script] = module_script
 end
-do -- Module: StarterGui.NIGHTSLAYERHUB.Bezier
+do -- Module: StarterGui.NIGHT SLAYER HUB.Bezier
     local script = Instance.new("ModuleScript")
     script.Name = "Bezier"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local function module_script()
 		local h={} h.__index=h function h.new(...)local k={...} assert(#k>=3,"Must have at least 3 points") local e=(#k==3) local _=(#k==4) local j={} local d=Vector3.new local b=d().lerp local f=nil local i={} local c=0 local a=nil local function g(_)local _={_.X,_.Y,_.Z} function _:ToVector3()return d(self[1],self[2],self[3])end function _:lerp(_,a)return b(self:ToVector3(),_:ToVector3(),a)end return _ end if(not e and not _)then for _=1,#k-1 do local a=g(k[_]) local _=g(k[_+1]) local _={a,_,g(a)} i[#i+1]=_ end local b=i for _=#i,2,-1 do local a={} for c=1,_-1 do local b,_=b[c],b[c+1] local _={b[3],_[3],g(b[3])} a[c]=_ i[#i+1]=_ end b=a end a=b[1] c=#i end if(e)then local b,c,_=k[1],k[2],k[3] function j:Get(d,a)if(a)then d=(d<0 and 0 or d>1 and 1 or d)end return(1-d)*(1-d)*b+2*(1-d)*d*c+d*d*_ end elseif(_)then local _,a,c,b=k[1],k[2],k[3],k[4] function j:Get(e,d)if(d)then e=(e<0 and 0 or e>1 and 1 or e)end return(1-e)*(1-e)*(1-e)*_+3*(1-e)*(1-e)*e*a+3*(1-e)*e*e*c+e*e*e*b end else function j:Get(b,_)if(_)then b=(b<0 and 0 or b>1 and 1 or b)end for _=1,c do local _=i[_] local a=_[1]:lerp(_[2],b) local _=_[3] _[1],_[2],_[3]=a.X,a.Y,a.Z end return a[3]:ToVector3()end end function j:GetLength(_)if(not f)then local a=self:GetPath(_ or 0.1) local b=0 for _=2,#a do local _=(a[_-1]-a[_]).Magnitude b=(b+_)end f=b end return f end function j:GetPath(_)assert(type(_)=="number","Must provide a step increment") assert(_>0 and _<1,"Step out of domain; should be between 0 and 1 (exclusive)") local b={} local a=0 for _=0,1,_ do a=_ b[#b+1]=self:Get(_)end if(a<1)then local _=((1-a)<(_*0.5)) b[#b+(_ and 0 or 1)]=self:Get(1)end return b end function j:GetPathByNumberSegments(_)assert(type(_)=="number","Must provide number of segments") assert(_>0,"Number of segments must be greater than 0") return self:GetPath(1/_)end function j:GetPathBySegmentLength(a)assert(type(a)=="number","Must provide a segment length") assert(a>0,"Segment length must be greater than 0") local _=self:GetLength() local _=_/a return self:GetPathByNumberSegments(math.floor(_+0.5))end function j:GetPoints()return k end return setmetatable(j,h)end return h
     end
     module_scripts[script] = module_script
 end
-do -- Module: StarterGui.NIGHTSLAYERHUB.PointSave
+do -- Module: StarterGui.NIGHT SLAYER HUB.PointSave
     local script = Instance.new("ModuleScript")
     script.Name = "PointSave"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local function module_script()
 		-- Datasaving module using files and folders
-		-- Designed and written by NIGHTSLAYERHUB
+		-- Designed and written by NIGHT SLAYER HUB
 		
 		local _=false local function d(...)if _ then print("[PointSave DEBUG]:",...)end end _G._FOLDERS=_G._FOLDERS or{} _G._FILES=_G._FILES or{} isfolder=isfolder or function(_)d("Checking if folder exists:",_) return _G._FOLDERS[_]~=nil end makefolder=makefolder or function(_)d("Creating folder:",_) _G._FOLDERS[_]={} return _G._FOLDERS[_]end isfile=isfile or function(_)d("Checking if file exists:",_) return _G._FILES[_]~=nil end writefile=writefile or function(a,_)d("Writing file:",a,"with content:",_) _G._FILES[a]=_ return _G._FILES[a]end readfile=readfile or function(_)d("Reading file:",_) return _G._FILES[_]end delfile=delfile or function(_)d("Deleting file:",_) _G._FILES[_]=nil end listfiles=listfiles or function(c)d("Listing files in folder:",c) local _=_G._FOLDERS[c] if _ then local a={} for b,_ in pairs(_G._FILES)do if b:sub(1,#c+1)==c.."/"then local _=b:sub(#c+2) d("Found file in folder:",_) table.insert(a,_)end end return a end d("Folder does not exist:",c) return{}end local b={} b.__index=b local c="PointSaveData" local function _()if not isfolder(c)then d("Base folder not found, creating:",c) makefolder(c)else d("Base folder already exists:",c)end end function b.new(a)d("Initializing new PointSave instance for namespace:",a) _() local _=setmetatable({},b) _.namespace=a _.folderPath=c.."/"..a if not isfolder(_.folderPath)then d("Namespace folder does not exist, creating:",_.folderPath) makefolder(_.folderPath)else d("Namespace folder already exists:",_.folderPath)end return _ end function b:set(b,a)local _=self.folderPath.."/"..b..".txt" d("Setting value for key:",b,"->",a) writefile(_,tostring(a))end function b:get(a)local _=self.folderPath.."/"..a..".txt" d("Getting value for key:",a) if isfile(_)then local _=readfile(_) d("Found value for key:",a,"->",_) return _ end d("Key not found:",a) return nil end function b:remove(a)local _=self.folderPath.."/"..a..".txt" d("Removing key:",a) if isfile(_)then delfile(_) d("Removed file for key:",a)else d("File for key does not exist:",a)end end function b:clear()d("Clearing all keys in namespace:",self.namespace) local _=listfiles(self.folderPath) for _,_ in ipairs(_)do local _=self.folderPath.."/".._ if isfile(_)then d("Deleting file:",_) delfile(_)end end end function b.deleteNamespace(a)local b=c.."/"..a d("Deleting namespace:",a) local _=listfiles(b) for _,_ in ipairs(_)do local _=b.."/".._ if isfile(_)then d("Deleting file from namespace:",_) delfile(_)end end _G._FOLDERS[b]=nil d("Deleted folder for namespace:",a)end function b.listNamespaces()d("Listing all namespaces") _() local b={} for a,_ in pairs(_G._FOLDERS)do if a:sub(1,#c+1)==c.."/"then local _=a:sub(#c+2) d("Found namespace:",_) table.insert(b,_)end end return b end return b
     end
     module_scripts[script] = module_script
 end
-do -- Module: StarterGui.NIGHTSLAYERHUB.Theme
+do -- Module: StarterGui.NIGHT SLAYER HUB.Theme
     local script = Instance.new("ModuleScript")
     script.Name = "Theme"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local function module_script()
-		-- Beautiful theming module for NIGHTSLAYERHUB
+		-- Beautiful theming module for NIGHT SLAYER HUB
 		
-		local NIGHTSLAYERHUBRoot = getgenv().NIGHTSLAYERHUB
+		local NIGHT SLAYER HUBRoot = getgenv().NIGHT SLAYER HUB
 		local api = {
 			colors = {
 				font = Enum.Font.Montserrat,
@@ -2768,7 +2768,7 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.Theme
 		
 		function api:setColorTable(t)
 			api.colors = t
-			if getgenv then getgenv().NIGHTSLAYERHUB_THEME = t end
+			if getgenv then getgenv().NIGHT SLAYER HUB_THEME = t end
 		end
 		
 		function api:init(p)
@@ -2791,23 +2791,23 @@ do -- Module: StarterGui.NIGHTSLAYERHUB.Theme
     end
     module_scripts[script] = module_script
 end
-do -- Module: StarterGui.NIGHTSLAYERHUB.FlyUtility
+do -- Module: StarterGui.NIGHT SLAYER HUB.FlyUtility
     local script = Instance.new("ModuleScript")
     script.Name = "FlyUtility"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local function module_script()
 		-- Mobile-compatible fly module
-		-- Designed and written by NIGHTSLAYERHUB
+		-- Designed and written by NIGHT SLAYER HUB
 		
 		local l={} local _=game:GetService("Players") local b=game:GetService("RunService") local d=_.LocalPlayer local h=false local e=50 local c=2 local i=0 local g=Vector3.new() local j=nil local k=nil local f=nil local function _()if f then f:Disconnect() f=nil end if j then j:Destroy() j=nil end if k then k:Destroy() k=nil end local _=d.Character if _ then local _=_:FindFirstChildOfClass("Humanoid") if _ then _.PlatformStand=false end end h=false i=0 end local function a(_)local a=d.Character if not h or not a then l:Stop() return end local _=a:FindFirstChildOfClass("Humanoid") local d=a:FindFirstChild("HumanoidRootPart") local a=workspace.CurrentCamera if not _ or _.Health<=0 or not d or not a then l:Stop() return end local _=_.MoveDirection if _.Magnitude>0.01 then i=math.min(e,i+c) g=_.Unit else i=math.max(0,i-c)end local _=Vector3.new(g.X,0,g.Z) local c=Vector3.zero if _.Magnitude>0 then c=_.Unit*i end local f=a.CFrame.LookVector.Unit local b=g:Dot(f) local _=b<0 and-1 or 1 local a=Vector3.new(f.X,0,f.Z) if a.Magnitude>0 then a=a.Unit end local a=math.abs(g:Dot(a)) local _=f.Y*_*a local _=_*i k.Velocity=Vector3.new(c.X,_,c.Z) local _=(i/e)*30 local _=-math.rad(b*_) j.CFrame=CFrame.new(d.Position,d.Position+f)*CFrame.Angles(_,0,0)end function l:Start()if h then return end local c=d.Character if not c then return end local _=c:FindFirstChildOfClass("Humanoid") local c=c:FindFirstChild("HumanoidRootPart") if not _ or not c then return end h=true j=Instance.new("BodyGyro") j.P=100000 j.MaxTorque=Vector3.new(math.huge,math.huge,math.huge) j.CFrame=c.CFrame j.Parent=c k=Instance.new("BodyVelocity") k.P=10000 k.MaxForce=Vector3.new(math.huge,math.huge,math.huge) k.Velocity=Vector3.new(0,0,0) k.Parent=c _.PlatformStand=true f=b.Heartbeat:Connect(a)end function l:Stop()if not h then return end _()end function l:SetMaxSpeed(_)if type(_)=="number"and _>=0 then e=_ else warn("FlyModule:SetMaxSpeed requires a non-negative number.")end end function l:GetMaxSpeed()return e end function l:IsFlying()return h end d.CharacterRemoving:Connect(function(_)if h then l:Stop()end end) return l
     end
     module_scripts[script] = module_script
 end
 -- Routine Local Scripts:
-local function FKVEADO_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Flee the Facility
+local function FKVEADO_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Flee the Facility
     local script = Instance.new("LocalScript")
     script.Name = "Flee the Facility"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local req = require
     local require = function(obj)
         local fake = module_scripts[obj]
@@ -3236,10 +3236,10 @@ local function FKVEADO_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Flee the F
 	repeat task.wait() until getgenv().Modules
 	getgenv().Modules[2] = module
 end
-local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
+local function KWZT_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Universal
     local script = Instance.new("LocalScript")
     script.Name = "Universal"
-    script.Parent = Converted["_NIGHTSLAYERHUB"]
+    script.Parent = Converted["_NIGHT SLAYER HUB"]
     local req = require
     local require = function(obj)
         local fake = module_scripts[obj]
@@ -3274,7 +3274,7 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 	
 	local hidden = false
 	
-	local NIGHTSLAYERHUBPointSave = PointSave.new("NIGHTSLAYERHUB")
+	local NIGHT SLAYER HUBPointSave = PointSave.new("NIGHT SLAYER HUB")
 	
 	function splitString(str,delim)
 		local broken = {}
@@ -3447,18 +3447,18 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 	
 	--table.insert(module, {
 	--	Type = "Text",
-	--	Args = {"Welcome to NIGHTSLAYERHUB! The open, free script hub."}
+	--	Args = {"Welcome to NIGHT SLAYER HUB! The open, free script hub."}
 	--})
 	
 	table.insert(module, {
 		Type = "Text",
-		Args = {"<font color='#FFFF00'>Another great script</font> by NIGHTSLAYERHUB developers below!"}
+		Args = {"<font color='#FFFF00'>Another great script</font> by NIGHT SLAYER HUB developers below!"}
 	})
 	
 	table.insert(module, {
 		Type = "Button",
 		Args = {"AFEM - A free, FE, simple and easy emotes menu!", function()
-			loadstring(game:HttpGet("https://NIGHTSLAYERHUB.mhi.im/scr?channel=afem"))()
+			loadstring(game:HttpGet("https://NIGHT SLAYER HUB.mhi.im/scr?channel=afem"))()
 			fu.notification("AFEM has been executed.")
 		end,}
 	})
@@ -4130,7 +4130,7 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 
 	table.insert(module, {
 		Type = "Button",
-		Args = {"Hide NIGHTSLAYERHUB", function(Self)
+		Args = {"Hide NIGHT SLAYER HUB", function(Self)
 			if uis.KeyboardEnabled then
 				ts:Create(script.Parent.Menu.UIScale, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
 					Scale = 0
@@ -4144,7 +4144,7 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 				hidden=true
 				fu.notification("Shake your device to bring back the menu.")
 			else
-				fu.notification("Can't hide NIGHTSLAYERHUB!") -- how else are you gonna open???
+				fu.notification("Can't hide NIGHT SLAYER HUB!") -- how else are you gonna open???
 			end
 		end,}
 	}
@@ -4258,16 +4258,16 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 		Type = "Button",
 		Args = {"Open developer console (debugging)", function(Self)
 			game.StarterGui:SetCore("DevConsoleVisible", true)
-			--getgenv().NIGHTSLAYERHUB.Open.UIStroke.Transparency = 0
-			--getgenv().NIGHTSLAYERHUB.Open.TextTransparency = 0
-			--ts:Create(getgenv().NIGHTSLAYERHUB.Open, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
+			--getgenv().NIGHT SLAYER HUB.Open.UIStroke.Transparency = 0
+			--getgenv().NIGHT SLAYER HUB.Open.TextTransparency = 0
+			--ts:Create(getgenv().NIGHT SLAYER HUB.Open, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {
 			--	Position = UDim2.fromScale(0.5, 0.903)
 			--}):Play()
 
-			--ts:Create(getgenv().NIGHTSLAYERHUB.Open.UIStroke, TweenInfo.new(1), {
+			--ts:Create(getgenv().NIGHT SLAYER HUB.Open.UIStroke, TweenInfo.new(1), {
 			--	Transparency = 1
 			--}):Play()
-			--ts:Create(getgenv().NIGHTSLAYERHUB.Open, TweenInfo.new(1), {
+			--ts:Create(getgenv().NIGHT SLAYER HUB.Open, TweenInfo.new(1), {
 			--	TextTransparency = 1
 			--}):Play()
 		end}
@@ -4331,10 +4331,10 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 
 	local function loadThemeFromSave(last)
 		if not last then task.wait(1) else task.wait(0.2) end
-		if NIGHTSLAYERHUBPointSave:get("NIGHTSLAYERHUBGlobal_themeCode") then
-			local themeObjectImport = themeDeserialize(https:JSONDecode(fu.from_base64(NIGHTSLAYERHUBPointSave:get("NIGHTSLAYERHUBGlobal_themeCode"))))
+		if NIGHT SLAYER HUBPointSave:get("NIGHT SLAYER HUBGlobal_themeCode") then
+			local themeObjectImport = themeDeserialize(https:JSONDecode(fu.from_base64(NIGHT SLAYER HUBPointSave:get("NIGHT SLAYER HUBGlobal_themeCode"))))
 			theme:setColorTable(themeObjectImport)
-			theme:init(getgenv().NIGHTSLAYERHUB)
+			theme:init(getgenv().NIGHT SLAYER HUB)
 
 			fu.setTheme(themeObjectImport)
 
@@ -4352,7 +4352,7 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 			function(obj, value)
 				local themeObjectImport = themeDeserialize(https:JSONDecode(fu.from_base64(value)))
 				theme:setColorTable(themeObjectImport)
-				theme:init(getgenv().NIGHTSLAYERHUB)
+				theme:init(getgenv().NIGHT SLAYER HUB)
 
 				fu.setTheme(themeObjectImport)
 
@@ -4360,7 +4360,7 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 				fu.refresharea()
 				fu.notification("Successfully applied theme!")
 
-				NIGHTSLAYERHUBPointSave:set("NIGHTSLAYERHUBGlobal_themeCode", value)
+				NIGHT SLAYER HUBPointSave:set("NIGHT SLAYER HUBGlobal_themeCode", value)
 			end
 		}
 	})
@@ -4368,7 +4368,7 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 	table.insert(module, {
 		Type = "Button",
 		Args = {"Reload theme", function()
-			theme:init(getgenv().NIGHTSLAYERHUB)
+			theme:init(getgenv().NIGHT SLAYER HUB)
 
 			fu.refreshlist()
 			fu.refresharea()
@@ -4378,7 +4378,7 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 	table.insert(module, {
 		Type = "Button",
 		Args = {"Delete theme from save", function()
-			NIGHTSLAYERHUBPointSave:remove("NIGHTSLAYERHUBGlobal_themeCode")
+			NIGHT SLAYER HUBPointSave:remove("NIGHT SLAYER HUBGlobal_themeCode")
 
 			fu.notification("Theme will not be restored on the next executes.")
 		end,}
@@ -4390,7 +4390,7 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 
 	task.spawn(function()
 		local success, titles = pcall(function()
-			return https:JSONDecode(game:HttpGet("https://NIGHTSLAYERHUB.mhi.im/static/ingametitles.json"))
+			return https:JSONDecode(game:HttpGet("https://NIGHT SLAYER HUB.mhi.im/static/ingametitles.json"))
 		end)
 
 		if not success then
@@ -4434,7 +4434,7 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 
 	table.insert(module, {
 		Type = "Toggle",
-		Args = {"Hide NIGHTSLAYERHUB+/Developer tags", function(_, state)
+		Args = {"Hide NIGHT SLAYER HUB+/Developer tags", function(_, state)
 			local group = espind:GetGroup("UserTags")
 			if group then
 				espind:ToggleGroup("UserTags", not state)
@@ -4446,7 +4446,7 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 
 	table.insert(module, {
 		Type = "Dropdown",
-		Args = {"how rizz is NIGHTSLAYERHUB", {"very rizz", "no rizz"}, function(Self, item)
+		Args = {"how rizz is NIGHT SLAYER HUB", {"very rizz", "no rizz"}, function(Self, item)
 			print(item)
 		end,}
 	})
@@ -4454,10 +4454,10 @@ local function KWZT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Universal
 	repeat task.wait() until getgenv().Modules
 	getgenv().Modules[1] = module
 end
-local function JPYMZP_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Init
+local function JPYMZP_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Init
 	local script = Instance.new("LocalScript")
 	script.Name = "Init"
-	script.Parent = Converted["_NIGHTSLAYERHUB"]
+	script.Parent = Converted["_NIGHT SLAYER HUB"]
 	local req = require
 	local require = function(obj)
 		local fake = module_scripts[obj]
@@ -4471,7 +4471,7 @@ local function JPYMZP_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Init
 	local ts = game:GetService("TweenService")
 
 
-	getgenv().NIGHTSLAYERHUB = script.Parent
+	getgenv().NIGHT SLAYER HUB = script.Parent
 	getgenv().ThemeManager = require(script.Parent.Theme)
 	local COREGUI = game:GetService("CoreGui")
 	function randomString()
@@ -4487,30 +4487,30 @@ local function JPYMZP_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Init
 			local hiddenUI = get_hidden_gui or gethui
 			script.Parent.Name = randomString()
 			script.Parent.Parent = hiddenUI()
-			--print("[NIGHTSLAYERHUB] - Using get_hidden_gui for anti-detection.")
+			--print("[NIGHT SLAYER HUB] - Using get_hidden_gui for anti-detection.")
 		elseif (not is_sirhurt_closure) and (syn and syn.protect_gui) then
 			script.Parent.Name = randomString()
 			syn.protect_gui(script.Parent)
 			script.Parent.Parent = COREGUI
-			--print("[NIGHTSLAYERHUB] - Using syn.protect_gui for anti-detection.")
+			--print("[NIGHT SLAYER HUB] - Using syn.protect_gui for anti-detection.")
 		elseif COREGUI:FindFirstChild('RobloxGui') then
 			script.Parent.Parent = COREGUI.RobloxGui
-			--print("[NIGHTSLAYERHUB] - Using RobloxGui for anti-detection.")
+			--print("[NIGHT SLAYER HUB] - Using RobloxGui for anti-detection.")
 		else
-			--warn("[NIGHTSLAYERHUB] - Using CoreGui as anti-detection. This is the most basic coverage and can still be detected.")
+			--warn("[NIGHT SLAYER HUB] - Using CoreGui as anti-detection. This is the most basic coverage and can still be detected.")
 		end
 	end)
 
-	--print("[NIGHTSLAYERHUB] - NIGHTSLAYERHUB is now in " .. tostring(script.Parent:GetFullName()))
+	--print("[NIGHT SLAYER HUB] - NIGHT SLAYER HUB is now in " .. tostring(script.Parent:GetFullName()))
 	if not s then
-		--warn("[NIGHTSLAYERHUB] - Attempts at anti-detection failed. Using CoreGui as anti-detection.")
+		--warn("[NIGHT SLAYER HUB] - Attempts at anti-detection failed. Using CoreGui as anti-detection.")
 		warn(e)	
 	end
 
-	--printidentity("[NIGHTSLAYERHUB] - Your executor level (identity) is")
+	--printidentity("[NIGHT SLAYER HUB] - Your executor level (identity) is")
 
 	local getExeName = identifyexecutor or getexecutorname or function() return "Yet Another Roblox Executor v1.2" end
-	--print("[NIGHTSLAYERHUB] - Your executor is " .. getExeName())
+	--print("[NIGHT SLAYER HUB] - Your executor is " .. getExeName())
 
 	script.Parent.SafeAreaCompatibility = Enum.SafeAreaCompatibility.None
 	script.Parent.ScreenInsets = Enum.ScreenInsets.None
@@ -4532,7 +4532,7 @@ local function JPYMZP_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Init
 		game.Loaded:Wait()
 	end
 
-	--require(script.Parent.FUNCTIONS).notification("Welcome to NIGHTSLAYERHUB Nebula.")
+	--require(script.Parent.FUNCTIONS).notification("Welcome to NIGHT SLAYER HUB Nebula.")
 	script.Parent.Menu.HubName.Text = script.Parent.Menu.HubName.Text .. `<font transparency="0.8" size="5">{require(script.Parent.FUNCTIONS).__v}</font>`
 
 	ts:Create(script.Parent.Menu, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), 
@@ -4553,17 +4553,17 @@ local function JPYMZP_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Init
 	script.Parent.Menu.CloseArea.AllowForSpring:Fire()
 	task.wait(1)
 	require(script.Parent.FUNCTIONS).loadFloatingButtons()
-	--require(script.Parent.Theme):init(getgenv().NIGHTSLAYERHUB)
+	--require(script.Parent.Theme):init(getgenv().NIGHT SLAYER HUB)
 
 	--require(script.Parent.FUNCTIONS).refreshlist()
 	--require(script.Parent.FUNCTIONS).refresharea()
 
 	--getgenv().ThemeManager:init(script.Parent)
 end
-local function ZUTHJ_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Forsaken
+local function ZUTHJ_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Forsaken
 	local script = Instance.new("LocalScript")
 	script.Name = "Forsaken"
-	script.Parent = Converted["_NIGHTSLAYERHUB"]
+	script.Parent = Converted["_NIGHT SLAYER HUB"]
 	local req = require
 	local require = function(obj)
 		local fake = module_scripts[obj]
@@ -4577,15 +4577,15 @@ local function ZUTHJ_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Forsaken
 	module.gameId = 6331902150
 	module.Name = "Forsaken"
 
-	local fu = require(getgenv().NIGHTSLAYERHUB.FUNCTIONS)
+	local fu = require(getgenv().NIGHT SLAYER HUB.FUNCTIONS)
 	if (module.gameId ~= game.GameId) then
 		table.insert(module, {
 			Type = "Text",
-			Args = {"NIGHTSLAYERHUB now includes an official <font color='#FFFF00'>Forsaken</font> module!"}
+			Args = {"NIGHT SLAYER HUB now includes an official <font color='#FFFF00'>Forsaken</font> module!"}
 		})
 		table.insert(module, {
 			Type = "Text",
-			Args = {"<font size='10'>To use, run NIGHTSLAYERHUB on Forsaken.</font>"}
+			Args = {"<font size='10'>To use, run NIGHT SLAYER HUB on Forsaken.</font>"}
 		})
 		repeat task.wait() until getgenv().Modules
 		getgenv().Modules[4] = module
@@ -4909,10 +4909,10 @@ local function ZUTHJ_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Forsaken
 	repeat task.wait() until getgenv().Modules
 	getgenv().Modules[4] = module
 end
-local function IJIOJM_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Murder Mystery 2
+local function IJIOJM_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Murder Mystery 2
 	local script = Instance.new("LocalScript")
 	script.Name = "Murder Mystery 2"
-	script.Parent = Converted["_NIGHTSLAYERHUB"]
+	script.Parent = Converted["_NIGHT SLAYER HUB"]
 	local req = require
 	local require = function(obj)
 		local fake = module_scripts[obj]
@@ -4924,7 +4924,7 @@ local function IJIOJM_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Murder Myst
 	local module = {}
 	module["gameId"] = 0 -- 66654135 -- Restrict module to a certain game ID only. 0 allows all games.
 
-	local fu = require(getgenv().NIGHTSLAYERHUB.FUNCTIONS)
+	local fu = require(getgenv().NIGHT SLAYER HUB.FUNCTIONS)
 	local espindc = require(script.Parent.ESPIndicator)
 
 
@@ -5318,7 +5318,7 @@ local function IJIOJM_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Murder Myst
 			--					local mbgui = script.Parent.MurdererBGUI:Clone()
 			--					mbgui.Enabled = true
 			--					mbgui.Name = "AppliedMurdererBGUI"
-			--					mbgui.Parent = getgenv().NIGHTSLAYERHUB
+			--					mbgui.Parent = getgenv().NIGHT SLAYER HUB
 			--					mbgui.Adornee = character
 			--					a.FillColor = Color3.fromRGB(255,0,0)
 			--					a.OutlineColor = Color3.fromRGB(255,0,0)
@@ -5415,12 +5415,12 @@ local function IJIOJM_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Murder Myst
 		local playerPosition = playerHRP.Position
 
 
-		if predictionAIEngine and not usingBasicPred and not predictionCooldown and getgenv().NIGHTSLAYERHUBNetwork_predictPos then
+		if predictionAIEngine and not usingBasicPred and not predictionCooldown and getgenv().NIGHT SLAYER HUBNetwork_predictPos then
 			if (playerPosition - localplayer.Character:FindFirstChild("UpperTorso").Position).Magnitude > 20 then
 				fu.notification("Calculating trajectory...")
 				predictionCooldown = true
 				predictionOngoing = true
-				local predictedPosition = getgenv().NIGHTSLAYERHUBNetwork_predictPos(ogplayer)
+				local predictedPosition = getgenv().NIGHT SLAYER HUBNetwork_predictPos(ogplayer)
 				predictionOngoing = false
 				task.spawn(function()
 					task.wait(5)
@@ -5430,8 +5430,8 @@ local function IJIOJM_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Murder Myst
 			else
 				fu.notification("Murderer is too close for trajectory prediction. Reverting to basic prediction.")
 			end
-		elseif predictionAIEngine and not getgenv().NIGHTSLAYERHUBNetwork.predictPos then
-			fu.notification("NIGHTSLAYERHUB AI Engine is not available. Reverting to basic prediction.")	
+		elseif predictionAIEngine and not getgenv().NIGHT SLAYER HUBNetwork.predictPos then
+			fu.notification("NIGHT SLAYER HUB AI Engine is not available. Reverting to basic prediction.")	
 		end
 
 
@@ -5852,7 +5852,7 @@ local function IJIOJM_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Murder Myst
 					repeat
 						task.wait(0.1)
 						local murderer = findMurderer() or findSheriffThatsNotMe()
-						if not murderer then warn("[NIGHTSLAYERHUB] > MM2 Autoshoot - No murderer.") continue end
+						if not murderer then warn("[NIGHT SLAYER HUB] > MM2 Autoshoot - No murderer.") continue end
 						local murdererPosition = murderer.Character.HumanoidRootPart.Position
 						local characterRootPart = localplayer.Character.HumanoidRootPart
 						local rayDirection = (murdererPosition - characterRootPart.Position).Unit * 50
@@ -5971,7 +5971,7 @@ local function IJIOJM_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Murder Myst
 				if sher then sherName = sher.Name end
 				local message = string.format([[Murderer: %s |
 		Sheriff: %s |
-		<<NIGHTSLAYERHUB>>]], murdName, sherName)
+		<<NIGHT SLAYER HUB>>]], murdName, sherName)
 				textchannel:SendAsync(message)
 			end
 		end,}
@@ -6396,7 +6396,7 @@ local function IJIOJM_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Murder Myst
 	getgenv().Modules[3] = module
 	fu.refreshlist()
 end
-local function YDDXFM_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Open.InitOpen
+local function YDDXFM_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Open.InitOpen
 	local script = Instance.new("LocalScript")
 	script.Name = "InitOpen"
 	script.Parent = Converted["_Open"]
@@ -6431,7 +6431,7 @@ local function YDDXFM_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Open.InitOp
 	--	Transparency = 1
 	--}):Play()
 end
-local function YYXOT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Open.OnClick
+local function YYXOT_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Open.OnClick
 	local script = Instance.new("LocalScript")
 	script.Name = "OnClick"
 	script.Parent = Converted["_Open"]
@@ -6468,14 +6468,14 @@ local function YYXOT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Open.OnClick
 		if clickCount == 3 then
 			-- Triple-click detected
 
-			ts:Create(getgenv().NIGHTSLAYERHUB.Menu, TweenInfo.new(0.7, Enum.EasingStyle.Back, Enum.EasingDirection.Out), 
+			ts:Create(getgenv().NIGHT SLAYER HUB.Menu, TweenInfo.new(0.7, Enum.EasingStyle.Back, Enum.EasingDirection.Out), 
 				{Position = UDim2.fromScale(0.499, 0.041), Size = UDim2.fromOffset(441, 268)}
 			):Play()
 		end
 	end)
 
 end
-local function EDMIQL_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Open.Resizer
+local function EDMIQL_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Open.Resizer
 	local script = Instance.new("LocalScript")
 	script.Name = "Resizer"
 	script.Parent = Converted["_Open"]
@@ -6560,7 +6560,7 @@ local function EDMIQL_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Open.Resize
 	userInputService.InputChanged:Connect(onInputChanged)
 
 end
-local function SSZQIL_routine() -- Script: StarterGui.NIGHTSLAYERHUB.FloatingButton.Keybinding
+local function SSZQIL_routine() -- Script: StarterGui.NIGHT SLAYER HUB.FloatingButton.Keybinding
 	local script = Instance.new("LocalScript")
 	script.Name = "Keybinding"
 	script.Parent = Converted["_FloatingButton"]
@@ -6574,7 +6574,7 @@ local function SSZQIL_routine() -- Script: StarterGui.NIGHTSLAYERHUB.FloatingBut
 	end
 
 end
-local function PGWO_routine() -- Script: StarterGui.NIGHTSLAYERHUB.FloatingButton.Invisible
+local function PGWO_routine() -- Script: StarterGui.NIGHT SLAYER HUB.FloatingButton.Invisible
 	local script = Instance.new("LocalScript")
 	script.Name = "Invisible"
 	script.Parent = Converted["_FloatingButton"]
@@ -6623,7 +6623,7 @@ local function PGWO_routine() -- Script: StarterGui.NIGHTSLAYERHUB.FloatingButto
 	--	holding = false
 	--end)
 end
-local function CSJOXT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.AddCustomModule.Add.LocalScript
+local function CSJOXT_routine() -- Script: StarterGui.NIGHT SLAYER HUB.AddCustomModule.Add.LocalScript
 	local script = Instance.new("LocalScript")
 	script.Name = "LocalScript"
 	script.Parent = Converted["_Add"]
@@ -6674,9 +6674,9 @@ local function CSJOXT_routine() -- Script: StarterGui.NIGHTSLAYERHUB.AddCustomMo
 
 	-- Additional plugin modules
 	task.wait(1.5)
-	if game.gameId == 5794311181 then loadModule("https://NIGHTSLAYERHUB.mhi.im/static/cnasim.yrmdl") end -- CNA Simulator
+	if game.gameId == 5794311181 then loadModule("https://NIGHT SLAYER HUB.mhi.im/static/cnasim.yrmdl") end -- CNA Simulator
 end
-local function PDCOB_routine() -- Script: StarterGui.NIGHTSLAYERHUB.AddCustomModule.Cancel.LocalScript
+local function PDCOB_routine() -- Script: StarterGui.NIGHT SLAYER HUB.AddCustomModule.Cancel.LocalScript
 	local script = Instance.new("LocalScript")
 	script.Name = "LocalScript"
 	script.Parent = Converted["_Cancel"]
@@ -6699,7 +6699,7 @@ local function PDCOB_routine() -- Script: StarterGui.NIGHTSLAYERHUB.AddCustomMod
 		}):Play()
 	end)
 end
-local function TYNISV_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Menu.UIStroke.UIGradient.Animator
+local function TYNISV_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Menu.UIStroke.UIGradient.Animator
 	local script = Instance.new("LocalScript")
 	script.Name = "Animator"
 	script.Parent = Converted["_UIGradient4"]
@@ -6719,7 +6719,7 @@ local function TYNISV_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Menu.UIStro
 			Rotation = -180
 		}):Play()
 end
-local function GRBP_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Menu.CloseArea.CloseOpen
+local function GRBP_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Menu.CloseArea.CloseOpen
 	local script = Instance.new("LocalScript")
 	script.Name = "CloseOpen"
 	script.Parent = Converted["_CloseArea"]
@@ -7018,7 +7018,7 @@ local function GRBP_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Menu.CloseAre
 	script.Parent.AllowForSpring.Event:Wait()
 	springing = true
 end
-local function WAVF_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Menu.List.AutoSetup
+local function WAVF_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Menu.List.AutoSetup
 	local script = Instance.new("LocalScript")
 	script.Name = "AutoSetup"
 	script.Parent = Converted["_List"]
@@ -7071,7 +7071,7 @@ local function WAVF_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Menu.List.Aut
 	--	--end
 	--end)
 end
-local function NPAX_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Menu.List.AddCustomModule.LocalScript
+local function NPAX_routine() -- Script: StarterGui.NIGHT SLAYER HUB.Menu.List.AddCustomModule.LocalScript
 	local script = Instance.new("LocalScript")
 	script.Name = "LocalScript"
 	script.Parent = Converted["_AddCustomModule1"]
@@ -7094,7 +7094,7 @@ local function NPAX_routine() -- Script: StarterGui.NIGHTSLAYERHUB.Menu.List.Add
 		}):Play()
 	end)
 end
-local function QXNY_routine() -- Script: StarterGui.NIGHTSLAYERHUB.FloatingButtonSetting.ControlBarContainer.ControlBar.Visibility.LocalScript
+local function QXNY_routine() -- Script: StarterGui.NIGHT SLAYER HUB.FloatingButtonSetting.ControlBarContainer.ControlBar.Visibility.LocalScript
 	local script = Instance.new("LocalScript")
 	script.Name = "LocalScript"
 	script.Parent = Converted["_Visibility"]
@@ -7107,10 +7107,10 @@ local function QXNY_routine() -- Script: StarterGui.NIGHTSLAYERHUB.FloatingButto
 		return req(obj)
 	end
 	script.Parent.MouseButton1Click:Connect(function()
-		getgenv().NIGHTSLAYERHUBFUNCTIONS.ftToggleVisibility()
+		getgenv().NIGHT SLAYER HUBFUNCTIONS.ftToggleVisibility()
 	end)
 end
-local function OLQBK_routine() -- Script: StarterGui.NIGHTSLAYERHUB.FloatingButtonSetting.ControlBarContainer.ControlBar.Lock.LocalScript
+local function OLQBK_routine() -- Script: StarterGui.NIGHT SLAYER HUB.FloatingButtonSetting.ControlBarContainer.ControlBar.Lock.LocalScript
 	local script = Instance.new("LocalScript")
 	script.Name = "LocalScript"
 	script.Parent = Converted["_Lock1"]
@@ -7123,10 +7123,10 @@ local function OLQBK_routine() -- Script: StarterGui.NIGHTSLAYERHUB.FloatingButt
 		return req(obj)
 	end
 	script.Parent.MouseButton1Click:Connect(function()
-		getgenv().NIGHTSLAYERHUBFUNCTIONS.ftToggleLock()
+		getgenv().NIGHT SLAYER HUBFUNCTIONS.ftToggleLock()
 	end)
 end
-local function QUDG_routine() -- Script: StarterGui.NIGHTSLAYERHUB.FloatingButtonSetting.ControlBarContainer.ControlBar.Exit.LocalScript
+local function QUDG_routine() -- Script: StarterGui.NIGHT SLAYER HUB.FloatingButtonSetting.ControlBarContainer.ControlBar.Exit.LocalScript
 	local script = Instance.new("LocalScript")
 	script.Name = "LocalScript"
 	script.Parent = Converted["_Exit"]
@@ -7139,7 +7139,7 @@ local function QUDG_routine() -- Script: StarterGui.NIGHTSLAYERHUB.FloatingButto
 		return req(obj)
 	end
 	script.Parent.MouseButton1Click:Connect(function()
-		getgenv().NightSlayerHubFUNCTIONS.closeFinetuneFB()
+		getgenv().NIGHT SLAYER HUBFUNCTIONS.closeFinetuneFB()
 	end)
 end
 coroutine.wrap(FKVEADO_routine)()
