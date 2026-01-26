@@ -7139,7 +7139,7 @@ local function QUDG_routine() -- Script: StarterGui.NIGHT SLAYER HUB.FloatingBut
 		return req(obj)
 	end
 	script.Parent.MouseButton1Click:Connect(function()
-		getgenv().NIGHT SLAYER HUBFUNCTIONS.closeFinetuneFB()
+		getgenv().NIGHTSLAYERHUBFUNCTIONS.closeFinetuneFB()
 	end)
 end
 coroutine.wrap(FKVEADO_routine)()
