@@ -1,0 +1,393 @@
+-- ts file was generated at discord.gg/25ms & Remade GUI by Gemini
+-- Clean up old connections
+if _G.a then
+    local v1, v2, v3 = pairs(_G.a)
+    while true do
+        local v4
+        v3, v4 = v1(v2, v3)
+        if v3 == nil then break end
+        v4:Disconnect()
+    end
+    _G.a = nil
+end
+
+repeat task.wait() until game.Players.LocalPlayer
+
+-- Variables
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local LocalPlayer = Players.LocalPlayer
+
+local Character = nil
+local Humanoid = nil
+local RootPart = nil
+local IsInvisible = false
+local BodyParts = {}
+
+-- GUI Variables
+local MainFrame = nil
+local StatusButton = nil
+local ToggleButton = nil
+local IsMenuOpen = true
+
+-- Function to setup character parts
+local function SetupCharacter()
+    Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+    Humanoid = Character:WaitForChild('Humanoid')
+    RootPart = Character:WaitForChild('HumanoidRootPart')
+    BodyParts = {}
+
+    -- Get all visible parts to make them transparent locally (Ghost mode visual)
+    for _, part in pairs(Character:GetDescendants()) do
+        if part:IsA('BasePart') and part.Transparency == 0 then
+            table.insert(BodyParts, part)
+        end
+    end
+end
+
+-- Core Toggle Function (Handles Visuals + Logic)
+local function ToggleInvisible()
+    IsInvisible = not IsInvisible
+
+    -- Visual feedback on Character (Ghost effect)
+    for _, part in pairs(BodyParts) do
+        if part then
+            part.Transparency = IsInvisible and 0.5 or 0
+        end
+    end
+
+    -- Update GUI Button Status
+    if StatusButton then
+        if IsInvisible then
+            StatusButton.Text = "Invisible: ON"
+            StatusButton.BackgroundColor3 = Color3.fromRGB(85, 255, 127) -- Green
+        else
+            StatusButton.Text = "Invisible: OFF"
+            StatusButton.BackgroundColor3 = Color3.fromRGB(37, 37, 37) -- Dark gray
+        end
+    end
+end
+
+-- Toggle Menu Visibility
+local function ToggleMenu()
+    IsMenuOpen = not IsMenuOpen
+    MainFrame.Visible = IsMenuOpen
+    
+    -- Update Toggle Button
+    if ToggleButton then
+        if IsMenuOpen then
+            ToggleButton.Text = "⋮⋮⋮"
+            ToggleButton.TextColor3 = Color3.fromRGB(220, 20, 60) -- Crimson when open
+        else
+            ToggleButton.Text = "⋮⋮⋮"
+            ToggleButton.TextColor3 = Color3.fromRGB(150, 150, 150) -- Gray when closed
+        end
+    end
+end
+
+-- Create Mini Toggle Button (Top Right)
+local function CreateToggleButton()
+    if LocalPlayer.PlayerGui:FindFirstChild("ToggleButtonGUI") then
+        LocalPlayer.PlayerGui.ToggleButtonGUI:Destroy()
+    end
+
+    local ToggleScreenGui = Instance.new('ScreenGui')
+    ToggleScreenGui.Name = "ToggleButtonGUI"
+    ToggleScreenGui.ResetOnSpawn = false
+    ToggleScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    
+    ToggleButton = Instance.new('TextButton')
+    local ToggleUICorner = Instance.new("UICorner")
+    local ToggleUIStroke = Instance.new("UIStroke")
+
+    -- Position near chat (top right)
+    ToggleButton.Name = "MenuToggle"
+    ToggleButton.Size = UDim2.new(0, 40, 0, 40)
+    ToggleButton.Position = UDim2.new(1, -50, 0, 10) -- Right side, near top
+    ToggleButton.Text = "⋮⋮⋮"
+    ToggleButton.Font = Enum.Font.GothamBlack
+    ToggleButton.TextSize = 18
+    ToggleButton.TextColor3 = Color3.fromRGB(220, 20, 60) -- Crimson
+    ToggleButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    ToggleButton.BackgroundTransparency = 0.1
+    ToggleButton.Parent = ToggleScreenGui
+
+    -- Rounded Corners
+    ToggleUICorner.CornerRadius = UDim.new(0, 8)
+    ToggleUICorner.Parent = ToggleButton
+
+    -- Border
+    ToggleUIStroke.Thickness = 2
+    ToggleUIStroke.Color = Color3.fromRGB(128, 0, 128) -- Purple
+    ToggleUIStroke.Transparency = 0.3
+    ToggleUIStroke.Parent = ToggleButton
+
+    -- Hover Effects
+    ToggleButton.MouseEnter:Connect(function()
+        ToggleButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+        ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    end)
+
+    ToggleButton.MouseLeave:Connect(function()
+        ToggleButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+        if IsMenuOpen then
+            ToggleButton.TextColor3 = Color3.fromRGB(220, 20, 60)
+        else
+            ToggleButton.TextColor3 = Color3.fromRGB(150, 150, 150)
+        end
+    end)
+
+    -- Click Event
+    ToggleButton.MouseButton1Click:Connect(function()
+        ToggleMenu()
+    end)
+
+    ToggleScreenGui.Parent = LocalPlayer:WaitForChild('PlayerGui')
+end
+
+-- GUI Setup Function
+local function CreateMainGUI()
+    -- Check if GUI already exists and destroy it to prevent duplicates
+    if LocalPlayer.PlayerGui:FindFirstChild("NightSlayerHub") then
+        LocalPlayer.PlayerGui.NightSlayerHub:Destroy()
+    end
+
+    local ScreenGui = Instance.new('ScreenGui')
+    ScreenGui.Name = "NightSlayerHub"
+    ScreenGui.ResetOnSpawn = false -- Keep GUI when respawning
+    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    
+    -- Main Frame
+    MainFrame = Instance.new('Frame')
+    local UICorner = Instance.new("UICorner")
+    local UIStroke = Instance.new("UIStroke")
+    
+    -- Title Label
+    local Title = Instance.new('TextLabel')
+    local TitleUICorner = Instance.new("UICorner")
+    local TitleUIStroke = Instance.new("UIStroke")
+    
+    -- Subtitle Label
+    local Subtitle = Instance.new('TextLabel')
+    
+    -- Close Button
+    local CloseButton = Instance.new('TextButton')
+    local CloseUICorner = Instance.new("UICorner")
+    
+    -- Main Frame Styling
+    MainFrame.Name = "MainFrame"
+    MainFrame.Size = UDim2.new(0, 300, 0, 200)
+    MainFrame.Position = UDim2.new(0.5, -150, 0.5, -100)
+    MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    MainFrame.BackgroundTransparency = 0.1
+    MainFrame.Parent = ScreenGui
+
+    -- Rounded Corners for Main Frame
+    UICorner.CornerRadius = UDim.new(0, 12)
+    UICorner.Parent = MainFrame
+
+    -- Border for Main Frame
+    UIStroke.Thickness = 2
+    UIStroke.Color = Color3.fromRGB(128, 0, 128) -- Purple border
+    UIStroke.Transparency = 0.3
+    UIStroke.Parent = MainFrame
+
+    -- Title Label Styling
+    Title.Name = "Title"
+    Title.Size = UDim2.new(1, 0, 0, 50)
+    Title.Position = UDim2.new(0, 0, 0, 0)
+    Title.Text = "Night Slayer Hub"
+    Title.Font = Enum.Font.GothamBlack
+    Title.TextSize = 28
+    Title.TextColor3 = Color3.fromRGB(220, 20, 60) -- Crimson red
+    Title.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    Title.BackgroundTransparency = 0.1
+    Title.Parent = MainFrame
+
+    -- Title Rounded Corners (top only)
+    TitleUICorner.CornerRadius = UDim.new(0, 12)
+    TitleUICorner.Parent = Title
+
+    -- Title Border
+    TitleUIStroke.Thickness = 1
+    TitleUIStroke.Color = Color3.fromRGB(128, 0, 128) -- Purple
+    TitleUIStroke.Parent = Title
+
+    -- Subtitle Label
+    Subtitle.Name = "Subtitle"
+    Subtitle.Size = UDim2.new(1, 0, 0, 20)
+    Subtitle.Position = UDim2.new(0, 0, 0, 50)
+    Subtitle.Text = "discord_betaa | @TikTok"
+    Subtitle.Font = Enum.Font.Gotham
+    Subtitle.TextSize = 12
+    Subtitle.TextColor3 = Color3.fromRGB(150, 150, 150)
+    Subtitle.BackgroundTransparency = 1
+    Subtitle.Parent = MainFrame
+
+    -- Toggle Button
+    StatusButton = Instance.new('TextButton')
+    local ButtonUICorner = Instance.new("UICorner")
+    local ButtonUIStroke = Instance.new("UIStroke")
+
+    StatusButton.Name = "ToggleButton"
+    StatusButton.Size = UDim2.new(0.8, 0, 0, 45)
+    StatusButton.Position = UDim2.new(0.1, 0, 0.5, 0)
+    StatusButton.Text = 'Invisible: OFF'
+    StatusButton.Font = Enum.Font.GothamBold
+    StatusButton.TextSize = 18
+    StatusButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    StatusButton.BackgroundColor3 = Color3.fromRGB(37, 37, 37) -- Dark gray
+    StatusButton.Parent = MainFrame
+
+    -- Button Rounded Corners
+    ButtonUICorner.CornerRadius = UDim.new(0, 8)
+    ButtonUICorner.Parent = StatusButton
+
+    -- Button Border
+    ButtonUIStroke.Thickness = 1
+    ButtonUIStroke.Color = Color3.fromRGB(128, 0, 128) -- Purple
+    ButtonUIStroke.Parent = StatusButton
+
+    -- Close Button
+    CloseButton.Name = "CloseButton"
+    CloseButton.Size = UDim2.new(0, 30, 0, 30)
+    CloseButton.Position = UDim2.new(1, -35, 0, 5)
+    CloseButton.Text = "X"
+    CloseButton.Font = Enum.Font.GothamBold
+    CloseButton.TextSize = 16
+    CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    CloseButton.BackgroundColor3 = Color3.fromRGB(220, 20, 60) -- Crimson red
+    CloseButton.Parent = MainFrame
+
+    CloseUICorner.CornerRadius = UDim.new(0, 6)
+    CloseUICorner.Parent = CloseButton
+
+    ScreenGui.Parent = LocalPlayer:WaitForChild('PlayerGui')
+
+    -- Drag Logic for Main Frame
+    local dragging = false
+    local dragInput, dragStart, startPos
+
+    local function updateInput(input)
+        local delta = input.Position - dragStart
+        MainFrame.Position = UDim2.new(
+            startPos.X.Scale, 
+            startPos.X.Offset + delta.X, 
+            startPos.Y.Scale, 
+            startPos.Y.Offset + delta.Y
+        )
+    end
+
+    Title.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = MainFrame.Position
+            
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    Title.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            updateInput(input)
+        end
+    end)
+
+    -- Click Event for Toggle Button
+    StatusButton.MouseButton1Click:Connect(function()
+        ToggleInvisible()
+    end)
+
+    -- Hover effect for Invisible button
+    StatusButton.MouseEnter:Connect(function()
+        if StatusButton.BackgroundColor3 ~= Color3.fromRGB(85, 255, 127) then -- If not green (ON)
+            StatusButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+        end
+    end)
+
+    StatusButton.MouseLeave:Connect(function()
+        if IsInvisible then
+            StatusButton.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+        else
+            StatusButton.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+        end
+    end)
+
+    -- Close Button Functionality
+    CloseButton.MouseButton1Click:Connect(function()
+        ToggleMenu()
+    end)
+end
+
+-- Initialize
+SetupCharacter()
+CreateMainGUI()
+CreateToggleButton()
+
+-- Connections Storage
+local connections = {nil, nil}
+
+-- Keybind Listener for Invisible (G key)
+connections[1] = UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if not gameProcessed then
+        if input.KeyCode == Enum.KeyCode.G then
+            ToggleInvisible()
+        end
+    end
+end)
+
+-- Heartbeat Logic (The Invisible Mechanism)
+connections[2] = RunService.Heartbeat:Connect(function()
+    if IsInvisible and RootPart and Humanoid then
+        local currentCFrame = RootPart.CFrame
+        local originalCamOffset = Humanoid.CameraOffset
+        
+        -- Teleport far down
+        local newCFrame = currentCFrame * CFrame.new(0, -200000, 0)
+        
+        -- Calculate offset to keep camera looking normal
+        local offsetPosition = newCFrame:ToObjectSpace(CFrame.new(currentCFrame.Position)).Position
+
+        RootPart.CFrame = newCFrame
+        Humanoid.CameraOffset = offsetPosition
+
+        RunService.RenderStepped:Wait()
+
+        -- Reset for the frame render (client visual trick)
+        RootPart.CFrame = currentCFrame
+        Humanoid.CameraOffset = originalCamOffset
+    end
+end)
+
+-- Handle Respawn
+LocalPlayer.CharacterAdded:Connect(function()
+    IsInvisible = false
+    -- Reset GUI status if it exists
+    if StatusButton then
+        StatusButton.Text = "Invisible: OFF"
+        StatusButton.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+    end
+    SetupCharacter()
+end)
+
+-- Save connections to _G for cleanup later
+_G.a = connections
+
+print("Night Slayer Hub loaded successfully!")
+print("Controls:")
+print("- G: Toggle Invisible")
+print("- Top Right Button (⋮⋮⋮): Toggle Menu")
+print("- Drag Title Bar to move menu")
+print("- X Button: Close Menu")
