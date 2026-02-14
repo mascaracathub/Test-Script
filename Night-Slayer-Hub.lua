@@ -1,5 +1,4 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/mascaracathub/Test-Script/refs/heads/main/fast.attack.lua.txt))()
-
 --DEOBFUSCATED BY _NTT
 local L_1_ = {}
 L_1_[2] = table["concat"]
