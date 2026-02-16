@@ -1,0 +1,143 @@
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
+
+local Player = Players.LocalPlayer
+local Modules = ReplicatedStorage:WaitForChild("Modules")
+local Net = Modules:WaitForChild("Net")
+local RegisterAttack = Net:WaitForChild("RE/RegisterAttack")
+local RegisterHit = Net:WaitForChild("RE/RegisterHit")
+local ShootGunEvent = Net:WaitForChild("RE/ShootGunEvent")
+
+getgenv().PMT_GunFast = true
+getgenv().PMT_GunFast_Delay = 0 
+getgenv().PMT_GunFast_PrimeEvery = 0 
+
+local Config = {
+    AttackDistance = 70, 
+    AttackMobs = true,
+    AttackPlayers = true,
+    AttackCooldown = 0, 
+    HitboxLimbs = {"Head", "HumanoidRootPart", "UpperTorso", "LowerTorso"}, 
+    AutoClickEnabled = true
+}
+
+local FastAttack = {}
+FastAttack.__index = FastAttack
+
+function FastAttack.new()
+    local self = setmetatable({
+        EnemyRootPart = nil,
+        _GunLastPrime = 0,
+        _GunLastShot = 0,
+        _LastGunTargetModel = nil,
+        HitFunction = nil
+    }, FastAttack)
+
+    pcall(function()
+        local ls = Player:WaitForChild("PlayerScripts"):FindFirstChildOfClass("LocalScript")
+        if ls and getsenv then 
+            self.HitFunction = getsenv(ls)._G.SendHitsToServer 
+        end
+    end)
+    return self
+end
+
+function FastAttack:IsEntityAlive(e)
+    local h = e and e:FindFirstChild("Humanoid")
+    return h and h.Health > 0
+end
+
+function FastAttack:GetBladeHits(c, dist)
+    local pos = c:GetPivot().Position
+    local bh = {}
+    dist = dist or Config.AttackDistance
+
+    local function proc(folder)
+        if not folder then return end
+        for _, e in ipairs(folder:GetChildren()) do
+            if e ~= c and self:IsEntityAlive(e) then
+                local root = e:FindFirstChild("HumanoidRootPart")
+                if root and (pos - root.Position).Magnitude <= dist then
+                    local hitPart = e:FindFirstChild("Head") or root 
+                    table.insert(bh, {e, hitPart})
+                    self.EnemyRootPart = root 
+                end
+            end
+        end
+    end
+
+    if Config.AttackMobs then proc(Workspace:FindFirstChild("Enemies")) end
+    if Config.AttackPlayers then proc(Workspace:FindFirstChild("Characters")) end
+    return bh
+end
+
+function FastAttack:Attack()
+    if not Config.AutoClickEnabled then return end
+    
+    local char = Player.Character
+    if not char or not self:IsEntityAlive(char) then return end
+    
+    local tool = char:FindFirstChildOfClass("Tool")
+    if not tool then return end
+
+    if tool.ToolTip == "Gun" and getgenv().PMT_GunFast then
+        pcall(function() tool:Activate() end)
+        
+        local targets = self:GetBladeHits(char, 120)
+        local targetParams = targets[1] -- Lấy mục tiêu gần nhất
+        if targetParams then
+            local enemyModel = targetParams[1]
+            local enemyPart = targetParams[2]
+            
+            pcall(function()
+                ShootGunEvent:FireServer(enemyPart.Position, {enemyPart})
+            end)
+        end
+        return 
+    end
+
+    local hits = self:GetBladeHits(char)
+    if #hits > 0 then
+        RegisterAttack:FireServer(0) 
+        
+        if self.HitFunction then
+            self.HitFunction(self.EnemyRootPart, hits)
+        else
+
+            local args = {nil, {}}
+            args[1] = hits[1][2] 
+            
+            for i, v in ipairs(hits) do
+                args[2][i] = v 
+            end
+            
+            RegisterHit:FireServer(unpack(args))
+        end
+    end
+end
+
+
+local AttackInstance = FastAttack.new()
+
+RunService.Heartbeat:Connect(function()
+    pcall(function()
+        AttackInstance:Attack()
+    end)
+end)
+
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+setreadonly(mt, false)
+
+mt.__namecall = newcclosure(function(self, ...)
+    local method = getnamecallmethod()
+    if method == "FireServer" and self.Name == "RegisterAttack" then
+        AttackInstance:Attack()
+        return 
+    end
+    return old(self, ...)
+end)
+setreadonly(mt, true)
