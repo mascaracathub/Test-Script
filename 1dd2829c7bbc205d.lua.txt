@@ -1,0 +1,639 @@
+-- ts file was generated at discord.gg/25ms
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AnhDangNhoEm/TuanAnhIOS/refs/heads/main/Loader'))()
+
+local _ScreenGui = Instance.new('ScreenGui')
+local _TextLabel = Instance.new('TextLabel')
+
+_ScreenGui.Parent = game.CoreGui
+_TextLabel.Parent = _ScreenGui
+_TextLabel.Text = 'Tu\u{1ea5}n Anh IOS / Join | discord.gg/kK2vMrUsQy'
+_TextLabel.Position = UDim2.new(0.5, 0, 0, 5, 0.5)
+_TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+_TextLabel.BackgroundTransparency = 0.5
+_TextLabel.Font = Enum.Font.SourceSansBold
+_TextLabel.TextSize = 16
+_TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+_TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_TextLabel.TextWrapped = false
+
+(function(p3)
+    local v4 = string.len(p3.Text) * p3.TextSize * 0
+
+    p3.Size = UDim2.new(0, v4 + 0, 0, 0)
+end)(_TextLabel)
+
+local v5 = 0
+local u6 = v5
+local u7 = v5
+
+local function v11()
+    while true do
+        local _Position = _TextLabel.Position
+        local v9 = _Position.X.Scale + u6
+        local v10 = _Position.Y.Scale + u7
+
+        if v9 >= 1 or v9 <= 0 then
+            u6 = -u6
+        end
+        if v10 >= 1 or v10 <= 0 then
+            u7 = -u7
+        end
+
+        _TextLabel.Position = UDim2.new(v9, 0, v10, 0)
+
+        wait(0.03)
+    end
+end
+
+spawn(v11)
+spawn(function()
+    while true do
+        for v12 = 0, 1, 0.01 do
+            _TextLabel.TextColor3 = Color3.fromHSV(v12, 1, 1)
+
+            wait(0.05)
+        end
+    end
+end)
+
+local function u18()
+    local _LocalPlayer = game.Players.LocalPlayer
+    local _Head = (_LocalPlayer.Character or _LocalPlayer.CharacterAdded:Wait()):WaitForChild('Head')
+
+    if _Head:FindFirstChild('EspBillboard') then
+        _Head:FindFirstChild('EspBillboard'):Destroy()
+    end
+
+    local _BillboardGui = Instance.new('BillboardGui')
+
+    _BillboardGui.Name = 'EspBillboard'
+    _BillboardGui.Adornee = _Head
+    _BillboardGui.AlwaysOnTop = true
+    _BillboardGui.Size = UDim2.new(0, 200, 0, 30)
+    _BillboardGui.StudsOffset = Vector3.new(0, 2.5, 0)
+    _BillboardGui.Parent = _Head
+
+    local _TextLabel2 = Instance.new('TextLabel')
+
+    _TextLabel2.Size = UDim2.new(1, 0, 1, 0)
+    _TextLabel2.BackgroundTransparency = 1
+    _TextLabel2.Text = 'Tu\u{1ea5}n Anh IOS'
+    _TextLabel2.TextScaled = false
+    _TextLabel2.TextSize = 10
+    _TextLabel2.Font = Enum.Font.GothamBold
+    _TextLabel2.TextStrokeTransparency = 0
+    _TextLabel2.TextStrokeColor3 = Color3.new(0, 0, 0)
+    _TextLabel2.TextColor3 = Color3.fromHSV(0, 1, 1)
+    _TextLabel2.Parent = _BillboardGui
+
+    spawn(function()
+        local v17 = 0
+
+        while _BillboardGui.Parent do
+            wait(0.05)
+
+            v17 = v17 + 0.01
+            _TextLabel2.TextColor3 = Color3.fromHSV(v17 % 1, 1, 1)
+        end
+    end)
+end
+
+u18()
+game.Players.LocalPlayer.CharacterAdded:Connect(function()
+    wait(1)
+    u18()
+end)
+game:GetService('TweenService')
+
+local _UserInputService = game:GetService('UserInputService')
+local _LocalPlayer2 = game:GetService('Players').LocalPlayer
+local _ScreenGui2 = Instance.new('ScreenGui', game.CoreGui)
+
+_ScreenGui2.Name = 'TuanAnhIOS'
+_ScreenGui2.ResetOnSpawn = false
+
+local _ImageButton = Instance.new('ImageButton', _ScreenGui2)
+
+_ImageButton.Size = UDim2.new(0, 50, 0, 50)
+_ImageButton.Position = UDim2.new(0, 19, 0, 19)
+_ImageButton.Image = 'rbxassetid://75774010417827'
+_ImageButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+_ImageButton.ZIndex = 9999
+_ImageButton.Name = 'OpenToggle'
+Instance.new('UICorner', _ImageButton).CornerRadius = UDim.new(0.25, 0)
+
+local _UIStroke = Instance.new('UIStroke', _ImageButton)
+
+_UIStroke.Thickness = 2
+_UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+local _ScreenGui3 = Instance.new('ScreenGui', _LocalPlayer2:WaitForChild('PlayerGui'))
+
+_ScreenGui3.Name = 'MyCenterUI'
+_ScreenGui3.ResetOnSpawn = false
+_ScreenGui3.IgnoreGuiInset = true
+
+local _Frame = Instance.new('Frame', _ScreenGui3)
+
+_Frame.Size = UDim2.new(0, 500, 0, 370)
+_Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+_Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+_Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+_Frame.BorderSizePixel = 0
+_Frame.Active = true
+_Frame.Draggable = true
+_Frame.Visible = true
+Instance.new('UICorner', _Frame).CornerRadius = UDim.new(0, 12)
+
+local _UIStroke2 = Instance.new('UIStroke', _Frame)
+
+_UIStroke2.Thickness = 3
+_UIStroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+task.spawn(function()
+    local v27 = 0
+
+    while task.wait(0.03) do
+        v27 = (v27 + 1) % 360
+
+        local v28 = Color3.fromHSV(v27 / 360, 1, 1)
+
+        _UIStroke.Color = v28
+        _UIStroke2.Color = v28
+    end
+end)
+
+local _Frame2 = Instance.new('Frame', _Frame)
+
+_Frame2.Size = UDim2.new(1, 0, 0, 40)
+_Frame2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Instance.new('UICorner', _Frame2).CornerRadius = UDim.new(0, 12)
+
+local _TextLabel3 = Instance.new('TextLabel', _Frame2)
+
+_TextLabel3.Text = 'Tu\u{1ea5}n Anh IOS [ T\u{1ed5}ng H\u{1ee3}p ]'
+_TextLabel3.Size = UDim2.new(1, -60, 1, 0)
+_TextLabel3.Position = UDim2.new(0, 10, 0, 0)
+_TextLabel3.BackgroundTransparency = 1
+_TextLabel3.TextColor3 = Color3.new(1, 1, 1)
+_TextLabel3.Font = Enum.Font.FredokaOne
+_TextLabel3.TextXAlignment = Enum.TextXAlignment.Left
+_TextLabel3.TextSize = 22
+
+task.spawn(function()
+    local v31 = 0
+
+    while task.wait(0.03) do
+        v31 = (v31 + 1) % 360
+        _TextLabel3.TextColor3 = Color3.fromHSV(v31 / 360, 1, 1)
+    end
+end)
+
+local _TextButton = Instance.new('TextButton', _Frame2)
+
+_TextButton.Text = '\u{fffd}\u{fffd}'
+_TextButton.Size = UDim2.new(0, 40, 0, 40)
+_TextButton.Position = UDim2.new(1, -40, 0, 0)
+_TextButton.BackgroundTransparency = 1
+_TextButton.TextColor3 = Color3.new(1, 1, 1)
+_TextButton.Font = Enum.Font.SourceSansBold
+_TextButton.TextSize = 20
+
+_TextButton.MouseButton1Click:Connect(function()
+    _Frame.Visible = false
+end)
+
+local _ScrollingFrame = Instance.new('ScrollingFrame', _Frame)
+
+_ScrollingFrame.Size = UDim2.new(1, 0, 0, 30)
+_ScrollingFrame.Position = UDim2.new(0, 0, 0, 40)
+_ScrollingFrame.BackgroundTransparency = 1
+_ScrollingFrame.ScrollBarThickness = 0
+_ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 30)
+_ScrollingFrame.ScrollingDirection = Enum.ScrollingDirection.X
+_ScrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.X
+
+local _UIListLayout = Instance.new('UIListLayout', _ScrollingFrame)
+
+_UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+_UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+_UIListLayout.Padding = UDim.new(0, 6)
+
+local v35, v36, v37 = ipairs({
+    'Th\u{f4}ng Tin',
+    'Hot Nh\u{1ea5}t',
+    'Hop Boss',
+    'Script Kaitan',
+    'Nh\u{1eb7}t Fruit',
+    'Stock Fruit',
+    'Bounty',
+    'Nh\u{1eb7}t R\u{1b0}\u{1a1}ng',
+})
+local v38 = {}
+local u39 = {}
+
+while true do
+    local v40
+
+    v37, v40 = v35(v36, v37)
+
+    if v37 == nil then
+        break
+    end
+
+    local _TextButton2 = Instance.new('TextButton')
+
+    _TextButton2.Size = UDim2.new(0, 100, 1, 0)
+    _TextButton2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    _TextButton2.Text = v40
+    _TextButton2.TextColor3 = Color3.new(1, 1, 1)
+    _TextButton2.Font = Enum.Font.FredokaOne
+    _TextButton2.TextSize = 16
+    Instance.new('UICorner', _TextButton2).CornerRadius = UDim.new(0, 6)
+    _TextButton2.Parent = _ScrollingFrame
+    v38[v40] = _TextButton2
+
+    local _ScrollingFrame2 = Instance.new('ScrollingFrame')
+
+    _ScrollingFrame2.Size = UDim2.new(0.9, 0, 1, -90)
+    _ScrollingFrame2.Position = UDim2.new(0.05, 0, 0, 80)
+    _ScrollingFrame2.CanvasSize = UDim2.new(0, 0, 0, 0)
+    _ScrollingFrame2.ScrollBarThickness = 4
+    _ScrollingFrame2.BackgroundTransparency = 1
+    _ScrollingFrame2.Visible = false
+    _ScrollingFrame2.Parent = _Frame
+
+    local _UIGridLayout = Instance.new('UIGridLayout', _ScrollingFrame2)
+
+    _UIGridLayout.CellSize = UDim2.new(0.48, 0, 0, 40)
+    _UIGridLayout.CellPadding = UDim2.new(0.02, 0, 0.02, 0)
+    u39[v40] = _ScrollingFrame2
+end
+
+local function u49(p44)
+    local v45, v46, v47 = pairs(u39)
+
+    while true do
+        local v48
+
+        v47, v48 = v45(v46, v47)
+
+        if v47 == nil then
+            break
+        end
+
+        v48.Visible = v47 == p44
+    end
+end
+
+u49('Th\u{f4}ng Tin')
+
+local v50, v51, u52 = pairs(v38)
+
+while true do
+    local v53
+
+    u52, v53 = v50(v51, u52)
+
+    if u52 == nil then
+        break
+    end
+
+    v53.MouseButton1Click:Connect(function()
+        u49(u52)
+    end)
+end
+
+local v54, v55, v56 = pairs({
+    ['Hot Nh\u{1ea5}t'] = {
+        ['Redz Hub'] = 'https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau',
+        ['Tu\u{1ea5}n Anh IOS'] = 'https://raw.githubusercontent.com/AnhTuanDzai-Hub/TuanAnhIOS/refs/heads/main/TuanAnhIOS.lua',
+        ['Merri Hub D\u{1ec5} D\u{f9}ng'] = 'https://github.com/MerrySubs4t/Softwork/blob/main/Fetching/dll?raw=true',
+        ['Banana Hub'] = 'https://raw.githubusercontent.com/AnhTuanDzai-Hub/Banana-Hub/refs/heads/main/Banana-Free.lua',
+        ['M\u{e1}t M\u{e1}t Hub'] = 'https://raw.githubusercontent.com/AnhDzaiScript/TuanAnhIOS/refs/heads/main/TuanAnhIOS-Piaa.lua',
+        ['Renla Hub'] = 'https://raw.githubusercontent.com/AnhTuanDzai-Hub/TuanAnhIOS/refs/heads/main/RenLa.lua',
+        ['Tanh IOS'] = 'https://raw.githubusercontent.com/AnhTuanDzai-Hub/TuanAnhIOS/refs/heads/main/TuanAnhIOS-V000.lua',
+        ['Tu\u{1ea5}n Anh V1'] = 'https://raw.githubusercontent.com/AnhTuanDzai-Hub/TuanAnhIOS/refs/heads/main/TuanAnhIOSV1.lua',
+        ['Rubu V3'] = 'https://raw.githubusercontent.com/LuaCrack/RubuRoblox/refs/heads/main/RuBuRzVn',
+        ['Volcano Hub'] = 'https://raw.githubusercontent.com/indexeduu/BF-NewVer/refs/heads/main/V3New.lua',
+        ['Maru Hub Free'] = 'https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub',
+        ['Lion Hub'] = 'https://api.luarmor.net/files/v3/loaders/e0c7fcf6c077fc23475cf4ce4db58e42.lua',
+        ['Tu\u{1ea5}n Anh V3'] = 'https://raw.githubusercontent.com/AnhTuanDzai-Hub/TuanAnhIOS/refs/heads/main/TuanAnhIOS-V3.lua',
+        ['Xero Hub'] = 'https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/main.lua',
+        ['B\u{1eaf}p Red'] = 'https://raw.githubusercontent.com/LuaCrack/BapRed/main/BapRedHub',
+        ['Tr\u{1ea9}u Roblox'] = 'https://raw.githubusercontent.com/LuaCrack/TrauHub/refs/heads/main/TrauV1',
+        ['Zis Roblox'] = 'https://raw.githubusercontent.com/giaotrinhhoc/ZisRb/refs/heads/main/ZisRbV5',
+        ['QuanTum Hub'] = 'https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/refs/heads/main/QuantumOnyx.lua',
+        ['Doremon Hub'] = 'https://raw.githubusercontent.com/obfmoonsec/Masterhub/refs/heads/main/obf',
+        ['Rise Hub'] = 'https://raw.githubusercontent.com/TrashLua/BloxFruits/main/FreeScripts.lua',
+        ['Fly Gui All Game'] = 'https://raw.githubusercontent.com/AnhTuanDzai-Hub/Scriptbay/refs/heads/main/FlyGuiTuanAnhIOS.lua',
+        ['BlueX Hub'] = 'https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua',
+        ['Cokka Hub V4'] = 'https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua',
+        ['Min Gaming'] = 'https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinAV',
+        ['Speed Hub'] = 'https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua',
+        ['Attack Hub'] = 'https://raw.githubusercontent.com/KOBENFF/sdfd/refs/heads/main/Koatta.txt',
+        ['Astral Hub'] = 'https://raw.githubusercontent.com/Overgustx2/Main/refs/heads/main/BloxFruits_25.html',
+        ['HoHo Hub'] = 'https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI',
+        ['Zenith Hub'] = 'https://raw.githubusercontent.com/Efe0626/RaitoHub/main/Script',
+        ['Hiru Hub'] = 'https://raw.githubusercontent.com/LuaStupid/ExecuteGames/main/QuestGames.lua',
+        ['BlueX Menu'] = 'https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua',
+    },
+    ['Nh\u{1eb7}t Fruit'] = {
+        ['Panda Hub'] = 'https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruitfarm.lua',
+        ['Tu\u{1ea5}n Anh IOS'] = 'https://raw.githubusercontent.com/AnhTuanDzai-Hub/AutoFruitDepzai/refs/heads/main/TuanAnhIOS-Find-Fruit.Lua',
+        ['Vexeze Hub'] = 'https://pandadevelopment.net/virtual/file/e50b45018b39ad3e',
+        ['BlueX Hub'] = 'https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/FindFruits.lua',
+    },
+    Bounty = {
+        ['Hoho Draco V3'] = 'https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI',
+        ['Lion Hub'] = 'https://api.luarmor.net/files/v3/loaders/10f7f97cebba24a87808c36ebd345a97.lua',
+        ['Tu\u{1ea5}n Anh PvP'] = 'https://raw.githubusercontent.com/AnhTuanDzai-Hub/AimBotSkibidi/refs/heads/main/TuanAnhIOS-AIMBOT.Lua',
+        ['Vxeze Hub'] = 'https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubAutoBounty',
+    },
+    ['Nh\u{1eb7}t R\u{1b0}\u{1a1}ng'] = {
+        ['Skull Hub'] = 'https://raw.githubusercontent.com/xxhumggxx/SkullHub/refs/heads/main/ChestV2.lua',
+        ['Vxeze Hub'] = 'https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubAutoChest.lua',
+    },
+    ['Script Kaitan'] = {
+        ['Tu\u{1ea5}n Anh IOS'] = 'https://raw.githubusercontent.com/AnhDzaiScript/TuanAnhIOS/refs/heads/main/KaiTan',
+        ['XSodiez Hub'] = 'https://raw.githubusercontent.com/XSodiez/Kaitun/refs/heads/main/Kaitun',
+    },
+    ['Hop Boss'] = {
+        ['Teddy Hub'] = 'https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM',
+    },
+})
+
+while true do
+    local v57
+
+    v56, v57 = v54(v55, v56)
+
+    if v56 == nil then
+        break
+    end
+
+    local v58 = u39[v56]
+    local _ScrollingFrame3 = Instance.new('ScrollingFrame')
+
+    _ScrollingFrame3.Name = v58.Name
+    _ScrollingFrame3.Position = UDim2.new(0, 0, 0, 75)
+    _ScrollingFrame3.Size = UDim2.new(1, 0, 1, -75)
+    _ScrollingFrame3.BackgroundTransparency = 1
+    _ScrollingFrame3.BorderSizePixel = 0
+    _ScrollingFrame3.ScrollBarThickness = 6
+    _ScrollingFrame3.ScrollingDirection = Enum.ScrollingDirection.Y
+    _ScrollingFrame3.AutomaticCanvasSize = Enum.AutomaticSize.Y
+    _ScrollingFrame3.CanvasSize = UDim2.new(0, 0, 0, 0)
+    _ScrollingFrame3.ScrollingEnabled = true
+    _ScrollingFrame3.Active = true
+    _ScrollingFrame3.Selectable = false
+    _ScrollingFrame3.ZIndex = 1
+    _ScrollingFrame3.Visible = false
+    _ScrollingFrame3.Parent = v58.Parent
+
+    v58:Destroy()
+
+    u39[v56] = _ScrollingFrame3
+
+    local _UIGridLayout2 = Instance.new('UIGridLayout')
+
+    _UIGridLayout2.CellSize = UDim2.new(0.3, -10, 0, 44)
+    _UIGridLayout2.CellPadding = UDim2.new(0, 16, 0, 18)
+    _UIGridLayout2.FillDirection = Enum.FillDirection.Horizontal
+    _UIGridLayout2.SortOrder = Enum.SortOrder.LayoutOrder
+    _UIGridLayout2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    _UIGridLayout2.VerticalAlignment = Enum.VerticalAlignment.Top
+    _UIGridLayout2.Parent = _ScrollingFrame3
+
+    local v61, v62, v63 = pairs(v57)
+
+    while true do
+        local u64
+
+        v63, u64 = v61(v62, v63)
+
+        if v63 == nil then
+            break
+        end
+
+        local _TextButton3 = Instance.new('TextButton')
+
+        _TextButton3.Size = UDim2.new(0, 0, 0, 44)
+        _TextButton3.Text = v63
+        _TextButton3.Font = Enum.Font.FredokaOne
+        _TextButton3.TextSize = 18
+        _TextButton3.TextColor3 = Color3.new(1, 1, 1)
+        _TextButton3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+        _TextButton3.BackgroundTransparency = 0
+        _TextButton3.BorderSizePixel = 0
+        _TextButton3.ZIndex = 1
+        _TextButton3.Parent = _ScrollingFrame3
+
+        local _UICorner = Instance.new('UICorner')
+
+        _UICorner.CornerRadius = UDim.new(0, 6)
+        _UICorner.Parent = _TextButton3
+
+        _TextButton3.MouseButton1Click:Connect(function()
+            pcall(function()
+                loadstring(game:HttpGet(u64))()
+            end)
+        end)
+    end
+end
+
+u49('Th\u{f4}ng Tin')
+
+local _ThngTin = u39['Th\u{f4}ng Tin']
+
+if _ThngTin then
+    local v73, v74, v75 = ipairs((function()
+        local v68 = _LocalPlayer2:FindFirstChild('Data') and (_LocalPlayer2.Data:FindFirstChild('Level') and _LocalPlayer2.Data.Level.Value or 'Kh\u{f4}ng r\u{f5}') or 'Kh\u{f4}ng r\u{f5}'
+        local _PlaceId = game.PlaceId
+        local v70 = _PlaceId == 2753915549 and 'Sea 1' or (_PlaceId == 4442272183 and 'Sea 2' or (_PlaceId == 7449423635 and 'Sea 3' or 'Kh\u{f4}ng r\u{f5}'))
+        local _t = os.date('*t')
+        local __02d02d02d02d02d04d = string.format('%02d:%02d:%02d  %02d/%02d/%04d', _t.hour, _t.min, _t.sec, _t.day, _t.month, _t.year)
+
+        return {
+            ' T\u{ea}n: ' .. _LocalPlayer2.Name,
+            'Level: ' .. v68,
+            'Sea: ' .. v70,
+            'Th\u{1edd}i gian: ' .. __02d02d02d02d02d04d,
+        }
+    end)())
+
+    while true do
+        local v76
+
+        v75, v76 = v73(v74, v75)
+
+        if v75 == nil then
+            break
+        end
+
+        local _TextLabel4 = Instance.new('TextLabel', _ThngTin)
+
+        _TextLabel4.Size = UDim2.new(1, 0, 0, 35)
+        _TextLabel4.BackgroundTransparency = 1
+        _TextLabel4.TextColor3 = Color3.new(1, 1, 1)
+        _TextLabel4.Font = Enum.Font.FredokaOne
+        _TextLabel4.TextSize = 18
+        _TextLabel4.Text = v76
+        _TextLabel4.TextXAlignment = Enum.TextXAlignment.Left
+    end
+
+    local function v83(p78, p79, p80, p81)
+        local _TextButton4 = Instance.new('TextButton', _ThngTin)
+
+        _TextButton4.Size = UDim2.new(1, 0, 0, 35)
+        _TextButton4.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+        _TextButton4.Text = p78 .. ' - ' .. p79
+        _TextButton4.Font = Enum.Font.FredokaOne
+        _TextButton4.TextSize = 16
+        _TextButton4.TextColor3 = Color3.new(1, 1, 1)
+        _TextButton4.TextXAlignment = Enum.TextXAlignment.Left
+        Instance.new('UICorner', _TextButton4).CornerRadius = UDim.new(0, 6)
+
+        _TextButton4.MouseButton1Click:Connect(function()
+            setclipboard(p80)
+            game:GetService('StarterGui'):SetCore('SendNotification', {
+                Title = 'Th\u{f4}ng b\u{e1}o',
+                Text = p81 or '\u{fffd}\u{e3} sao ch\u{e9}p!',
+                Duration = 3,
+            })
+        end)
+    end
+
+    v83('Discord', 'discord.gg/kK2vMrUsQy', 'https://discord.gg/kK2vMrUsQy', '\u{fffd}\u{e3} sao ch\u{e9}p link Discord!')
+    v83('     TikTok', 'tuananh_ios', 'tuananh_ios', '\u{fffd}\u{e3} sao ch\u{e9}p link TikTok!')
+    v83('YouTube', 'TuanAnhIOS', 'https://www.youtube.com/@TuanAnhIOS', '\u{fffd}\u{e3} sao ch\u{e9}p link YouTube!')
+    v83('Facebook', 'Tu\u{1ea5}n Anh (T\u{fa}nnAngg)', 'https://www.facebook.com/share/15tkBroa35/?mibextid=wwXIfr', '\u{fffd}\u{e3} sao ch\u{e9}p link Facebook!')
+end
+
+_ImageButton.MouseButton1Click:Connect(function()
+    _Frame.Visible = not _Frame.Visible
+end)
+
+local u84 = nil
+local u85 = nil
+local u86 = nil
+local u87 = nil
+
+local function u90(p88)
+    local v89 = p88.Position - u85
+
+    _ImageButton.Position = UDim2.new(u86.X.Scale, u86.X.Offset + v89.X, u86.Y.Scale, u86.Y.Offset + v89.Y)
+end
+
+_ImageButton.InputBegan:Connect(function(p91)
+    if p91.UserInputType == Enum.UserInputType.MouseButton1 or p91.UserInputType == Enum.UserInputType.Touch then
+        u84 = true
+        u85 = p91.Position
+        u86 = _ImageButton.Position
+
+        p91.Changed:Connect(function()
+            if p91.UserInputState == Enum.UserInputState.End then
+                u84 = false
+            end
+        end)
+    end
+end)
+_ImageButton.InputChanged:Connect(function(p92)
+    if p92.UserInputType == Enum.UserInputType.MouseMovement or p92.UserInputType == Enum.UserInputType.Touch then
+        u87 = p92
+    end
+end)
+_UserInputService.InputChanged:Connect(function(p93)
+    if u84 and p93 == u87 then
+        u90(p93)
+    end
+end)
+
+local _StockFruit = u39['Stock Fruit']
+
+if _StockFruit then
+    local _Frame3 = Instance.new('Frame')
+
+    _Frame3.Size = UDim2.new(1, 0, 1, 0)
+    _Frame3.BackgroundTransparency = 1
+    _Frame3.Name = 'FruitStockContainer'
+    _Frame3.Parent = _StockFruit
+
+    local _UIListLayout2 = Instance.new('UIListLayout')
+
+    _UIListLayout2.FillDirection = Enum.FillDirection.Horizontal
+    _UIListLayout2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    _UIListLayout2.SortOrder = Enum.SortOrder.LayoutOrder
+    _UIListLayout2.Padding = UDim.new(0, 100)
+    _UIListLayout2.Parent = _Frame3
+
+    local function v109(p97, p98)
+        local _Frame4 = Instance.new('Frame')
+
+        _Frame4.Size = UDim2.new(0.2, 0, 1, 0)
+        _Frame4.BackgroundTransparency = 1
+        _Frame4.Name = p97
+        _Frame4.Parent = _Frame3
+
+        local _TextLabel5 = Instance.new('TextLabel')
+
+        _TextLabel5.Size = UDim2.new(1, 0, 0, 30)
+        _TextLabel5.BackgroundTransparency = 1
+        _TextLabel5.Text = p97
+        _TextLabel5.TextColor3 = Color3.fromRGB(255, 255, 255)
+        _TextLabel5.Font = Enum.Font.FredokaOne
+        _TextLabel5.TextSize = 20
+        _TextLabel5.TextXAlignment = Enum.TextXAlignment.Left
+        _TextLabel5.Parent = _Frame4
+
+        local _Frame5 = Instance.new('Frame')
+
+        _Frame5.Size = UDim2.new(1, 0, 1, -30)
+        _Frame5.Position = UDim2.new(0, 0, 0, 30)
+        _Frame5.BackgroundTransparency = 1
+        _Frame5.Parent = _Frame4
+
+        local _UIListLayout3 = Instance.new('UIListLayout')
+
+        _UIListLayout3.SortOrder = Enum.SortOrder.LayoutOrder
+        _UIListLayout3.Padding = UDim.new(0, 6)
+        _UIListLayout3.Parent = _Frame5
+
+        local v103, v104, v105 = ipairs(p98)
+
+        while true do
+            local v106
+
+            v105, v106 = v103(v104, v105)
+
+            if v105 == nil then
+                break
+            end
+            if v106.OnSale then
+                local v107 = tostring(v106.Price):reverse():gsub('(%d%d%d)', '%1,'):reverse():gsub('^,', '')
+                local _TextLabel6 = Instance.new('TextLabel')
+
+                _TextLabel6.Size = UDim2.new(1, 0, 0, 24)
+                _TextLabel6.BackgroundTransparency = 1
+                _TextLabel6.Text = ' ' .. v106.Name .. ' - $' .. v107
+                _TextLabel6.TextColor3 = Color3.fromRGB(255, 255, 255)
+                _TextLabel6.Font = Enum.Font.FredokaOne
+                _TextLabel6.TextSize = 14
+                _TextLabel6.TextXAlignment = Enum.TextXAlignment.Left
+                _TextLabel6.Parent = _Frame5
+            end
+        end
+    end
+
+    local _CommF_ = game:GetService('ReplicatedStorage'):WaitForChild('Remotes'):WaitForChild('CommF_')
+    local _GetFruits = _CommF_:InvokeServer('GetFruits', true)
+    local _GetFruits2 = _CommF_:InvokeServer('GetFruits')
+
+    v109('Mirage Stock', _GetFruits)
+    v109('Th\u{1b0}\u{1edd}ng Stock', _GetFruits2)
+
+    _StockFruit.CanvasSize = UDim2.new(0, 0, 1, 0)
+end
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AnhDangNhoEm/TuanAnhIOS/refs/heads/main/Haz.lua'))()
