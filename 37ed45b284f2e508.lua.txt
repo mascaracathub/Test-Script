@@ -1,0 +1,1826 @@
+-- ts file was generated at discord.gg/25ms
+
+local u1 = loadstring(game:HttpGet('https://raw.githubusercontent.com/AnhTuanDzai-Hub/UIMenu/refs/heads/main/Uiflue.lua'))()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/AnhDangNhoEm/TuanAnhIOS/refs/heads/main/Loader'))()
+
+local u2 = u1:CreateWindow({
+    Title = 'Night Slayer Hub [ Premium ]',
+    SubTitle = 'by discord_betaa',
+    TabWidth = 155,
+    Size = UDim2.fromOffset(450, 330),
+    Acrylic = true,
+    Theme = 'TuanAnhIOS',
+    MinimizeKey = Enum.KeyCode.LeftControl,
+})
+local _ScreenGui = Instance.new('ScreenGui')
+
+_ScreenGui.Name = 'ControlGUI'
+_ScreenGui.Parent = game.CoreGui
+
+local _ImageButton = Instance.new('ImageButton')
+
+_ImageButton.Size = UDim2.new(0, 50, 0, 50)
+_ImageButton.Position = UDim2.new(0.15, 0, 0.15, 0)
+_ImageButton.Image = 'rbxassetid://130627959945120'
+_ImageButton.BackgroundTransparency = 1
+_ImageButton.Parent = _ScreenGui
+
+local _UICorner = Instance.new('UICorner')
+
+_UICorner.CornerRadius = UDim.new(0.25, 0)
+_UICorner.Parent = _ImageButton
+
+local _UIStroke = Instance.new('UIStroke')
+
+_UIStroke.Thickness = 2
+_UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+_UIStroke.Parent = _ImageButton
+
+local u7 = {
+    Color3.fromRGB(255, 0, 0),
+    Color3.fromRGB(255, 127, 0),
+    Color3.fromRGB(255, 255, 0),
+    Color3.fromRGB(0, 255, 0),
+    Color3.fromRGB(0, 255, 255),
+    Color3.fromRGB(0, 0, 255),
+    Color3.fromRGB(139, 0, 255),
+}
+
+task.spawn(function()
+    local v8 = 1
+
+    while true do
+        _UIStroke.Color = u7[v8]
+        v8 = v8 % #u7 + 1
+
+        task.wait(0.5)
+    end
+end)
+
+local u9 = true
+local u10 = nil
+local u11 = nil
+local u12 = nil
+local u13 = nil
+
+local function u16(p14)
+    local v15 = p14.Position - u12
+
+    _ImageButton.Position = UDim2.new(u13.X.Scale, u13.X.Offset + v15.X, u13.Y.Scale, u13.Y.Offset + v15.Y)
+end
+
+_ImageButton.InputBegan:Connect(function(p17)
+    if p17.UserInputType == Enum.UserInputType.Touch or p17.UserInputType == Enum.UserInputType.MouseButton1 then
+        u10 = true
+        u12 = p17.Position
+        u13 = _ImageButton.Position
+
+        p17.Changed:Connect(function()
+            if p17.UserInputState == Enum.UserInputState.End then
+                u10 = false
+            end
+        end)
+    end
+end)
+_ImageButton.InputChanged:Connect(function(p18)
+    if p18.UserInputType == Enum.UserInputType.Touch or p18.UserInputType == Enum.UserInputType.MouseMovement then
+        u11 = p18
+    end
+end)
+game:GetService('UserInputService').InputChanged:Connect(function(p19)
+    if u10 and p19 == u11 then
+        u16(p19)
+    end
+end)
+_ImageButton.MouseButton1Click:Connect(function()
+    u9 = not u9
+
+    if u9 then
+        u2:Minimize(false)
+    else
+        u2:Minimize(true)
+    end
+end)
+
+local v20 = u2
+local v21 = u2.AddTab(v20, {
+    Title = 'Tab Info',
+    Icon = 'rbxassetid://110657725541747',
+})
+local v22 = u2
+local v23 = u2.AddTab(v22, {
+    Title = 'Tab Main',
+    Icon = 'rbxassetid://110657725541747',
+})
+local v24 = u2
+local v25 = u2.AddTab(v24, {
+    Title = 'Tab Fix Lag',
+    Icon = 'rbxassetid://110657725541747',
+})
+local v26 = u2
+local v27 = u2.AddTab(v26, {
+    Title = 'Tab Hop Sever Pet',
+    Icon = 'rbxassetid://110657725541747',
+})
+local v28 = u2
+local v29 = u2.AddTab(v28, {
+    Title = 'Tab Esp',
+    Icon = 'rbxassetid://110657725541747',
+})
+local v30 = u2
+local v31 = u2.AddTab(v30, {
+    Title = 'Tab Shop',
+    Icon = 'rbxassetid://110657725541747',
+})
+local v32 = u2
+local v33 = u2.AddTab(v32, {
+    Title = 'Tab Sever',
+    Icon = 'rbxassetid://110657725541747',
+})
+
+v21:AddParagraph({
+    Title = 'Script L\u{1ed7}i L\u{ea}n H\u{1ec7}',
+    Content = 'Tik Tok : tuananh_ios',
+})
+pcall(function()
+    local v34 = getrawmetatable(game)
+
+    setreadonly(v34, false)
+
+    local ___namecall = v34.__namecall
+
+    v34.__namecall = newcclosure(function(p36, ...)
+        if tostring(p36):lower():find('kick') or getnamecallmethod() == 'Kick' then
+            return nil
+        else
+            return ___namecall(p36, ...)
+        end
+    end)
+end)
+v21:AddButton({
+    Title = 'Link Join Sever Discord',
+    Description = 'discord.gg/wWHxH6ARU',
+    Callback = function()
+        setclipboard('https://discord.gg/wWHxH6ARU')
+        game:GetService('StarterGui'):SetCore('SendNotification', {
+            Title = 'Th\u{f4}ng b\u{e1}o',
+            Text = '\u{fffd}\u{e3} sao ch\u{e9}p link Discord!',
+            Duration = 3,
+        })
+    end,
+})
+v21:AddButton({
+    Title = 'TikTok: C\u{1ee7}a \u{110}\u{1ea1}i Ka',
+    Description = 'https://www.tiktok.com/@discord_betaa',
+    Callback = function()
+        setclipboard('tuananh_ios')
+        game:GetService('StarterGui'):SetCore('SendNotification', {
+            Title = 'Th\u{f4}ng b\u{e1}o',
+            Text = '\u{fffd}\u{e3} sao ch\u{e9}p link TikTok!',
+            Duration = 3,
+        })
+    end,
+})
+v23:AddButton({
+    Title = 'Link Join Sever Discord',
+    Description = 'discord.gg/wWHxH6ARU',
+    Callback = function()
+        setclipboard('https://discord.gg/wWHxH6ARU')
+        game:GetService('StarterGui'):SetCore('SendNotification', {
+            Title = 'Th\u{f4}ng b\u{e1}o',
+            Text = '\u{fffd}\u{e3} sao ch\u{e9}p link Discord!',
+            Duration = 3,
+        })
+    end,
+})
+v23:AddSection('Check Base')
+
+local _StarterGui = game:GetService('StarterGui')
+local v38, v39, v40 = ipairs(workspace.Plots:GetChildren())
+local v41 = nil
+
+while true do
+    local v42
+
+    v40, v42 = v38(v39, v40)
+
+    if v40 == nil then
+        break
+    end
+
+    local _YourBase = v42:FindFirstChild('YourBase', true)
+
+    if _YourBase and _YourBase.Enabled then
+        v41 = v42.Name
+
+        break
+    end
+end
+
+local _RemainingTime = workspace.Plots[v41].Purchases.PlotBlock.Main.BillboardGui.RemainingTime
+local u45 = v23:AddParagraph({
+    Title = 'Lock Time: ' .. _RemainingTime.Text,
+})
+local u46 = 0
+local u47 = false
+
+task.spawn(function()
+    while true do
+        local _Text = _RemainingTime.Text
+
+        u45:SetTitle('Lock Time: ' .. _Text)
+
+        local v49 = tonumber(_Text:match('%d+'))
+
+        if v49 then
+            if u46 < v49 then
+                u47 = false
+            end
+            if v49 == 5 and not u47 then
+                u47 = true
+
+                pcall(function()
+                    _StarterGui:SetCore('SendNotification', {
+                        Title = 'Th\u{f4}ng b\u{e1}o | Notification',
+                        Text = 'C\u{f2}n 5 gi\u{e2}y n\u{1eef}a c\u{103}n c\u{1ee9} c\u{1ee7}a b\u{1ea1}n s\u{1ebd} | 5 seconds left until your base is Unlocked',
+                        Duration = 3,
+                    })
+                end)
+            end
+
+            u46 = v49
+        end
+
+        task.wait(0.25)
+    end
+end)
+v23:AddSection('Th\u{f4}ng B\u{e1}o | Notification')
+
+local _Players = game:GetService('Players')
+local _StarterGui2 = game:GetService('StarterGui')
+
+game:GetService('RunService')
+
+local _ = _Players.LocalPlayer
+local u52 = {
+    ['Graipuss Medussi'] = 'Brainrot God Secret',
+    ['La Vacca Saturno Saturnita'] = 'Brainrot God Secret',
+    ['Los Tralaleritos'] = 'Brainrot God Secret',
+    ['Sammyni Spyderini'] = 'Brainrot God Secret',
+    ['Garama and Madundung'] = 'Brainrot God Secret',
+    ['La Grande Combinazione'] = 'Brainrot God Secret',
+    ['Cocofanto Elefanto'] = 'Brainrot God',
+    ['Unclito Samito'] = 'Brainrot God',
+    ['Odin Din Din Dun'] = 'Brainrot God',
+    ['Tralalero Tralala'] = 'Brainrot God',
+    ['Girafa Celestre'] = 'Brainrot God',
+    ['Gattatino Nyanino'] = 'Brainrot God',
+    Matteo = 'Brainrot God',
+    ['Trenostruzzo Turbo 3000'] = 'Brainrot God',
+}
+local u53 = false
+local u54 = {}
+
+local function u57(p55, p56)
+    if not u54[p55] then
+        u54[p55] = true
+
+        pcall(function()
+            _StarterGui2:SetCore('SendNotification', {
+                Title = 'Pet Vip Ph\u{e1}t Hi\u{1ec7}n',
+                Text = p55 .. ' [' .. p56 .. ']',
+                Duration = 5,
+            })
+        end)
+    end
+end
+local function u62()
+    local v58, v59, v60 = ipairs(workspace:GetDescendants())
+
+    while true do
+        local v61
+
+        v60, v61 = v58(v59, v60)
+
+        if v60 == nil then
+            break
+        end
+        if v61:IsA('Model') and u52[v61.Name] then
+            u57(v61.Name, u52[v61.Name])
+        end
+    end
+end
+
+task.spawn(function()
+    while true do
+        if u53 then
+            u62()
+        end
+
+        task.wait(5)
+    end
+end)
+v23:AddToggle('PetScanToggle', {
+    Title = 'Show Notification If There Is Pet Brainrot God Secret',
+    Description = 'Hi\u{1ec7}n Th\u{f4}ng B\u{e1}o N\u{1ebf}u Sever C\u{f3} Pet Brainrot God Secret',
+    Default = false,
+    Callback = function(p63)
+        u53 = p63
+    end,
+})
+v23:AddSection('Setting')
+
+local u64 = false
+
+v23:AddToggle('AntiTrapToggle', {
+    Title = 'Anti Trap',
+    Description = 'V\u{f4} Hi\u{1ec7}u Kho\u{e1} C\u{1ea1}m B\u{1eab}y',
+    Default = false,
+    Callback = function(p65)
+        u64 = p65
+    end,
+})
+
+local function u73(p66)
+    if p66:IsA('Model') then
+        local _zero = Vector3.zero
+        local v68, v69, v70 = ipairs(p66:GetDescendants())
+        local v71 = 0
+
+        while true do
+            local v72
+
+            v70, v72 = v68(v69, v70)
+
+            if v70 == nil then
+                break
+            end
+            if v72:IsA('BasePart') then
+                _zero = _zero + v72.Position
+                v71 = v71 + 1
+            end
+        end
+
+        if v71 > 0 then
+            return _zero / v71
+        end
+    elseif p66:IsA('BasePart') then
+        return p66.Position
+    end
+
+    return Vector3.zero
+end
+local function u76(p74)
+    local _Part = Instance.new('Part')
+
+    _Part.Name = 'FakeTrap'
+    _Part.Size = Vector3.new(1.3, 1.3, 1.3)
+    _Part.Anchored = true
+    _Part.CanCollide = false
+    _Part.Color = Color3.fromRGB(0, 255, 0)
+    _Part.Material = Enum.Material.SmoothPlastic
+    _Part.Position = p74 + Vector3.new(0, _Part.Size.Y / 2, 0)
+    _Part.Parent = workspace
+end
+
+task.spawn(function()
+    while true do
+        if u64 then
+            local v77, v78, v79 = ipairs(workspace:GetDescendants())
+
+            while true do
+                local u80
+
+                v79, u80 = v77(v78, v79)
+
+                if v79 == nil then
+                    break
+                end
+                if u80.Name == 'Trap' then
+                    local v81 = u73(u80)
+
+                    pcall(function()
+                        u80:Destroy()
+                    end)
+                    u76(v81)
+                end
+            end
+        end
+
+        task.wait(0.5)
+    end
+end)
+v23:AddButton({
+    Title = 'Speed 50',
+    Description = 'Ch\u{1ea1}y Nhanh Ph\u{1edd} L\u{e1}t',
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/AnhDangNhoEm/TuanAnhIOS/refs/heads/main/Speed.lua'))()
+    end,
+})
+
+local _Players2 = game:GetService('Players')
+local _UserInputService = game:GetService('UserInputService')
+local _RunService = game:GetService('RunService')
+local _LocalPlayer = _Players2.LocalPlayer
+local _ToggleBoostJump = v23:AddToggle('ToggleBoostJump', {
+    Title = 'Boost Jump',
+    Description = 'Nh\u{1ea3}y Cao T\u{1ed1}i \u{110}a 3 L\u{1ea7}n Nh\u{1ea3}y V\u{1eeb}a Th\u{f4}i Tr\u{e1}nh L\u{1ed7}i :))',
+    Default = false,
+})
+local u87 = false
+local u88 = nil
+local u89 = nil
+local u90 = 0
+local u91 = 3
+
+local function u97()
+    if not (u88 and u88.Connected) then
+        u88 = _UserInputService.JumpRequest:Connect(function()
+            if u87 then
+                local _Character = _LocalPlayer.Character
+
+                if _Character then
+                    local _Humanoid = _Character:FindFirstChildOfClass('Humanoid')
+                    local _HumanoidRootPart = _Character:FindFirstChild('HumanoidRootPart')
+
+                    if _Humanoid and _HumanoidRootPart then
+                        if u90 < u91 then
+                            u90 = u90 + 1
+                            _HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0, 80, 0)
+                        end
+                    end
+                else
+                    return
+                end
+            else
+                return
+            end
+        end)
+        u89 = _RunService.Stepped:Connect(function()
+            local _Character2 = _LocalPlayer.Character
+
+            if _Character2 then
+                local _Humanoid2 = _Character2:FindFirstChildOfClass('Humanoid')
+
+                if _Humanoid2 then
+                    if _Humanoid2.FloorMaterial ~= Enum.Material.Air then
+                        u90 = 0
+                    end
+                end
+            else
+                return
+            end
+        end)
+    end
+end
+local function u98()
+    if u88 then
+        u88:Disconnect()
+
+        u88 = nil
+    end
+    if u89 then
+        u89:Disconnect()
+
+        u89 = nil
+    end
+
+    u90 = 0
+end
+
+_ToggleBoostJump:OnChanged(function(p99)
+    u87 = p99
+
+    if u87 then
+        u97()
+    else
+        u98()
+    end
+end)
+v23:AddButton({
+    Title = 'Flash to the Roof of the Base While Stealing Pets',
+    Description = 'T\u{1ed1}c Bi\u{1ebf}n L\u{ea}n Tr\u{ea}n N\u{f3}c C\u{103}n C\u{1ee9} Khi \u{110}ang C\u{1b0}\u{1edb}p Pet [ New Updade ] ',
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/TuanAnhIOX/TuanAnhIOS/refs/heads/main/PiaTele.lua'))()
+    end,
+})
+v23:AddButton({
+    Title = 'Fly Vip',
+    Description = 'D\u{f9}ng \u{110}\u{1ec3} Bay D\u{1ec5} D\u{e0}ng Trong C\u{103}n C\u{1ee9} P\u{1ecb}a Ho\u{1eb7}c \u{1ede} Ngo\u{e0}i :))',
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/TuanAnhIOX/TuanAnhIOS/refs/heads/main/fly.lua'))()
+    end,
+})
+v23:AddSection('Leave / Reset | Tho\u{e1}t Game Reset Nhanh')
+v23:AddButton({
+    Title = 'Leave Button',
+    Description = 'Hi\u{1ec3}n Th\u{1ecb} N\u{fa}t Tho\u{e1}t Game Nhanh',
+    Callback = function()
+        local _PlayerGui = game:GetService('Players').LocalPlayer:WaitForChild('PlayerGui')
+
+        if not _PlayerGui:FindFirstChild('LeaveConfirmationGui') then
+            local _ScreenGui2 = Instance.new('ScreenGui')
+
+            _ScreenGui2.Name = 'LeaveConfirmationGui'
+            _ScreenGui2.ResetOnSpawn = false
+            _ScreenGui2.IgnoreGuiInset = true
+            _ScreenGui2.Parent = _PlayerGui
+
+            local _TextButton = Instance.new('TextButton')
+
+            _TextButton.Name = 'LeaveButton'
+            _TextButton.Size = UDim2.new(0, 102, 0, 26)
+            _TextButton.Position = UDim2.new(0.5, 0, 0.02, 0)
+            _TextButton.AnchorPoint = Vector2.new(0.5, 0)
+            _TextButton.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+            _TextButton.Text = 'Leave Game'
+            _TextButton.Font = Enum.Font.GothamBold
+            _TextButton.TextSize = 14
+            _TextButton.TextColor3 = Color3.new(1, 1, 1)
+            _TextButton.Parent = _ScreenGui2
+            Instance.new('UICorner', _TextButton).CornerRadius = UDim.new(0, 8)
+
+            _TextButton.MouseButton1Click:Connect(function()
+                game:Shutdown()
+            end)
+        end
+    end,
+})
+v23:AddButton({
+    Title = 'Reset Button',
+    Description = 'Hi\u{1ec3}n Th\u{1ecb} N\u{fa}t Reset Nh\u{e2}n V\u{1ead}t Nhanh',
+    Callback = function()
+        local _LocalPlayer2 = game:GetService('Players').LocalPlayer
+        local _PlayerGui2 = _LocalPlayer2:WaitForChild('PlayerGui')
+
+        if not _PlayerGui2:FindFirstChild('ResetButtonGUI') then
+            local function u109()
+                local _ScreenGui3 = Instance.new('ScreenGui')
+
+                _ScreenGui3.Name = 'ResetButtonGUI'
+                _ScreenGui3.ResetOnSpawn = false
+                _ScreenGui3.IgnoreGuiInset = true
+                _ScreenGui3.Parent = _PlayerGui2
+
+                local _TextButton2 = Instance.new('TextButton')
+
+                _TextButton2.Size = UDim2.new(0, 70, 0, 28)
+                _TextButton2.Position = UDim2.new(0, 10, 0, 50)
+                _TextButton2.AnchorPoint = Vector2.new(0, 0)
+                _TextButton2.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
+                _TextButton2.TextColor3 = Color3.new(1, 1, 1)
+                _TextButton2.Text = 'Reset'
+                _TextButton2.Font = Enum.Font.GothamBold
+                _TextButton2.TextSize = 14
+                _TextButton2.Parent = _ScreenGui3
+
+                local _UICorner2 = Instance.new('UICorner')
+
+                _UICorner2.CornerRadius = UDim.new(0, 6)
+                _UICorner2.Parent = _TextButton2
+
+                _TextButton2.MouseButton1Click:Connect(function()
+                    local _Humanoid3 = (_LocalPlayer2.Character or _LocalPlayer2.CharacterAdded:Wait()):FindFirstChildOfClass('Humanoid')
+
+                    if _Humanoid3 then
+                        _Humanoid3.Health = 0
+                    end
+
+                    _ScreenGui3:Destroy()
+                end)
+            end
+
+            u109()
+            _LocalPlayer2.CharacterAdded:Connect(function()
+                task.wait(0.5)
+
+                if not _PlayerGui2:FindFirstChild('ResetButtonGUI') then
+                    u109()
+                end
+            end)
+        end
+    end,
+})
+
+local function u136(p110)
+    local _Players3 = game:GetService('Players')
+    local _Lighting = game:GetService('Lighting')
+    local _Workspace = game:GetService('Workspace')
+    local _LocalPlayer3 = _Players3.LocalPlayer
+
+    local function v125()
+        local v115 = _Lighting
+        local v116, v117, v118 = pairs(v115:GetChildren())
+
+        while true do
+            local u119
+
+            v118, u119 = v116(v117, v118)
+
+            if v118 == nil then
+                break
+            end
+            if u119:IsA('BlurEffect') or (u119:IsA('DepthOfFieldEffect') or (u119:IsA('SunRaysEffect') or (u119:IsA('BloomEffect') or u119:IsA('ColorCorrectionEffect')))) then
+                pcall(function()
+                    u119.Enabled = false
+                end)
+            end
+        end
+
+        if p110 >= 4 then
+            _Lighting.GlobalShadows = false
+            _Lighting.FogEnd = 1000000000
+            _Lighting.Brightness = 1
+            _Lighting.OutdoorAmbient = Color3.fromRGB(110, 110, 110)
+            _Lighting.Ambient = Color3.fromRGB(90, 90, 90)
+        end
+        if p110 == 5 then
+            local v120 = _Lighting
+            local v121, v122, v123 = pairs(v120:GetChildren())
+
+            while true do
+                local u124
+
+                v123, u124 = v121(v122, v123)
+
+                if v123 == nil then
+                    break
+                end
+                if not u124:IsA('Sky') then
+                    pcall(function()
+                        u124:Destroy()
+                    end)
+                end
+            end
+
+            _Lighting.Brightness = 0
+            _Lighting.OutdoorAmbient = Color3.new(0, 0, 0)
+            _Lighting.Ambient = Color3.new(0, 0, 0)
+        end
+    end
+
+    (function()
+        local v126 = _Workspace
+        local v127, v128, v129 = ipairs(v126:GetDescendants())
+
+        while true do
+            local u130
+
+            v129, u130 = v127(v128, v129)
+
+            if v129 == nil then
+                break
+            end
+            if u130:IsA('ParticleEmitter') or (u130:IsA('Trail') or (u130:IsA('Beam') or (u130:IsA('Smoke') or (u130:IsA('Fire') or (u130:IsA('Sparkles') or p110 >= 4 and (u130:IsA('Decal') or u130:IsA('Texture'))))))) then
+                pcall(function()
+                    u130:Destroy()
+                end)
+            end
+        end
+
+        if _LocalPlayer3.Character then
+            local v131, v132, v133 = ipairs(_LocalPlayer3.Character:GetDescendants())
+
+            while true do
+                local u134
+
+                v133, u134 = v131(v132, v133)
+
+                if v133 == nil then
+                    break
+                end
+                if u134:IsA('ParticleEmitter') or (u134:IsA('Trail') or (u134:IsA('Beam') or (u134:IsA('Smoke') or (u134:IsA('Fire') or (u134:IsA('Sparkles') or p110 >= 4 and (u134:IsA('Decal') or u134:IsA('Texture'))))))) then
+                    pcall(function()
+                        u134:Destroy()
+                    end)
+                end
+            end
+        end
+    end)()
+    v125();
+    (function()
+        local u135 = {
+            Enum.QualityLevel.Level06,
+            Enum.QualityLevel.Level04,
+            Enum.QualityLevel.Level03,
+            Enum.QualityLevel.Level02,
+            Enum.QualityLevel.Level01,
+        }
+
+        pcall(function()
+            settings().Rendering.QualityLevel = u135[p110] or Enum.QualityLevel.Level06
+        end)
+    end)()
+    pcall(function()
+        game.StarterGui:SetCore('SendNotification', {
+            Title = '\u{fffd}\u{fffd} Fix Lag ' .. tostring(p110 * 20) .. '%',
+            Text = '\u{fffd}\u{e3} \u{e1}p d\u{1ee5}ng t\u{1ed1}i \u{1b0}u c\u{1ea5}p ' .. tostring(p110),
+            Duration = 5,
+        })
+    end)
+end
+
+v25:AddButton({
+    Title = 'Fix Lag + Font Minecraft',
+    Description = 'Gi\u{1ea3}m lag + \u{111}\u{1ed5}i font GUI ki\u{1ec3}u Minecraft',
+    Callback = function()
+        u136(2)
+
+        local _LocalPlayer4 = game.Players.LocalPlayer
+        local v138, v139, v140 = ipairs(_LocalPlayer4.PlayerGui:GetDescendants())
+
+        local function u142(p141)
+            if p141:IsA('TextLabel') or (p141:IsA('TextButton') or p141:IsA('TextBox')) then
+                p141.Font = Enum.Font.Arcade
+                p141.TextStrokeTransparency = 0.8
+                p141.TextColor3 = Color3.fromRGB(255, 255, 255)
+            end
+        end
+
+        while true do
+            local v143
+
+            v140, v143 = v138(v139, v140)
+
+            if v140 == nil then
+                break
+            end
+
+            u142(v143)
+        end
+
+        _LocalPlayer4.PlayerGui.DescendantAdded:Connect(function(p144)
+            u142(p144)
+        end)
+        game.StarterGui:SetCore('SendNotification', {
+            Title = '\u{fffd}\u{fffd} Font Minecraft',
+            Text = '\u{fffd}\u{e3} b\u{1ead}t font + gi\u{1ea3}m lag',
+            Duration = 5,
+        })
+    end,
+})
+v25:AddButton({
+    Title = 'Fix Lag 30%',
+    Description = 'T\u{1ed1}i \u{1b0}u nh\u{1eb9} nh\u{1ea5}t, ch\u{1ec9} gi\u{1ea3}m ch\u{fa}t hi\u{1ec7}u \u{1ee9}ng',
+    Callback = function()
+        u136(1)
+    end,
+})
+v25:AddButton({
+    Title = 'Fix Lag 40%',
+    Description = 'T\u{1eaf}t hi\u{1ec7}u \u{1ee9}ng n\u{1eb7}ng, gi\u{1eef} s\u{e1}ng v\u{e0} \u{111}\u{1ed3} h\u{1ecd}a \u{1ed5}n',
+    Callback = function()
+        u136(2)
+    end,
+})
+v25:AddButton({
+    Title = 'Fix Lag 50%',
+    Description = 'T\u{1eaf}t hi\u{1ec7}u \u{1ee9}ng v\u{1eeb}a ph\u{1ea3}i, \u{111}\u{1ed3} ho\u{1ea1} \u{1ed5}n',
+    Callback = function()
+        u136(2)
+    end,
+})
+v25:AddButton({
+    Title = 'Fix Lag 75%',
+    Description = 'Xo\u{e1} nhi\u{1ec1}u hi\u{1ec7}u \u{1ee9}ng, gi\u{1ea3}m \u{111}\u{1ed3} ho\u{1ea1} trung b\u{ec}nh',
+    Callback = function()
+        u136(3)
+    end,
+})
+v25:AddButton({
+    Title = 'Fix Lag 95%',
+    Description = 'T\u{1eaf}t g\u{1ea7}n h\u{1ebf}t hi\u{1ec7}u \u{1ee9}ng, Lighting \u{111}\u{1a1}n gi\u{1ea3}n',
+    Callback = function()
+        u136(4)
+    end,
+})
+v25:AddButton({
+    Title = 'Fix Lag 100%',
+    Description = 'T\u{1ed1}i \u{1b0}u c\u{1ef1}c m\u{1ea1}nh, si\u{ea}u nh\u{1eb9}, xo\u{e1} s\u{1ea1}ch hi\u{1ec7}u \u{1ee9}ng',
+    Callback = function()
+        u136(5)
+    end,
+})
+v27:AddButton({
+    Title = 'Hop Sever Pet',
+    Description = 'Brainrot God, Mythic, Legendary, Brainrot God Secret',
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/AnhDzaiScript/TuanAnhIOS/refs/heads/main/ScriptBrainrotHopSever.lua'))()
+    end,
+})
+
+local _Players4 = game:GetService('Players')
+local _RunService2 = game:GetService('RunService')
+local _CurrentCamera = workspace.CurrentCamera
+local _LocalPlayer5 = _Players4.LocalPlayer
+
+_G.PLAYER_ESP_ENABLED = false
+
+local _TogglePlayerESP = v29:AddToggle('TogglePlayerESP', {
+    Title = 'ESP Player',
+    Description = '\u{fffd}\u{1ecb}nh V\u{1ecb} Ng\u{1b0}\u{1edd}i Ch\u{1a1}i',
+    Default = false,
+})
+local u150 = {}
+local u151 = {}
+
+local function u158(p152)
+    local v153 = u150[p152]
+
+    if v153 then
+        if v153.text then
+            v153.text.Visible = false
+
+            v153.text:Remove()
+        end
+        if v153.conns then
+            local v154, v155, v156 = ipairs(v153.conns)
+
+            while true do
+                local v157
+
+                v156, v157 = v154(v155, v156)
+
+                if v156 == nil then
+                    break
+                end
+                if v157.Connected then
+                    v157:Disconnect()
+                end
+            end
+        end
+
+        u150[p152] = nil
+    end
+end
+local function u169(p159, p160)
+    if p160 then
+        u158(p159)
+
+        local _Humanoid4 = p160:WaitForChild('Humanoid', 3)
+        local _Head = p160:WaitForChild('Head', 3)
+
+        if _Humanoid4 and _Head then
+            local _Text2 = Drawing.new('Text')
+
+            _Text2.Visible = false
+            _Text2.Center = true
+            _Text2.Outline = true
+            _Text2.Font = 4
+            _Text2.Size = 14
+            _Text2.Color = Color3.new(1, 1, 1)
+            u150[p159] = {
+                text = _Text2,
+                conns = {
+                    p160.AncestryChanged:Connect(function(_, p164)
+                        if not p164 then
+                            u158(p159)
+                        end
+                    end),
+                    _Humanoid4.HealthChanged:Connect(function(p165)
+                        if p165 <= 0 or _Humanoid4:GetState() == Enum.HumanoidStateType.Dead then
+                            u158(p159)
+                        end
+                    end),
+                    (_RunService2.RenderStepped:Connect(function()
+                        if _G.PLAYER_ESP_ENABLED then
+                            if _LocalPlayer5.Character and (_LocalPlayer5.Character:FindFirstChild('HumanoidRootPart') and p160:FindFirstChild('HumanoidRootPart')) then
+                                local v166, v167 = _CurrentCamera:WorldToViewportPoint(_Head.Position)
+
+                                if v167 then
+                                    local v168 = tick() * 2
+
+                                    _Text2.Color = Color3.fromRGB(math.floor(math.sin(v168) * 127 + 128), math.floor(math.sin(v168 + 2) * 127 + 128), math.floor(math.sin(v168 + 4) * 127 + 128))
+                                    _Text2.Text = string.format('[ %s ]', p159.Name, math.floor(_Humanoid4.Health))
+                                    _Text2.Position = Vector2.new(v166.X, v166.Y - 27)
+                                    _Text2.Visible = true
+                                else
+                                    _Text2.Visible = false
+                                end
+                            else
+                                _Text2.Visible = false
+                            end
+                        else
+                            _Text2.Visible = false
+                        end
+                    end)),
+                },
+            }
+        end
+    else
+        return
+    end
+end
+local function u180()
+    local v170 = _Players4
+    local v171, v172, v173 = ipairs(v170:GetPlayers())
+
+    while true do
+        local u174
+
+        v173, u174 = v171(v172, v173)
+
+        if v173 == nil then
+            break
+        end
+        if u174 ~= _LocalPlayer5 then
+            if u174.Character then
+                u169(u174, u174.Character)
+            end
+
+            table.insert(u151, u174.CharacterAdded:Connect(function(p175)
+                u169(u174, p175)
+            end))
+            table.insert(u151, u174.AncestryChanged:Connect(function(_, p176)
+                if not p176 then
+                    u158(u174)
+                end
+            end))
+        end
+    end
+
+    table.insert(u151, _Players4.PlayerAdded:Connect(function(p177)
+        if p177 ~= _LocalPlayer5 then
+            if p177.Character then
+                u169(p177, p177.Character)
+            end
+
+            table.insert(u151, p177.CharacterAdded:Connect(function(p178)
+                u169(p177, p178)
+            end))
+        end
+    end))
+    table.insert(u151, _Players4.PlayerRemoving:Connect(function(p179)
+        u158(p179)
+    end))
+end
+local function u188()
+    local v181, v182, v183 = ipairs(u151)
+
+    while true do
+        local v184
+
+        v183, v184 = v181(v182, v183)
+
+        if v183 == nil then
+            break
+        end
+        if v184.Connected then
+            v184:Disconnect()
+        end
+    end
+
+    u151 = {}
+
+    local v185, v186, v187 = pairs(u150)
+
+    while true do
+        v187 = v185(v186, v187)
+
+        if v187 == nil then
+            break
+        end
+
+        u158(v187)
+    end
+end
+
+_TogglePlayerESP:OnChanged(function(p189)
+    _G.PLAYER_ESP_ENABLED = p189 and true or false
+
+    if _G.PLAYER_ESP_ENABLED then
+        u180()
+    else
+        u188()
+    end
+end)
+
+local _Players5 = game:GetService('Players')
+local _LocalPlayer6 = _Players5.LocalPlayer
+local u192 = {
+    espPlayers = false,
+    espBox = false,
+}
+
+v29:AddToggle('ESPPlayers', {
+    Title = 'ESP Player Highlights',
+    Description = 'L\u{e0}m s\u{e1}ng t\u{1ea5}t c\u{1ea3} ng\u{1b0}\u{1edd}i ch\u{1a1}i',
+    Default = false,
+    Callback = function(p193)
+        u192.espPlayers = p193
+
+        local v194 = _Players5
+        local v195, v196, v197 = pairs(v194:GetPlayers())
+
+        while true do
+            local v198
+
+            v197, v198 = v195(v196, v197)
+
+            if v197 == nil then
+                break
+            end
+            if v198 ~= _LocalPlayer6 and v198.Character then
+                local _Highlight = v198.Character:FindFirstChild('Highlight')
+
+                if p193 then
+                    if not _Highlight then
+                        local _Highlight2 = Instance.new('Highlight')
+
+                        _Highlight2.Name = 'Highlight'
+                        _Highlight2.FillColor = Color3.fromRGB(255, 0, 0)
+                        _Highlight2.OutlineColor = Color3.fromRGB(255, 255, 255)
+                        _Highlight2.FillTransparency = 0.5
+                        _Highlight2.OutlineTransparency = 0
+                        _Highlight2.Parent = v198.Character
+                    end
+                elseif _Highlight then
+                    _Highlight:Destroy()
+                end
+            end
+        end
+    end,
+})
+
+local function u217(p201)
+    local _HumanoidRootPart2 = p201:FindFirstChild('HumanoidRootPart')
+
+    if _HumanoidRootPart2 then
+        local _BillboardGui = Instance.new('BillboardGui')
+
+        _BillboardGui.Name = 'ESPBox'
+        _BillboardGui.Adornee = _HumanoidRootPart2
+        _BillboardGui.Size = UDim2.new(4, 0, 6, 0)
+        _BillboardGui.AlwaysOnTop = true
+        _BillboardGui.StudsOffset = Vector3.new(0, 0, 0)
+        _BillboardGui.Parent = p201
+
+        local _Frame = Instance.new('Frame')
+
+        _Frame.Size = UDim2.new(1, 0, 1, 0)
+        _Frame.BackgroundTransparency = 1
+        _Frame.Parent = _BillboardGui
+
+        local function v209(p205, p206, p207)
+            local _Frame2 = Instance.new('Frame')
+
+            _Frame2.Name = p205
+            _Frame2.Size = p206
+            _Frame2.Position = p207
+            _Frame2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+            _Frame2.BorderSizePixel = 0
+            _Frame2.Parent = _Frame
+
+            return _Frame2
+        end
+
+        local _Top = v209('Top', UDim2.new(1, 0, 0, 2), UDim2.new(0, 0, 0, 0))
+        local _Bottom = v209('Bottom', UDim2.new(1, 0, 0, 2), UDim2.new(0, 0, 1, -2))
+        local _Left = v209('Left', UDim2.new(0, 2, 1, 0), UDim2.new(0, 0, 0, 0))
+        local _Right = v209('Right', UDim2.new(0, 2, 1, 0), UDim2.new(1, -2, 0, 0))
+        local _TextLabel = Instance.new('TextLabel')
+
+        _TextLabel.Size = UDim2.new(1, 0, 0, 20)
+        _TextLabel.Position = UDim2.new(0, 0, 0, -25)
+        _TextLabel.BackgroundTransparency = 1
+        _TextLabel.Text = p201.Name
+        _TextLabel.Font = Enum.Font.SourceSansBold
+        _TextLabel.TextSize = 14
+        _TextLabel.TextStrokeTransparency = 0
+        _TextLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+        _TextLabel.TextColor3 = Color3.fromHSV(0, 1, 1)
+        _TextLabel.Parent = _Frame
+
+        task.spawn(function()
+            local v215 = 0
+
+            while _BillboardGui.Parent do
+                v215 = (v215 + 0.01) % 1
+
+                local v216 = Color3.fromHSV(v215, 1, 1)
+
+                _Top.BackgroundColor3 = v216
+                _Bottom.BackgroundColor3 = v216
+                _Left.BackgroundColor3 = v216
+                _Right.BackgroundColor3 = v216
+                _TextLabel.TextColor3 = v216
+
+                task.wait(0.05)
+            end
+        end)
+    end
+end
+local function u220(p218)
+    local _ESPBox = p218:FindFirstChild('ESPBox')
+
+    if _ESPBox then
+        _ESPBox:Destroy()
+    end
+end
+
+v29:AddToggle('ESPBox', {
+    Title = 'ESP Box Player',
+    Description = 'Hi\u{1ec3}n th\u{1ecb} khung Player',
+    Default = false,
+    Callback = function(p221)
+        u192.espBox = p221
+
+        local v222 = _Players5
+        local v223, v224, v225 = pairs(v222:GetPlayers())
+
+        while true do
+            local v226
+
+            v225, v226 = v223(v224, v225)
+
+            if v225 == nil then
+                break
+            end
+            if v226 ~= _LocalPlayer6 and v226.Character then
+                if p221 then
+                    if not v226.Character:FindFirstChild('ESPBox') then
+                        u217(v226.Character)
+                    end
+                else
+                    u220(v226.Character)
+                end
+            end
+        end
+    end,
+})
+_Players5.PlayerAdded:Connect(function(p227)
+    p227.CharacterAdded:Connect(function(p228)
+        task.wait(1)
+
+        if u192.espPlayers and p227 ~= _LocalPlayer6 then
+            local _Highlight3 = Instance.new('Highlight')
+
+            _Highlight3.Name = 'Highlight'
+            _Highlight3.FillColor = Color3.fromRGB(255, 0, 0)
+            _Highlight3.OutlineColor = Color3.fromRGB(255, 255, 255)
+            _Highlight3.FillTransparency = 0.5
+            _Highlight3.OutlineTransparency = 0
+            _Highlight3.Parent = p228
+        end
+        if u192.espBox and p227 ~= _LocalPlayer6 then
+            u217(p228)
+        end
+    end)
+end)
+_Players5.PlayerRemoving:Connect(function(p230)
+    if p230.Character then
+        local _Highlight4 = p230.Character:FindFirstChild('Highlight')
+
+        if _Highlight4 then
+            _Highlight4:Destroy()
+        end
+
+        u220(p230.Character)
+    end
+end)
+game:GetService('RunService')
+
+local u232 = {}
+local u233 = false
+local u234 = {}
+
+local function u251()
+    if u233 then
+        local v235, v236, v237 = pairs(workspace.Plots:GetChildren())
+
+        while true do
+            local v238
+
+            v237, v238 = v235(v236, v237)
+
+            if v237 == nil then
+                break
+            end
+
+            local v239 = v238:FindFirstChild('Purchases', true) and (v238.Purchases:FindFirstChild('PlotBlock', true) and v238.Purchases.PlotBlock.Main:FindFirstChild('BillboardGui', true))
+
+            if v239 then
+                v239 = v238.Purchases.PlotBlock.Main.BillboardGui:FindFirstChild('RemainingTime', true)
+            end
+            if v239 and v239:IsA('TextLabel') then
+                local v240 = 'LockTimeESP_' .. v238.Name
+                local v241 = v238:FindFirstChild(v240)
+                local v242 = v239.Text == '0s'
+                local v243 = v242 and 'Unlocked' or 'Lock: ' .. v239.Text
+                local v244 = v242 and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 255, 0)
+
+                if v241 then
+                    v241.TextLabel.Text = v243
+                    v241.TextLabel.TextColor3 = v244
+                else
+                    local _BillboardGui2 = Instance.new('BillboardGui')
+
+                    _BillboardGui2.Name = v240
+                    _BillboardGui2.Size = UDim2.new(0, 200, 0, 30)
+                    _BillboardGui2.StudsOffset = Vector3.new(0, 5, 0)
+                    _BillboardGui2.AlwaysOnTop = true
+                    _BillboardGui2.Adornee = v238.Purchases.PlotBlock.Main
+
+                    local _TextLabel2 = Instance.new('TextLabel')
+
+                    _TextLabel2.Text = v243
+                    _TextLabel2.Size = UDim2.new(1, 0, 1, 0)
+                    _TextLabel2.BackgroundTransparency = 1
+                    _TextLabel2.TextScaled = true
+                    _TextLabel2.TextColor3 = v244
+                    _TextLabel2.TextStrokeColor3 = Color3.new(0, 0, 0)
+                    _TextLabel2.TextStrokeTransparency = 0
+                    _TextLabel2.Font = Enum.Font.SourceSansBold
+                    _TextLabel2.Parent = _BillboardGui2
+                    _BillboardGui2.Parent = v238
+                    u234[v238.Name] = _BillboardGui2
+                end
+            end
+        end
+    else
+        local v247, v248, v249 = pairs(u234)
+
+        while true do
+            local v250
+
+            v249, v250 = v247(v248, v249)
+
+            if v249 == nil then
+                break
+            end
+            if v250 then
+                v250:Destroy()
+            end
+        end
+
+        u234 = {}
+    end
+end
+
+local u252 = {
+    Legendary = {
+        Color = Color3.new(1, 1, 0),
+        Size = UDim2.new(0, 150, 0, 50),
+    },
+    Mythic = {
+        Color = Color3.new(1, 0, 0),
+        Size = UDim2.new(0, 150, 0, 50),
+    },
+    ['Brainrot God'] = {
+        Color = Color3.new(0.5, 0, 0.5),
+        Size = UDim2.new(0, 180, 0, 60),
+    },
+    Secret = {
+        Color = Color3.new(0, 0, 0),
+        Size = UDim2.new(0, 200, 0, 70),
+    },
+}
+local u253 = {
+    Gold = {
+        Color = Color3.fromRGB(255, 215, 0),
+        Size = UDim2.new(0, 120, 0, 30),
+    },
+    Diamond = {
+        Color = Color3.fromRGB(0, 191, 255),
+        Size = UDim2.new(0, 120, 0, 30),
+    },
+    Rainbow = {
+        Color = Color3.fromRGB(255, 192, 203),
+        Size = UDim2.new(0, 120, 0, 30),
+    },
+    Bloodrot = {
+        Color = Color3.fromRGB(139, 0, 0),
+        Size = UDim2.new(0, 120, 0, 30),
+    },
+}
+
+local function u274()
+    local v254, v255, v256 = pairs(workspace.Plots:GetChildren())
+
+    while true do
+        local v257
+
+        v256, v257 = v254(v255, v256)
+
+        if v256 == nil then
+            break
+        end
+
+        local v258, v259, v260 = pairs(v257:GetDescendants())
+
+        while true do
+            local v261
+
+            v260, v261 = v258(v259, v260)
+
+            if v260 == nil then
+                break
+            end
+            if v261.Name == 'Rarity' and (v261:IsA('TextLabel') and u252[v261.Text]) then
+                local _Parent = v261.Parent.Parent
+                local v263 = v261.Text .. '_ESP'
+                local v264 = 'Mutation_ESP'
+                local v265 = _Parent:FindFirstChild(v263)
+                local v266 = _Parent:FindFirstChild(v264)
+
+                if u232[v261.Text] then
+                    if not v265 then
+                        local v267 = u252[v261.Text]
+                        local _BillboardGui3 = Instance.new('BillboardGui')
+
+                        _BillboardGui3.Name = v263
+                        _BillboardGui3.Size = v267.Size
+                        _BillboardGui3.StudsOffset = Vector3.new(0, 3, 0)
+                        _BillboardGui3.AlwaysOnTop = true
+
+                        local _TextLabel3 = Instance.new('TextLabel')
+
+                        _TextLabel3.Text = v261.Parent.DisplayName.Text
+                        _TextLabel3.Size = UDim2.new(1, 0, 1, 0)
+                        _TextLabel3.BackgroundTransparency = 1
+                        _TextLabel3.TextScaled = true
+                        _TextLabel3.TextColor3 = v267.Color
+                        _TextLabel3.TextStrokeColor3 = Color3.new(0, 0, 0)
+                        _TextLabel3.TextStrokeTransparency = 0
+                        _TextLabel3.Font = Enum.Font.SourceSansBold
+                        _TextLabel3.Parent = _BillboardGui3
+                        _BillboardGui3.Parent = _Parent
+                    end
+
+                    local _Mutation = v261.Parent:FindFirstChild('Mutation')
+
+                    if _Mutation and (_Mutation:IsA('TextLabel') and u253[_Mutation.Text]) then
+                        local v271 = u253[_Mutation.Text]
+
+                        if v266 then
+                            v266.TextLabel.Text = _Mutation.Text
+                            v266.TextLabel.TextColor3 = v271.Color
+                        else
+                            local _BillboardGui4 = Instance.new('BillboardGui')
+
+                            _BillboardGui4.Name = v264
+                            _BillboardGui4.Size = v271.Size
+                            _BillboardGui4.StudsOffset = Vector3.new(0, 6, 0)
+                            _BillboardGui4.AlwaysOnTop = true
+
+                            local _TextLabel4 = Instance.new('TextLabel')
+
+                            _TextLabel4.Text = _Mutation.Text
+                            _TextLabel4.Size = UDim2.new(1, 0, 1, 0)
+                            _TextLabel4.BackgroundTransparency = 1
+                            _TextLabel4.TextScaled = true
+                            _TextLabel4.TextColor3 = v271.Color
+                            _TextLabel4.TextStrokeColor3 = Color3.new(0, 0, 0)
+                            _TextLabel4.TextStrokeTransparency = 0
+                            _TextLabel4.Font = Enum.Font.SourceSansBold
+                            _TextLabel4.Parent = _BillboardGui4
+                            _BillboardGui4.Parent = _Parent
+                        end
+                    elseif v266 then
+                        v266:Destroy()
+                    end
+                else
+                    if v265 then
+                        v265:Destroy()
+                    end
+                    if v266 then
+                        v266:Destroy()
+                    end
+                end
+            end
+        end
+    end
+end
+
+v29:AddToggle('ESP_Lock', {
+    Title = 'ESP Lock',
+    Default = false,
+    Callback = function(p275)
+        u233 = p275
+
+        u251()
+    end,
+})
+
+local _Players6 = game:GetService('Players')
+
+game:GetService('PathfindingService')
+game:GetService('TweenService')
+
+local _LocalPlayer7 = _Players6.LocalPlayer
+local _Animals = game.ReplicatedStorage.Models.Animals
+local v279, v280, v281 = ipairs(_Animals:GetChildren())
+local u282 = u251
+local u283 = u233
+local u284 = u232
+local v285 = {}
+
+while true do
+    local v286
+
+    v281, v286 = v279(v280, v281)
+
+    if v281 == nil then
+        break
+    end
+
+    v285[#v285 + 1] = v286.Name
+end
+
+table.sort(v285)
+
+local _DropdownBet = v29:AddDropdown('DropdownBet', {
+    Title = 'Esp Pet',
+    Values = v285,
+    Multi = false,
+    Default = 1,
+})
+
+_G.SelectedBet = v285[1]
+
+_DropdownBet:OnChanged(function(p288)
+    _G.SelectedBet = p288
+end)
+
+local function u291(p289)
+    while p289 and p289 ~= workspace do
+        local v290 = p289:FindFirstChild('Owner') or (p289:FindFirstChild('owner') or p289:FindFirstChild('OwnerName'))
+
+        if v290 and (v290:IsA('ObjectValue') and v290.Value == _LocalPlayer7 or v290:IsA('StringValue') and v290.Value == _LocalPlayer7.Name) then
+            return true
+        end
+
+        p289 = p289.Parent
+    end
+
+    return false
+end
+
+local u292 = {}
+local u293 = nil
+
+v29:AddToggle('TogglePetESP', {
+    Title = 'Enable Show Selected Esp Pet',
+    Description = '\u{fffd}\u{1ecb}nh V\u{1ecb} Esp Nh\u{1eef}ng Pet \u{110}\u{e3} Ch\u{1ecd}n',
+    Default = false,
+    Callback = function(p294)
+        if u293 then
+            u293:Disconnect()
+
+            u293 = nil
+        end
+
+        local v295, v296, v297 = pairs(u292)
+
+        while true do
+            local v298, v299 = v295(v296, v297)
+
+            if v298 == nil then
+                break
+            end
+
+            v297 = v298
+
+            if v299 and v299.Parent then
+                v299:Destroy()
+            end
+        end
+
+        u292 = {}
+
+        if p294 then
+            local _SelectedBet = _G.SelectedBet
+
+            if _SelectedBet then
+                local v301, v302, v303 = ipairs(workspace:GetDescendants())
+                local v304 = {}
+
+                while true do
+                    local v305
+
+                    v303, v305 = v301(v302, v303)
+
+                    if v303 == nil then
+                        break
+                    end
+                    if v305:IsA('Model') and (v305.Name == _SelectedBet and not u291(v305)) then
+                        local v306 = v305.PrimaryPart or v305:FindFirstChildWhichIsA('BasePart', true)
+
+                        if v306 then
+                            table.insert(v304, {
+                                model = v305,
+                                part = v306,
+                            })
+                        end
+                    end
+                end
+
+                if #v304 ~= 0 then
+                    local u307 = {
+                        Color3.fromRGB(255, 0, 0),
+                        Color3.fromRGB(255, 127, 0),
+                        Color3.fromRGB(255, 255, 0),
+                        Color3.fromRGB(0, 255, 0),
+                        Color3.fromRGB(0, 0, 255),
+                        Color3.fromRGB(75, 0, 130),
+                        Color3.fromRGB(148, 0, 211),
+                    }
+                    local v308, v309, v310 = ipairs(v304)
+
+                    while true do
+                        local v311
+
+                        v310, v311 = v308(v309, v310)
+
+                        if v310 == nil then
+                            break
+                        end
+
+                        local _BillboardGui5 = Instance.new('BillboardGui')
+
+                        _BillboardGui5.Name = '_BetESP'
+                        _BillboardGui5.Size = UDim2.new(0, 60, 0, 30)
+                        _BillboardGui5.AlwaysOnTop = true
+                        _BillboardGui5.StudsOffset = Vector3.new(0, 3, 0)
+                        _BillboardGui5.Adornee = v311.part
+                        _BillboardGui5.Parent = v311.model
+
+                        local _TextLabel5 = Instance.new('TextLabel', _BillboardGui5)
+
+                        _TextLabel5.Name = 'RainbowText'
+                        _TextLabel5.Size = UDim2.new(1, 0, 1, 0)
+                        _TextLabel5.BackgroundTransparency = 1
+                        _TextLabel5.Text = '' .. _SelectedBet
+                        _TextLabel5.TextStrokeTransparency = 0.4
+                        _TextLabel5.TextScaled = true
+                        _TextLabel5.Font = Enum.Font.GothamBold
+
+                        table.insert(u292, _BillboardGui5)
+                    end
+
+                    local u314 = 1
+
+                    u293 = game:GetService('RunService').RenderStepped:Connect(function()
+                        local v315, v316, v317 = pairs(u292)
+
+                        while true do
+                            local v318
+
+                            v317, v318 = v315(v316, v317)
+
+                            if v317 == nil then
+                                break
+                            end
+
+                            local _RainbowText = v318:FindFirstChild('RainbowText')
+
+                            if _RainbowText then
+                                _RainbowText.TextColor3 = u307[u314]
+                            end
+                        end
+
+                        u314 = u314 % #u307 + 1
+
+                        task.wait(0.5)
+                    end)
+
+                    u1:Notify({
+                        Title = '\u{fffd}\u{e3} t\u{1ea1}o ESP',
+                        Content = 'Hi\u{1ec7}n \u{111}\u{1ecb}nh v\u{1ecb} cho ' .. #v304 .. ' pet ' .. _SelectedBet .. ' (7 m\u{e0}u)',
+                        Duration = 3,
+                    })
+                else
+                    u1:Notify({
+                        Title = 'Kh\u{f4}ng t\u{ec}m th\u{1ea5}y',
+                        Content = 'Kh\u{f4}ng c\u{f3} pet ' .. _SelectedBet .. ' ngo\u{e0}i c\u{103}n c\u{1ee9} c\u{1ee7}a b\u{1ea1}n',
+                        Duration = 3,
+                    })
+                end
+            else
+                u1:Notify({
+                    Title = 'Ch\u{1b0}a ch\u{1ecd}n bet',
+                    Content = 'H\u{e3}y ch\u{1ecd}n bet tr\u{1b0}\u{1edb}c!',
+                    Duration = 3,
+                })
+
+                return
+            end
+        else
+            return
+        end
+    end,
+})
+
+local v320, v321, v322 = ipairs({
+    'Legendary',
+    'Mythic',
+    'Brainrot God',
+    'Secret',
+})
+
+while true do
+    local u323
+
+    v322, u323 = v320(v321, v322)
+
+    if v322 == nil then
+        break
+    end
+
+    v29:AddToggle('ESP_' .. u323, {
+        Title = 'ESP ' .. u323,
+        Default = false,
+        Callback = function(p324)
+            u284[u323] = p324
+
+            u274()
+        end,
+    })
+end
+
+task.spawn(function()
+    while true do
+        task.wait(0.25)
+
+        if u283 then
+            u282()
+        end
+        if next(u284) ~= nil then
+            u274()
+        end
+    end
+end)
+
+local _RFCoinsShopServiceRequestBuy = game:GetService('ReplicatedStorage'):WaitForChild('Packages'):WaitForChild('Net'):WaitForChild('RF/CoinsShopService/RequestBuy')
+local v326, v327, v328 = ipairs({
+    'Slap',
+    'Speed Coil',
+    'Trap',
+    'Iron Slap',
+    'Gravitity Coil',
+    'Bee Launcher',
+    'Gold Slap',
+    'Coil Combo',
+    'Rage Table',
+    'Diamond Slap',
+    'Grapple Hook',
+    'Taser Gun',
+    'Emerald Slap',
+    'invisibility Cloak',
+    'Boogie Bomb',
+    'Ruby Slap',
+    "Medusa's Head",
+    'Dark Matter Slap',
+    'Web Slinger',
+    'Flame Slap',
+    'Quantum Cloner',
+    'All Seeing Sentry',
+    'Nuclear Slap',
+    'Rainbowrath Sword',
+    'Galaxy Slap',
+    'Laser Cape',
+    'Glitched Slap',
+    'Body Swap Potion',
+    'Splatter Slap',
+    'Paintball Gun',
+    'Heart Balloon',
+    'Magnet',
+})
+
+while true do
+    local u329
+
+    v328, u329 = v326(v327, v328)
+
+    if v328 == nil then
+        break
+    end
+
+    v31:AddButton({
+        Title = 'Buy: ' .. u329,
+        Description = 'Mua Items',
+        Callback = function()
+            pcall(function()
+                _RFCoinsShopServiceRequestBuy:InvokeServer(u329)
+            end)
+        end,
+    })
+end
+
+v33:AddButton({
+    Title = 'Joins a Different Server',
+    Description = '\u{fffd}\u{1ed5}i Sever M\u{1edb}i',
+    Callback = function()
+        local _PlaceId = game.PlaceId
+        local u331 = {}
+        local u332 = ''
+        local _hour = os.date('!*t').hour
+
+        if not pcall(function()
+            u331 = game:GetService('HttpService'):JSONDecode(readfile('NotSameServers.json'))
+        end) then
+            table.insert(u331, _hour)
+            writefile('NotSameServers.json', game:GetService('HttpService'):JSONEncode(u331))
+        end
+
+        function TPReturner()
+            local v334
+
+            if u332 ~= '' then
+                v334 = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. _PlaceId .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. u332))
+            else
+                v334 = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. _PlaceId .. '/servers/Public?sortOrder=Asc&limit=100'))
+            end
+            if v334.nextPageCursor and (v334.nextPageCursor ~= 'null' and v334.nextPageCursor ~= nil) then
+                u332 = v334.nextPageCursor
+            end
+
+            local v335, v336, v337 = pairs(v334.data)
+            local v338 = 0
+
+            while true do
+                local v339
+
+                v337, v339 = v335(v336, v337)
+
+                if v337 == nil then
+                    break
+                end
+
+                local v340 = true
+                local u341 = tostring(v339.id)
+
+                if tonumber(v339.maxPlayers) > tonumber(v339.playing) then
+                    local v342, v343, v344 = pairs(u331)
+
+                    while true do
+                        local v345
+
+                        v344, v345 = v342(v343, v344)
+
+                        if v344 == nil then
+                            break
+                        end
+                        if v338 == 0 then
+                            if tonumber(_hour) ~= tonumber(v345) then
+                                pcall(function()
+                                    delfile('NotSameServers.json')
+
+                                    u331 = {}
+
+                                    table.insert(u331, _hour)
+                                end)
+                            end
+                        elseif u341 == tostring(v345) then
+                            v340 = false
+                        end
+
+                        v338 = v338 + 1
+                    end
+
+                    if v340 == true then
+                        table.insert(u331, u341)
+                        task.wait()
+                        pcall(function()
+                            writefile('NotSameServers.json', game:GetService('HttpService'):JSONEncode(u331))
+                            task.wait()
+                            game:GetService('TeleportService'):TeleportToPlaceInstance(_PlaceId, u341, game.Players.LocalPlayer)
+                        end)
+                        task.wait(4)
+                    end
+                end
+            end
+        end
+        function Teleport()
+            while task.wait() do
+                pcall(function()
+                    TPReturner()
+
+                    if u332 ~= '' then
+                        TPReturner()
+                    end
+                end)
+            end
+        end
+
+        Teleport()
+    end,
+})
+v33:AddButton({
+    Title = 'Rejoins The Same Server',
+    Description = 'Tham Gia L\u{1ea1}i Sever',
+    Callback = function()
+        local _TeleportService = game:GetService('TeleportService')
+        local _LocalPlayer8 = game:GetService('Players').LocalPlayer
+
+        _TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, _LocalPlayer8)
+    end,
+})
+game:GetService('StarterGui'):SetCore('SendNotification', {
+    Title = 'Night Slayer Hub',
+    Text = '\u{fffd}\u{e3} T\u{1ea3}i Xong',
+    Icon = 'rbxthumb://type=Asset&id=110657725541747&w=150&h=150',
+    Duration = 8,
+})
+loadstring(game:HttpGet('https://raw.githubusercontent.com/TuanAnhIOX/TuanAnhIOS/refs/heads/main/AnhNhoEmHazz.lua'))()
